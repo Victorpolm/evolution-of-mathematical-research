@@ -1,0 +1,32 @@
+# bulk data caches (never commit full text; arXiv license forbids redistribution)
+corpus/
+papers/
+observatory.db*
+test_wsl.db*
+backups/
+annotation/
+
+# local artifacts
+__pycache__/
+*.pyc
+*.eml
+pitch.pdf
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# quarantined: per-paper labels/excerpts and live infra inventory (LB-07, review 2)
+reports/spotcheck_result_bearing.md
+pipeline/aws/instance.txt
+
+# credentials — never commit
+.env
+verdicts_*.json
+
+# aggregate-only boundary (review-7): per-paper expressive artifacts stay untracked
+results/
+reports/awesome_validation.*
+# unrelated tooling, no project provenance/license
+.claude/docs/lean4/
+.claude/tools/lean4/

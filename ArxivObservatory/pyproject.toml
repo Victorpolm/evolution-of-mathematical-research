@@ -1,0 +1,22 @@
+[project]
+name = "arxiv-observatory"
+version = "0.2.0"
+description = "Measuring disclosed AI assistance in arXiv mathematics papers (research prototype; not affiliated with arXiv)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.34.2,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# System (non-Python) dependencies, documented for a clean clone:
+#   pdftotext (poppler-utils)  — PDF text extraction (scan, render_check)
+#   codex CLI                  — LLM classification backend (classify, audit)
+#   aws CLI                    — bulk acquisition only (pipeline/aws, remote)
