@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-08-10T20:50:43+00:00",
+  "months": [
+    "2308",
+    "2309",
+    "2310",
+    "2311",
+    "2312",
+    "2401",
+    "2402",
+    "2403",
+    "2404",
+    "2405",
+    "2406",
+    "2407",
+    "2408",
+    "2409",
+    "2410",
+    "2411",
+    "2412",
+    "2501",
+    "2502",
+    "2503",
+    "2504",
+    "2505",
+    "2506",
+    "2507",
+    "2508",
+    "2509",
+    "2510",
+    "2511",
+    "2512",
+    "2601",
+    "2602",
+    "2603",
+    "2604",
+    "2605",
+    "2606",
+    "2607"
+  ],
+  "tar_sha256": {
+    "math_2308.tar": "0675cbed841890611d80822907b5b5642a92ac81143948156f9dc8ae8276e0ea",
+    "math_2309.tar": "a13d1544e4d1d67a30d4792b4bfe322af9bb832c8e4da40b69513db73a168904",
+    "math_2310.tar": "db49f9a1dde40570947e0e40d9c589040d1b952763d71394deb4732ab750b35e",
+    "math_2311.tar": "319fb13823916093c13863448c73f6d63e1528639e11198ac53e968b0bfaf70f",
+    "math_2312.tar": "91a85f0c86d99fd062a1b408a988481df30b429f09ac9ba1e812efd628cb27c2",
+    "math_2401.tar": "5d84391b2ed6646de9013c0d8229d86d39a9e86d8edce260fc697dbeb5ccf600",
+    "math_2402.tar": "8733821d711b4cb92445a4497a0d15085f565a79a37249d6a6a7ad3899683bff",
+    "math_2403.tar": "c817d9b0d1de925777b06c2b8ffd7eb64f13ac82d87b468f0fa05ce544b3c711",
+    "math_2404.tar": "d0f41b3390c8ff40dac96a503118385c05af54efe2e01127e50f6f70355291a5",
+    "math_2405.tar": "336bcaa1b3e7d7fea1b49c6708382a66a0f796c4ca42adf80598b0babb0e2ffe",
+    "math_2406.tar": "c38cc95245d1f0360b3f16790cbfa6b1d9e88c4763f7bc609f0c44473c0bcbde",
+    "math_2407.tar": "c94b2acc011482c63e8d2a51b8e17c2f63ceef0897d9e3572f3078cdf9ab2126",
+    "math_2408.tar": "55b2bd0dac33786c3d972813921b9d5806303bb447d39aa77d3076c80029fc0c",
+    "math_2409.tar": "8dfab62337568f537b54095590303bddd55276c40a2dab18d4f70eec5d962a87",
+    "math_2410.tar": "c7bcae4d1f5ce1b8978b29e4f2c7b5c370311c69fa2def7ffd978be32b40c93d",
+    "math_2411.tar": "d32380ea67db85661042fb4385bfdb2ebe04893240f1f36bf5d1ecc83a2a1926",
+    "math_2412.tar": "43ba2b028b11b973935d7b258c0d497e95904c64d7fe5454c6f5e52fb106b607",
+    "math_2501.tar": "b4b4cf69a66dc4868a33647a70d2de0e6a4fa74ac5f191ae53f4dc56e1dbb42e",
+    "math_2502.tar": "2cc590d1d67469a8cb732c4c8c311c964d3ac9ec4b0443e78eada7e4d2bc60fc",
+    "math_2503.tar": "3da0d2b3ee793d0962b62259b8234f20bda27a42da087530f27575ed9ac8af1e",
+    "math_2504.tar": "fe9c60bb9ebacb908cd5b403b69d9e9a3a321ee7c135166e99496faf9fb8c137",
+    "math_2505.tar": "f4108d64b3dec3df4f471c26023ce2bd394a1c24a8f88aa5d845ca4986c792a0",
+    "math_2506.tar": "24fab6745a64724c7b6319dac9d91f9309407d66079877a9725f2169cc062597",
+    "math_2507.tar": "081e822d4c7bc69ddb6007a5e4f05928f8678169f3969954ac3305f5ed9a8132",
+    "math_2508.tar": "dbdc5b0b26d4486bde4f4684e8504786f7cdef36a27989a115939d253c246d30",
+    "math_2509.tar": "8df8fd779dee22b0dfdae46d86ad83509a7cb71877226f69e7a0f26cd72984b7",
+    "math_2510.tar": "28c9732b68c89df7b5de9a2c295b97a010c806083c035b121233196691499371",
+    "math_2511.tar": "c277738ad16450878d5376497811964540884f4a2fee3078930ac82c08c6c704",
+    "math_2512.tar": "bce8946c949caad136c5e37dbec18af328c704b6970a783c0ad5199f02c6b3ff",
+    "math_2601.tar": "5f7d3c4cfdca58100c7d67b0b2ae752742a17231c9415b8455b90ba0c3f7122a",
+    "math_2602.tar": "3dda05e6ee34512f8333da2cfdd6e94520c9479715a38d0fb878837210959693",
+    "math_2603.tar": "aa08496a3035c335d46a2bb25b7c7d6a59a3f9620d886beeb1b24fb1eea8f8f5",
+    "math_2604.tar": "c384533dfb8e34971e1f5a888324da19689ac30a58165b176f003d736559eeb9",
+    "math_2605.tar": "98e1c3031dc258988f32f6c139ec2d03b9432694457fa0ffd58169c664d57f0e",
+    "math_2606.tar": "b63cde65e8595c243bb52589848a19129c0e352c84a9b92748fae8c69a0bffb7",
+    "math_2607.tar": "905e1ef6467edc9845359fd2d11e71d9983329311b641fe61814099336f5670f"
+  },
+  "target_ids_in_window": 168027,
+  "members_ledgered": 168027,
+  "registered": true,
+  "problems": {
+    "tar_errors": {
+      "count": 0,
+      "sample": []
+    },
+    "duplicates": {
+      "count": 0,
+      "sample": []
+    },
+    "extras": {
+      "count": 0,
+      "sample": []
+    },
+    "unknown_format": {
+      "count": 0,
+      "sample": []
+    },
+    "missing": {
+      "count": 0,
+      "sample": []
+    },
+    "not_in_papers": {
+      "count": 0,
+      "sample": []
+    }
+  }
+}

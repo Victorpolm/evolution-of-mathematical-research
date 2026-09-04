@@ -1,0 +1,413 @@
+<title>ArxivObservatory — tracking AI acknowledgements in math submissions on arXiv</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --grid: #e1e0d9; --axis: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100;
+    --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
+      --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+      --border: rgba(255,255,255,0.10);
+      --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+      --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --axis:#383835;
+    --border: rgba(255,255,255,0.10);
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500;
+    --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--page); color: var(--ink);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 48px; }
+  header .eyebrow {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-2); font-weight: 600;
+  }
+  header h1 { margin: 2px 0 4px; font-size: 26px; text-wrap: balance; }
+  header .sub { color: var(--ink-2); margin: 0 0 20px; max-width: 68ch; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 12px; margin-bottom: 16px; }
+  .tile {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 12px 14px;
+  }
+  .tile .v { font-size: 26px; font-weight: 650; }
+  .tile .l { font-size: 12.5px; color: var(--ink-2); margin-top: 2px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px;
+  }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .seg button {
+    border: 0; background: transparent; color: var(--ink-2); font: inherit;
+    font-size: 13px; padding: 5px 12px; cursor: pointer;
+  }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
+  .seg button:disabled { opacity: 0.45; cursor: not-allowed; }
+  h2 { font-size: 18px; margin: 4px 0 4px; }
+  h3 { font-size: 13.5px; margin: 12px 0 6px; color: var(--ink-2); }
+  .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 12px 24px; }
+  .panels svg { width: 100%; display: block; }
+  .strip { display: flex; gap: 2px; height: 18px; border-radius: 4px; overflow: hidden; margin: 8px 0 4px; }
+  .strip span { display: block; }
+  .striplab { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--ink-2); }
+  .striplab .dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 5px; }
+  :root { --ord1:#86b6ef; --ord2:#2a78d6; --ord3:#104281; }
+  @media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { --ord1:#9ec5f4; --ord2:#3987e5; --ord3:#184f95; } }
+  :root[data-theme="dark"] { --ord1:#9ec5f4; --ord2:#3987e5; --ord3:#184f95; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+    border: 1px solid var(--border); border-radius: 999px; background: transparent;
+    color: var(--ink-2); font: inherit; font-size: 13px; padding: 4px 11px;
+  }
+  .chip .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--c, var(--muted)); }
+  .chip[aria-pressed="true"] { border-color: var(--c, var(--ink)); color: var(--ink); }
+  .chip:focus-visible, .seg button:focus-visible { outline: 2px solid var(--s1); outline-offset: 1px; }
+  #chart { width: 100%; display: block; }
+  .tip {
+    position: fixed; pointer-events: none; z-index: 5; display: none;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+    padding: 8px 10px; font-size: 12.5px; box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+    min-width: 150px;
+  }
+  .tip .d { font-weight: 650; margin-bottom: 4px; }
+  .tip .row { display: flex; align-items: center; gap: 6px; justify-content: space-between; }
+  .tip .row .nm { display: flex; align-items: center; gap: 6px; color: var(--ink-2); }
+  .tip .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .tip .val { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .foot { color: var(--muted); font-size: 12.5px; margin-top: 14px; max-width: 80ch; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 8px; }
+  th, td { text-align: right; padding: 4px 8px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: var(--ink-2); font-weight: 600; }
+  #tablewrap { overflow-x: auto; display: none; }
+  .axis-label { fill: var(--muted); font-size: 11px; }
+  .direct-label { font-size: 11.5px; font-weight: 650; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>ArxivObservatory — tracking AI acknowledgements in math submissions on arXiv</h1>
+    <p class="sub" style="max-width:none">Daily and weekly counts of new math-primary submissions from the
+    OAI-PMH metadata harvest (backfilled to Aug 2023). Prototype of the
+    public dashboard layer — chart specs like this one are the unit a future
+    contributor PR would add.</p>
+  </header>
+
+  <!--TILES-->
+
+  <div class="card" id="submissions">
+    <h2>Number of math submissions on arXiv</h2>
+    <div class="controls" role="toolbar" aria-label="Chart controls">
+      <div class="seg" role="group" aria-label="Time horizon">
+        <button id="h3" aria-pressed="true">3 months</button>
+        <button id="h12" aria-pressed="false">1 year</button>
+        <button id="h36" aria-pressed="false">3 years</button>
+      </div>
+      <div class="seg" role="group" aria-label="Granularity">
+        <button id="gm" aria-pressed="false">Monthly</button>
+        <button id="gw" aria-pressed="true">Weekly</button>
+        <button id="gd" aria-pressed="false">Daily</button>
+      </div>
+      <div class="seg" role="group" aria-label="View">
+        <button id="vchart" aria-pressed="true">Chart</button>
+        <button id="vtable" aria-pressed="false">Table</button>
+      </div>
+      <div class="chips" id="chips" aria-label="Series (legend and filter)"></div>
+    </div>
+    <svg id="chart" height="380" role="img" aria-label="Submissions over time"></svg>
+    <div id="tablewrap"></div>
+    <div class="tip" id="tip"></div>
+    <div class="foot" id="caption"></div>
+  </div>
+
+  <p class="foot" style="max-width:none">Counts use each paper's v1 submission date (UTC). Weekly view
+  shows Monday-start weeks fully inside the window; the partial edge weeks are
+  omitted. "Other" aggregates the 23 smaller math subfields. Data:
+  arXiv OAI-PMH (arXivRaw), harvested 2026-08-09 · ArxivObservatory pipeline.
+  arXiv publishes its own submission statistics — see
+  <a href="https://info.arxiv.org/about/reports/submission_category_by_year.html"
+  style="color:inherit">their yearly reports by category</a>.</p>
+</div>
+
+<script type="application/json" id="data">{"dates": [], "categories": {}}</script>
+
+<script>
+(function () {
+  var DATA = JSON.parse(document.getElementById("data").textContent);
+  var dates = DATA.dates;
+  var TOP = Object.keys(DATA.categories).slice(0, 8);
+  var slots = ["--s1","--s2","--s3","--s4","--s5","--s6","--s7","--s8"];
+  var css = getComputedStyle(document.documentElement);
+  function col(v) { return css.getPropertyValue(v).trim(); }
+
+  // series definitions: entity-fixed colors
+  var series = [{ id: "TOTAL", name: "All math", varname: null }];
+  TOP.forEach(function (c, i) { series.push({ id: c, name: c, varname: slots[i] }); });
+  series.push({ id: "OTHER", name: "Other", varname: null });
+
+  function dailyOf(id) {
+    if (id === "TOTAL") {
+      var t = dates.map(function () { return 0; });
+      Object.keys(DATA.categories).forEach(function (c) {
+        DATA.categories[c].forEach(function (v, i) { t[i] += v; });
+      });
+      return t;
+    }
+    if (id === "OTHER") {
+      var o = dates.map(function () { return 0; });
+      Object.keys(DATA.categories).forEach(function (c) {
+        if (TOP.indexOf(c) === -1)
+          DATA.categories[c].forEach(function (v, i) { o[i] += v; });
+      });
+      return o;
+    }
+    return DATA.categories[id];
+  }
+
+  function monthsFor(sdates) {
+    // complete calendar months fully inside the sliced range
+    var months = [], start = null, cur = "";
+    for (var i = 0; i < sdates.length; i++) {
+      var m = sdates[i].slice(0, 7);
+      if (m !== cur) {
+        if (start !== null && sdates[i - 1].slice(8) >= "28")
+          months.push([start, i - 1]);
+        start = sdates[i].slice(8) === "01" ? i : null;
+        cur = m;
+      }
+    }
+    if (start !== null) {
+      var last = sdates[sdates.length - 1];
+      var y = +last.slice(0, 4), mo = +last.slice(5, 7);
+      var eom = new Date(Date.UTC(y, mo, 0)).getUTCDate();
+      if (+last.slice(8) === eom) months.push([start, sdates.length - 1]);
+    }
+    return months;
+  }
+  function weeksFor(sdates) {
+    // Monday-start weeks fully inside the sliced range
+    var weeks = [], start = null;
+    for (var i = 0; i < sdates.length; i++) {
+      var dow = (new Date(sdates[i] + "T00:00Z")).getUTCDay();
+      if (dow === 1) start = i;
+      if (dow === 0 && start !== null) { weeks.push([start, i]); start = null; }
+    }
+    return weeks;
+  }
+
+  var active = { TOTAL: true };
+  var mode = "w", view = "chart", HORIZON = 92;
+
+  var chipsEl = document.getElementById("chips");
+  series.forEach(function (s) {
+    var b = document.createElement("button");
+    b.className = "chip";
+    b.setAttribute("aria-pressed", !!active[s.id]);
+    if (s.varname) b.style.setProperty("--c", "var(" + s.varname + ")");
+    else if (s.id === "TOTAL") b.style.setProperty("--c", "var(--ink)");
+    var dot = document.createElement("span"); dot.className = "dot";
+    b.replaceChildren(dot, document.createTextNode(s.name));
+    b.onclick = function () {
+      active[s.id] = !active[s.id];
+      b.setAttribute("aria-pressed", !!active[s.id]);
+      render();
+    };
+    chipsEl.appendChild(b);
+  });
+
+  function seg(idOn, idOff, fn) {
+    var a = document.getElementById(idOn), b = document.getElementById(idOff);
+    a.onclick = function () { a.setAttribute("aria-pressed","true"); b.setAttribute("aria-pressed","false"); fn(true); };
+    b.onclick = function () { b.setAttribute("aria-pressed","true"); a.setAttribute("aria-pressed","false"); fn(false); };
+  }
+  [["gm","m"],["gw","w"],["gd","d"]].forEach(function (gb) {
+    document.getElementById(gb[0]).onclick = function () {
+      mode = gb[1];
+      ["gm","gw","gd"].forEach(function (id) {
+        document.getElementById(id).setAttribute("aria-pressed",
+          id === gb[0] ? "true" : "false");
+      });
+      render();
+    };
+  });
+  seg("vchart","vtable", function (c) { view = c ? "chart" : "table"; render(); });
+  [["h3", 92], ["h12", 365], ["h36", 0]].forEach(function (hb) {
+    var b = document.getElementById(hb[0]);
+    b.onclick = function () {
+      HORIZON = hb[1];
+      ["h3","h12","h36"].forEach(function (id) {
+        document.getElementById(id).setAttribute("aria-pressed", id === hb[0] ? "true" : "false");
+      });
+      render();
+    };
+  });
+
+  var svg = document.getElementById("chart");
+  var tip = document.getElementById("tip");
+  var NS = "http://www.w3.org/2000/svg";
+  function el(n, at) {
+    var e = document.createElementNS(NS, n);
+    for (var k in at) e.setAttribute(k, at[k]);
+    return e;
+  }
+  function fmt(n) { return n.toLocaleString("en-US"); }
+
+  var cache = {};
+  function render() {
+    css = getComputedStyle(document.documentElement);
+    var vis = series.filter(function (s) { return active[s.id]; });
+    var lo = HORIZON ? Math.max(0, dates.length - HORIZON) : 0;
+    var sdates = dates.slice(lo);
+    var buckets = mode === "w" ? weeksFor(sdates)
+                : mode === "m" ? monthsFor(sdates) : null;
+    // daily view: omit days with no submissions in the database (harvest
+    // edges) instead of plotting a spurious drop to zero
+    var keep = null;
+    if (!buckets) {
+      var tot = dailyOf("TOTAL").slice(lo);
+      keep = [];
+      for (var ki = 0; ki < sdates.length; ki++)
+        if (tot[ki] > 0) keep.push(ki);
+      sdates = keep.map(function (i) { return sdates[i]; });
+    }
+    var xs = buckets
+      ? buckets.map(function (w) { return mode === "m"
+          ? sdates[w[0]].slice(0, 7) : sdates[w[0]]; })
+      : sdates;
+    cache = { vis: vis, xs: xs, rows: vis.map(function (s) {
+      var d = dailyOf(s.id).slice(lo);
+      if (keep) return keep.map(function (i) { return d[i]; });
+      if (!buckets) return d;
+      return buckets.map(function (w) {
+        var acc = 0; for (var i = w[0]; i <= w[1]; i++) acc += d[i];
+        return acc;
+      });
+    })};
+
+    document.getElementById("tablewrap").style.display = view === "table" ? "block" : "none";
+    svg.style.display = view === "chart" ? "block" : "none";
+    document.getElementById("caption").textContent = vis.length
+      ? (mode === "w" ? "Submissions per week (Monday start)."
+        : mode === "m" ? "Submissions per complete calendar month."
+        : "Submissions per day — the weekday/weekend rhythm of arXiv announcements is visible.")
+      : "Select at least one series above.";
+    if (view === "table") { renderTable(); return; }
+
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var W = svg.clientWidth || 1000, H = 380;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    var m = { t: 14, r: 86, b: 30, l: 52 };
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    if (!vis.length || !xs.length) return;
+
+    var ymax = 0;
+    cache.rows.forEach(function (r) { r.forEach(function (v) { if (v > ymax) ymax = v; }); });
+    ymax = ymax || 1;
+    var step = Math.pow(10, Math.floor(Math.log10(ymax)));
+    if (ymax / step < 2) step /= 5; else if (ymax / step < 5) step /= 2;
+    var ytop = Math.ceil(ymax / step) * step;
+
+    function X(i) { return m.l + (xs.length === 1 ? iw / 2 : i * iw / (xs.length - 1)); }
+    function Y(v) { return m.t + ih * (1 - v / ytop); }
+
+    for (var v = 0; v <= ytop; v += step) {
+      svg.appendChild(el("line", { x1: m.l, x2: m.l + iw, y1: Y(v), y2: Y(v),
+        stroke: v === 0 ? col("--axis") : col("--grid"), "stroke-width": 1 }));
+      var t = el("text", { x: m.l - 8, y: Y(v) + 4, "text-anchor": "end", "class": "axis-label" });
+      t.textContent = fmt(v); svg.appendChild(t);
+    }
+    var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var bounds = [], lastM = "";
+    xs.forEach(function (x, i) {
+      var mth = x.slice(5, 7);
+      if (mth !== lastM) { bounds.push(i); lastM = mth; }
+    });
+    var lstep = Math.max(1, Math.ceil(bounds.length / 9));
+    bounds.forEach(function (i, bi) {
+      svg.appendChild(el("line", { x1: X(i), x2: X(i), y1: m.t + ih, y2: m.t + ih + 4,
+        stroke: col("--axis"), "stroke-width": 1 }));
+      if (bi % lstep) return;
+      var x = xs[i], mth = x.slice(5, 7);
+      var t2 = el("text", { x: X(i), y: H - 8, "text-anchor": "start", "class": "axis-label" });
+      t2.textContent = MON[+mth - 1] + (mth === "01" || bi === 0 ? " " + x.slice(0, 4) : "");
+      svg.appendChild(t2);
+    });
+
+    vis.forEach(function (s, si) {
+      var color = s.varname ? col(s.varname) : (s.id === "TOTAL" ? col("--ink") : col("--muted"));
+      var d = "";
+      cache.rows[si].forEach(function (v, i) {
+        d += (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1);
+      });
+      svg.appendChild(el("path", { d: d, fill: "none", stroke: color,
+        "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      if (vis.length <= 4) {
+        var last = cache.rows[si][cache.rows[si].length - 1];
+        var lb = el("text", { x: m.l + iw + 6, y: Y(last) + 4, "class": "direct-label", fill: color });
+        lb.textContent = s.name; svg.appendChild(lb);
+      }
+    });
+
+    var cross = el("line", { y1: m.t, y2: m.t + ih, stroke: col("--axis"),
+      "stroke-width": 1, "stroke-dasharray": "3 3", visibility: "hidden" });
+    svg.appendChild(cross);
+    svg.onmousemove = function (ev) {
+      var r = svg.getBoundingClientRect();
+      var px = (ev.clientX - r.left) * (W / r.width);
+      var i = Math.round((px - m.l) / (iw / Math.max(1, xs.length - 1)));
+      if (i < 0 || i >= xs.length) { tip.style.display = "none"; cross.setAttribute("visibility","hidden"); return; }
+      cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i));
+      cross.setAttribute("visibility", "visible");
+      var rows = vis.map(function (s, si) {
+        return { s: s, v: cache.rows[si][i] };
+      }).sort(function (a, b) { return b.v - a.v; });
+      var lab = mode === "w" ? "Week of " + xs[i] : xs[i];
+      tip.innerHTML = '<div class="d">' + lab + "</div>" + rows.map(function (r2) {
+        var c2 = r2.s.varname ? col(r2.s.varname) : (r2.s.id === "TOTAL" ? col("--ink") : col("--muted"));
+        return '<div class="row"><span class="nm"><span class="dot" style="background:' + c2 + '"></span>'
+          + r2.s.name + '</span><span class="val">' + fmt(r2.v) + "</span></div>";
+      }).join("");
+      tip.style.display = "block";
+      var tx = ev.clientX + 14, ty = ev.clientY + 12;
+      if (tx + 190 > innerWidth) tx = ev.clientX - 200;
+      tip.style.left = tx + "px"; tip.style.top = ty + "px";
+    };
+    svg.onmouseleave = function () { tip.style.display = "none"; cross.setAttribute("visibility","hidden"); };
+  }
+
+  function renderTable() {
+    var w = document.getElementById("tablewrap");
+    var h = "<table><tr><th>" + (mode === "w" ? "Week of" : mode === "m" ? "Month" : "Date") + "</th>";
+    cache.vis.forEach(function (s) { h += "<th>" + s.name + "</th>"; });
+    h += "</tr>";
+    cache.xs.forEach(function (x, i) {
+      h += "<tr><td>" + x + "</td>";
+      cache.rows.forEach(function (r) { h += "<td>" + fmt(r[i]) + "</td>"; });
+      h += "</tr>";
+    });
+    w.innerHTML = h + "</table>";
+  }
+
+  function renderAll() { render(); }
+  new MutationObserver(renderAll).observe(document.documentElement,
+    { attributes: true, attributeFilter: ["data-theme"] });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", renderAll);
+  addEventListener("resize", render);
+  render();
+})();
+</script>

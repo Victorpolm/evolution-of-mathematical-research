@@ -1,0 +1,9 @@
+# Locked runtime deps (pip install -r requirements.lock)
+# Regenerate with: pip freeze | grep -iE '^(requests|certifi|charset|idna|urllib3|pytest)=='
+# requests >= 2.32.4 required (CVE-2024-47081, .netrc credential selection)
+requests==2.34.2
+certifi==2026.1.4
+charset-normalizer==3.4.2
+idna==3.10
+urllib3==2.4.0
+pytest==9.0.2

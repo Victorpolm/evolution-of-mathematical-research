@@ -1,0 +1,17 @@
+# CI: tests + site build on a clean clone. By construction no corpus or
+# database access — everything runs on synthetic fixtures (LB-11).
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8  # v5.0.0
+      - uses: actions/setup-python@e797f83a49bb0ec9e0f0d0f8946e1e9b2b92c229  # v6.0.0
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.lock pytest
+      - run: python -m pytest tests/ -q
