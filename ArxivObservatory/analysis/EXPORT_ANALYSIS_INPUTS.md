@@ -4,9 +4,11 @@ The full run needs the existing paper metadata and OpenAlex authorship CSV.
 The shared repository intentionally excludes those records. The ID manifest
 alone cannot identify authors or primary mathematical categories.
 
-On the machine holding Johannes's database, from the ArxivObservatory folder:
+Download [export_metadata.py](export_metadata.py) into the ArxivObservatory
+folder on the machine holding Johannes's database. It runs as a standalone
+script using the Python standard library. From that folder:
 
-    python3 -m analysis.export_metadata \
+    python3 export_metadata.py \
       --database observatory.db \
       --openalex-csv results/paper_authors.csv \
       --output results/analysis_inputs.zip
