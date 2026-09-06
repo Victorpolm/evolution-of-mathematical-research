@@ -1,6 +1,13 @@
 # RESEARCH_CONTEXT.md
 
-_Last updated: 2026-09-04_
+_Last updated: 2026-09-06_
+
+The detailed first-stage proposal is the
+[revised statistical research plan](ArxivObservatory/analysis/STATISTICAL_RESEARCH_PLAN.md).
+It incorporates a mathematical and prior-literature review, preserves the
+paired recorded-name/OpenAlex-ID comparison, and distinguishes the existing
+three-year pilot from a longer historical study. Corpus choices and new
+analyses remain proposals for discussion, not completed empirical results.
 
 ## 1. Research program
 
@@ -48,27 +55,32 @@ Geographic, institutional, and career-stage democratization are possible later e
 
 ## 3. Core decomposition of publication growth
 
-A first-order decomposition is
+For one fixed corpus, window and author-identification method, let
+\(P_t\) be paper count, \(A_t\) active-author count and \(I_t\) authorship
+incidences. With mean team size \(\bar k_t=I_t/P_t\) and mean publication
+participation \(\bar n_t=I_t/A_t\), the exact identity is
 
 \[
-\text{number of papers}
-\approx
-\text{number of active researchers}
-\times
-\text{publication output per active researcher},
+P_t=A_t\frac{\bar n_t}{\bar k_t},
+\qquad
+\Delta\log P=\Delta\log A+\Delta\log\bar n-\Delta\log\bar k.
 \]
 
-with adjustments for coauthorship.
+For equal paper-level fractional credit
+\(f_{a,t}=\sum_{p\ni a}1/k_p\), \(\sum_a f_{a,t}=P_t\) and its
+mean is exactly \(P_t/A_t\). The mean is therefore a derived quantity;
+the distribution of fractional credit remains informative. At fixed
+\(\bar n_t\), larger teams lower \(P_t/A_t\).
 
-The empirical analysis therefore needs to separate:
+The revised protocol also accounts for adjacent-year paper changes through
+continuing-author credit change, entry credit and exit credit. These are
+descriptive identities, not causal effects or direct measures of research
+effort. Entry means newly observed activity relative to the previous window;
+distinguishing first-observed authors from returners requires lookback.
 
-1. growth in the number of mathematical papers,
-2. growth in the number of active mathematical authors,
-3. changes in output per active author,
-4. changes in coauthorship,
-5. changes in database coverage and publication indexing.
-
-Absolute paper counts alone are not sufficient to characterize changes in research production.
+Coverage, identity errors, field composition and changing arXiv participation
+must be assessed before interpreting these quantities as changes in people
+or publication behavior.
 
 ---
 
@@ -133,7 +145,9 @@ Then
 
 measures mean publication participations per active author.
 
-Both full-counting and fractional-counting productivity measures should be studied.
+Both full-counting and fractional-counting publication activity should be studied.
+Their distributions answer different questions; mean fractional output is already
+\(P_t/A_t\), not an additional independent outcome.
 
 For fractional counting, an author on a paper with \(n_p\) authors receives \(1/n_p\) paper-equivalents.
 
@@ -301,7 +315,11 @@ The historical analyses in the initial project are intended to establish the bas
 
 ## 9. Primary data source
 
-The initial bibliometric source is **OpenAlex**.
+For the first-stage study, **arXiv defines the paper population** and
+**OpenAlex supplies the initial author-identity layer**. Compare OpenAlex IDs
+with recorded-name counts on the same papers. zbMATH Open supplies a
+mathematics-specific prior study and a proposed external coverage/identity
+comparison; it is not assumed to provide infallible person identities.
 
 Relevant objects include:
 
@@ -491,9 +509,12 @@ Core analyses:
 9. years-since-first-observed-publication distributions,
 10. cohort/entry analysis,
 11. metadata coverage diagnostics,
-12. robustness to counting convention, active-author definition, time window, and mathematics-corpus definition.
+12. robustness to counting convention, active-author definition, time window, and mathematics-corpus definition,
+13. continuing-author, entry and exit credit accounting for validated adjacent years.
 
-Collaboration, article length, references, interdisciplinarity, and AI should remain secondary until this core analysis is credible.
+Team size belongs in the core accounting. Extended collaboration networks,
+article length, references, interdisciplinarity, and AI remain secondary until
+this core analysis is credible.
 
 ---
 
@@ -538,7 +559,7 @@ What has been established so far:
 
 - The broad research program concerns the historical evolution of mathematical research.
 - The first substantive focus is democratization/concentration of mathematical publishing.
-- OpenAlex is the initial primary data source.
+- arXiv is the initial paper frame and OpenAlex the initial author-ID layer.
 - The main first-wave statistics and methodological risks have been identified.
 - Concentration should be measured with top shares, Lorenz curves, Gini coefficients, and the full productivity distribution rather than a single statistic.
 - Publication growth should be decomposed into researcher-population growth, researcher productivity, and coauthorship.
@@ -553,7 +574,9 @@ No substantive empirical result has yet been established merely by inclusion in 
 
 ### 1. Validate the mathematics corpus
 
-Determine a reproducible and historically stable definition of mathematical works in OpenAlex.
+Audit the existing arXiv metadata and establish a reproducible mathematics
+corpus with explicit primary-category, cross-listing and alias rules. Assess
+historical stability and matching to OpenAlex before interpreting trends.
 
 ### 2. Build coverage diagnostics
 

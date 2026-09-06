@@ -1,367 +1,504 @@
-# Statistical research plan: democratization and changing structure of mathematics
+# Revised method: participation, collaboration and mathematical publication output
 
-## 1. Research motivation
+Revision: 2026-09-06. Research protocol for discussion before the contributor
+analysis. This revises the earlier statistical plan after reviewing the
+user-supplied methodological critique and the primary literature. It does not
+report new empirical results or authorize a new acquisition campaign.
 
-The broad project asks how mathematical research is changing during the rise
-of generative AI. The initial idea has two parts.
+## 1. Research question and contribution
 
-### Axis A — Production and democratization
+How do changes in mathematical paper uploads relate to changes in observed
+participation, publication activity and team size? Our initial population is a
+specified set of arXiv papers, not all employed mathematicians or all
+mathematical research. Broader participation and a more even distribution of
+publication credit are separate questions.
 
-1. Is the growth in arXiv mathematics caused by more people participating, or
-   by the same people publishing more?
-2. What is the academic-age distribution of active authors?
-3. Is publication output becoming more or less concentrated among the most
-   productive authors?
-4. Are papers becoming shorter, so that more papers represent a fragmentation
-   of roughly the same amount of work?
+The first study will combine a transparent accounting of publication growth
+with a sensitivity analysis of author identification. The comparison agreed
+with the user is retained: distinct recorded names versus OpenAlex author IDs,
+on identical papers and time windows. We do not presume to outperform
+OpenAlex's disambiguation.
 
-### Axis B — Collaboration and knowledge structure
+The contribution must be positioned as an extension and assessment of existing
+mathematics bibliometrics. Comparing papers and authors is already established
+in the literature. Our proposed additions are an auditable arXiv population,
+explicit continuing-author/entry/exit accounting, comparable activity windows,
+and an assessment of how measurement choices change the conclusions. Novelty
+of this combination remains to be established against further related work.
 
-1. How are collaboration rates and team sizes changing?
-2. Are authors publishing across a wider range of mathematical fields?
-3. Are new collaborations bridging previously separated areas of mathematics?
-4. Is AI associated with stronger links between researchers and fields, or
-   with weaker human collaboration?
+## 2. Prior work: what was actually done, and what we adopt
 
-Paper length, reference counts, field breadth, and collaboration are **not
-direct measures of quality**. They describe mathematical practice and
-knowledge structure. A separate quality study would require a defensible
-outcome such as expert evaluation, later influence, or correction rates.
+| Study | Data and method checked in the original source | Consequence for this study |
+|---|---|---|
+| [Hulek and Teschke (2023), *How do mathematicians publish? – Some trends*](https://ems.press/content/serial-article-files/29073) | Used a June 2023 zbMATH snapshot, retaining the 96.5% of authorships classified as unambiguous. Compared annual active authors and documents, lifetime-output thresholds, and team sizes in ten MSC groups. This retained share is not an independently established accuracy rate. | Closest substantive precedent. Reuse its distinction between publication growth, collaboration and community size. Audit exclusion effects; lifetime thresholds condition on accumulated history and disadvantage recent entrants. Authors appearing in several subject groups cannot be added to obtain a unique global total. |
+| [Grossman (2005), *Patterns of Research in Mathematics*](https://www.math.buffalo.edu/mad/stats/2005.research.patterns.pdf) | Used Mathematical Reviews records from approximately 1940–1999, with person identification maintained by MR. Compared decade-specific papers, authors, publication participation and team sizes; used primary MSC groupings for the later period and adjusted historical classification changes. | Preserve explicit observation windows, distinguish cumulative from period-specific counts, and examine collaboration and subfield composition. His study is a descriptive predecessor, not a controlled estimate of individual productivity change. |
+| [Fanelli and Larivière (2016), *Researchers' Individual Publication Rate Has Not Increased in a Century*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0149504) | Selected 41,427 Web of Science author profiles, including 492 in mathematics, using surnames with at least three initials and restricted geographic coverage. Profiles had to span at least 15 years; outcomes covered the first 15 years. They compared full counts, a collaboration-adjusted ratio and first-author counts across entry cohorts, and audited 50 randomly selected names. They found no overall century-long increase after adjustment, with variation across disciplines and periods. | This is a selected, persistent-career sample, not all active authors. Borrow fixed career exposure and validation; do not copy its exclusions as a representative population design. Its adjusted ratio differs from our paper-by-paper fractional credit. First-author position is not our contribution measure. |
+| [Fegley and Torvik (2013), *Has Large-Scale Named-Entity Network Analysis Been Resting on a Flawed Assumption?*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0070299) | Applied name-based splitting and lumping to disambiguated biomedical and patent datasets and examined changes in network statistics. | Name simplification is a stress test, not a reliable bracket around truth. Their estimated effects cannot be transferred numerically to arXiv mathematics. Assess errors for each statistic we intend to interpret. |
+| [Beckenbach, Hulek and Teschke (2024), *The extension of zbMATH Open by arXiv preprints*](https://ems.press/content/serial-article-files/47210) | Defined an arXiv subset using historical overlap with published mathematics. Matched works by DOI first, then title/author/abstract similarities with a random-forest classifier trained using DOI matches. Discussed weaker author assignments for preprints and distinguished unpublished entries from published records. | Examine existing zbMATH links before inventing a matcher. Work-matching validation does not establish person-identification accuracy. Any external published-literature comparison must exclude preprint-only entries and account for publication delays. |
 
-The first study should focus on Axis A because its estimands are clearer and
-its data requirements are manageable.
+Where the released data permit, first reproduce the definitions behind Hulek
+and Teschke's publication/author and team-size figures. Their article supplies
+a [data deposit reference](https://doi.org/10.5281/zenodo.8234415); those files
+have not been retrieved or reproduced in this revision. A current snapshot
+would be an updated analysis, not an exact reproduction of their snapshot.
 
-## 2. Primary question
+## 3. Mathematical accounting
 
-> Is growth in arXiv mathematics driven by broader participation, or by
-> increased and increasingly concentrated output among already-active authors?
-
-Evidence consistent with democratization would combine several observations:
-
-- active authors grow at least as fast as papers;
-- the share of new or early-career authors rises;
-- output concentration falls or remains stable;
-- participation broadens across subfields and, when data permit, institutions
-  and countries;
-- entry is persistent rather than consisting only of one-off submissions.
-
-No single indicator is sufficient.
-
-## 3. Unit of observation and study period
-
-The working input is a metadata-only table with one row per paper-author pair.
-At minimum it needs:
-
-- stable paper and arXiv identifiers;
-- arXiv submission year and preferably month;
-- primary arXiv mathematics category;
-- stable OpenAlex author identifier;
-- number of authors on the paper;
-- author first-observed publication and arXiv-mathematics years;
-- OpenAlex match and authorship-completeness diagnostics.
-
-The preferred acquisition window is 2010–2025, with headline analysis
-beginning in 2015. The earlier years provide lookback for entry and age
-calculations. Incomplete 2026 data should not be compared with complete years.
-
-OpenAlex's publication date may describe a journal version rather than the
-arXiv upload. Submission time should therefore come from the arXiv record or
-identifier whenever possible.
-
-## 4. Author identity
-
-Raw author-name strings are not reliable person identifiers. Spelling
-variants, name changes, transliteration, initials, and homonyms would bias
-active-author counts, entry, productivity, and concentration.
-
-The primary analysis therefore uses OpenAlex author IDs and reports:
-
-- paper matching rate;
-- authorship-slot identification rate;
-- share of papers with complete identified authorships;
-- ambiguous and unmatched counts;
-- OpenAlex truncation indicators.
-
-Headline estimates should use complete identified authorships. Sensitivity
-analyses should compare that frame with all usable matches. A blinded audit of
-author disambiguation is required before publication.
-
-## 5. Fractional authorship and publication growth
-
-For paper \(p\) with \(k_p\) authors, author \(i\) receives \(1/k_p\)
-fractional paper. Author \(i\)'s output in year \(t\) is
+Fix a corpus, a time window and an author-identification method. Let
+\(\mathcal P_t\) be its papers and \(\mathcal A_t\) its active authors.
+Initially assume complete bylines and one occurrence of a person per paper.
 
 \[
-y_{it}=\sum_{\substack{p\text{ in year }t\\i\in p}}\frac{1}{k_p}.
+P_t=|\mathcal P_t|,\qquad A_t=|\mathcal A_t|,
+\qquad n_{a,t}=\sum_{p\in\mathcal P_t}\mathbf 1\{a\in p\}.
 \]
 
-Then total fractional output equals the number of papers:
+For team size \(k_p\), define authorship incidences
 
 \[
-P_t=\sum_i y_{it}=A_t\overline{y}_t,
+I_t=\sum_{p\in\mathcal P_t}k_p
+   =\sum_{a\in\mathcal A_t}n_{a,t},\qquad
+\bar k_t=I_t/P_t,\qquad \bar n_t=I_t/A_t.
 \]
 
-where \(A_t\) is the number of active authors and
-\(\overline{y}_t=P_t/A_t\). This decomposes publication growth into:
-
-- **extensive margin:** change in the number of active authors;
-- **intensive margin:** change in mean fractional output per active author.
-
-For two dates, log growth decomposes as
+The exact identities are
 
 \[
-\Delta\log P=\Delta\log A+\Delta\log\overline{y}.
+\boxed{P_t=A_t\frac{\bar n_t}{\bar k_t}},\qquad
+\boxed{\frac{P_t}{A_t}=\frac{\bar n_t}{\bar k_t}}.
 \]
 
-Because fractional output is affected by team size, the analysis must also
-report full-count papers per author and explicit collaboration measures. The
-decomposition is descriptive, not causal.
+Report the measured counts \(P_t,A_t,I_t\), alongside mean team size
+\(\bar k_t\) and mean publication participation \(\bar n_t\). These contain
+three algebraic degrees of freedom, not five independent outcomes. This does
+not assert statistical independence of the three underlying counts.
 
-## 6. Concentration of publication output
-
-The phrase "first decile of publishers" should be operationalized as the
-**top productivity decile**, meaning the most productive 10% of active
-authors. "First decile" can otherwise mean the bottom 10%.
-
-Let \(T_{q,t}\) contain the top \(\lceil qA_t\rceil\) authors ranked by
-fractional output in year \(t\). The top-\(q\) share is
+Equal fractional credit is
 
 \[
-C_{q,t}=\frac{\sum_{i\in T_{q,t}}y_{it}}{\sum_i y_{it}}.
+f_{a,t}=\sum_{p\ni a}\frac{1}{k_p},\qquad
+\sum_a f_{a,t}=P_t,\qquad \bar f_t=P_t/A_t.
 \]
 
-Report \(q=0.01,0.05,0.10\). The top 10% alone can conceal increasing
-concentration among the top 1%.
+Thus mean fractional credit is exactly the papers/authors ratio. Its
+distribution across authors supplies additional information; its mean is not
+an additional independent productivity measure. Equal division is a
+transparent convention conserving paper totals, not a measurement of effort
+or a claim that it is the only defensible credit convention. Full
+participation counts remain useful. We will not infer contribution from
+byline order or assume every mathematics paper is alphabetically ordered.
 
-Also calculate:
+**Correction to the supplied critique:** at fixed \(\bar n_t\), increasing
+\(\bar k_t\) lowers \(P_t/A_t\). At fixed \(P_t,A_t\), adding coauthors
+raises both \(\bar k_t\) and \(\bar n_t\), leaving \(P_t/A_t\) unchanged.
+There is no unconditional direction without specifying what remains fixed.
 
-- Gini coefficient of annual author output;
-- Lorenz curves for selected benchmark years;
-- median and upper quantiles of author output;
-- fraction of active authors with only one paper;
-- optional Herfindahl concentration as a sensitivity measure.
-
-Ties at a cutoff require a predeclared rule. Fractional allocation of a tied
-group at the boundary avoids arbitrary author-ID ordering. Compute
-concentration using both fractional and full paper counts.
-
-## 7. Entry and observed academic age
-
-Keep two concepts separate:
-
-1. **Global observed academic age:**
-   \(t-\text{first OpenAlex work year}_i\).
-2. **Observed arXiv-mathematics age:**
-   \(t-\text{first observed arXiv-math year}_i\).
-
-The second measures tenure in the observed arXiv-mathematics system, not a
-person's true career age. Both are left-censored without a long lookback.
-
-Primary yearly statistics:
-
-- median observed age and the 25th/75th percentiles;
-- shares with observed age 0–1, 0–3, and 0–5 years;
-- fractional share of output produced by these groups;
-- persistence of entrants after two, three, and five years.
-
-A five-year minimum lookback is a reasonable initial gate. Authors first seen
-at the acquisition boundary must not automatically be called new researchers.
-
-## 8. Collaboration measures
-
-The first study should include easy collaboration indicators because they
-help interpret fractional productivity:
-
-- mean and median authors per paper;
-- single-author paper share;
-- shares with 2, 3–5, and 6+ authors;
-- total authorship slots;
-- full-count versus fractional-count productivity.
-
-A later network study can add distinct collaborators per author, new coauthor
-pairs, collaboration persistence, cross-field coauthor edges, network
-modularity, and assortativity by mathematical field.
-
-## 9. Mathematical subfields and standardization
-
-Produce all main statistics pooled across mathematics, separately by primary
-arXiv category, and standardized to a fixed category distribution. Otherwise,
-a growing subfield with different authorship norms can create the appearance
-of democratization or concentration across mathematics as a whole.
-
-For fixed field weights \(w_f\), a direct standardized statistic is
+For positive totals in adjacent periods,
 
 \[
-S_t^{std}=\sum_f w_fS_{ft}.
+\Delta\log P=\Delta\log A+\Delta\log\bar n-\Delta\log\bar k.
 \]
 
-Weights could use the 2015 paper shares or pooled 2015–2019 shares. Small
-categories should be grouped or suppressed using a predeclared threshold.
+This is descriptive accounting; the terms are not independent causal effects.
 
-## 10. Graph plan
+The prior-study adjustment also requires care. In general,
 
-### Figure 1 — Indexed growth decomposition
+\[
+\frac{n_a}{n_a^{-1}\sum_{p\ni a}k_p}
+\ne \sum_{p\ni a}\frac{1}{k_p}.
+\]
 
-Set 2015 to 100 and plot papers, active authors, fractional papers per active
-author, and optionally full-count papers per author. This is the main
-democratization figure.
+For two papers with team sizes 1 and 3, the left side is 1 and the right side
+is \(4/3\). An exact comparison with the earlier study must reproduce its
+denominator convention; it cannot silently substitute our conserved credit.
 
-### Figure 2 — Entry and observed age
+## 4. Continuing authors, entry and exit
 
-Plot median observed arXiv-math age with an interquartile band, plus the share
-with observed age at most three years.
+For adjacent non-overlapping calendar years define
 
-### Figure 3 — Concentration
+\[
+C_t=\mathcal A_t\cap\mathcal A_{t-1},\quad
+E_t=\mathcal A_t\setminus\mathcal A_{t-1},\quad
+X_t=\mathcal A_{t-1}\setminus\mathcal A_t.
+\]
 
-Plot annual top 1%, 5%, and 10% output shares and the Gini coefficient. Add
-Lorenz curves for 2015, 2020, 2023, and 2025.
+Then
 
-### Figure 4 — Collaboration
+\[
+\boxed{
+P_t-P_{t-1}=
+\underbrace{\sum_{a\in C_t}(f_{a,t}-f_{a,t-1})}_{\text{continuing-author credit change}}
++\underbrace{\sum_{a\in E_t}f_{a,t}}_{\text{entry credit}}
+-\underbrace{\sum_{a\in X_t}f_{a,t-1}}_{\text{exit credit}}.
+}
+\]
 
-Plot the single-author share, team size, and shares with 2, 3–5, and 6+
-authors.
+Make this a central explanatory figure after longitudinal identity validation.
+Show the three signed components in paper equivalents and their sum. Also
+report \(|C_t|,|E_t|,|X_t|\), and reconcile
+\(A_t-A_{t-1}=|E_t|-|X_t|\). Avoid percentage contributions when net growth
+is close to zero; signed contributions can exceed 100% when components offset.
 
-### Figure 5 — Field heterogeneity
+The continuing-author term includes changes in team sizes and fractional
+allocation. It is not a pure measure of additional individual research work.
+Changing database coverage or identity assignments can also create apparent
+entry and exit. The raw-name version measures continuing, entering and exiting
+name keys, and must be labelled accordingly.
 
-Use small multiples for major categories instead of one crowded panel.
+Two complete adjacent years suffice for this identity. More history is needed
+to partition \(E_t\) into authors first observed in the available history and
+authors returning after a gap. Use **first observed in this corpus**, never
+“first-ever researcher.” A disappearance means no observed paper during that
+window, not retirement. Changes of field can generate field entry and exit.
 
-Every graph must state whether author output is fractional or full counted and
-display retained/matched coverage.
+## 5. Existing data and the first audit
 
-## 11. Statistical uncertainty and robustness
+The [import reconciliation](../reports/s3_import.json) documents 168,027 paper
+IDs with archive members for August 2023–July 2026. That is an acquisition
+frame, not yet a verified primary-mathematics census. The separate 2023–2025
+OpenAlex pilot documented 69,166 usable works, 155,781 identified authorship
+links and 8,042 unidentified authorship slots. Its numerator and denominator
+must not be combined with the larger manifest population.
 
-The data are close to a census of the selected frame, so conventional
-sampling p-values are not the main uncertainty. The important uncertainties
-are measurement and cohort construction:
+Johannes's database already has fields for arXiv ID, created date, raw authors,
+categories, primary category and DOI. Reuse existing metadata and matches.
+The first aggregate audit must report, by submission month:
 
-- author disambiguation;
-- unmatched or incomplete authorships;
-- incomplete recent-year coverage;
-- left-censored first-publication dates;
-- arXiv/OpenAlex date differences;
-- changing category composition;
-- full versus fractional counting;
-- the entry threshold and field-classification errors.
+1. Papers by recorded primary category, including missing/unknown categories.
+2. Primary-mathematics, cross-listed-only and alias-category membership.
+3. Missing dates, unparsable author lists and incomplete or group bylines.
+4. OpenAlex work-match and authorship-slot identification rates.
+5. Papers with complete, aligned, non-truncated authorships; exclusions by reason.
+6. Retention and team-size distributions by category, to expose selective loss.
 
-Required sensitivity analyses:
+For paired author-method comparisons, retain exactly the same papers and
+aligned arXiv authorship slots. Keep the full-frame paper curve separately
+labelled. Completeness restrictions can select against recent work or large
+teams; they are a reproducibility rule, not a cure for selection bias.
 
-1. complete high-confidence authorships versus all usable matches;
-2. fractional versus full publication counts;
-3. entry thresholds of 1, 3, and 5 years;
-4. lookback periods of 3, 5, and 10 years where possible;
-5. pooled versus field-standardized results;
-6. exclusion of incomplete years;
-7. arXiv-category membership versus OpenAlex Mathematics classification.
+The database and raw pilot CSV are absent from the shared source snapshot by
+the existing [contribution policy](../CONTRIBUTING.md). The owner can run the
+offline aggregate audit or provide a metadata-only export. This revision does
+not infer the audit results from the manifest size and does not start a new
+download. The requested analysis awaits access to those records.
 
-Monthly estimates should use a 12-month rolling window. Annual headline
-estimates should use complete calendar years.
+## 6. Corpus definitions and version handling
 
-## 12. Interpretation framework
+The preferred headline specification is **primary-subject mathematics**, with
+an explicit, versioned alias crosswalk. It is a proposal to fix before inspecting
+the substantive trends. The broader specification includes any mathematics
+category, including cross-listings. Neither is intrinsically an invalid corpus;
+they describe different populations.
 
-| Pattern | Interpretation |
+| Alias-equivalent subject labels | Treatment |
 |---|---|
-| Active authors grow as fast as or faster than papers | Broader participation |
-| New-author share and entrant persistence increase | More durable entry |
-| Median observed age falls | Participation shifts toward newer authors |
-| Top 1/5/10% shares and Gini fall | Output becomes less concentrated |
-| Papers rise, authors lag, and concentration rises | Expansion is concentrated |
-| Team sizes rise while fractional output per author falls | Collaboration explains part of paper growth |
-| Pooled change disappears after field standardization | Field composition drove the aggregate trend |
+| `math.IT`, `cs.IT` | One information-theory subject; inclusion is declared explicitly. |
+| `math.NA`, `cs.NA` | One numerical-analysis subject. |
+| `math.ST`, `stat.TH` | One statistics-theory subject. |
+| `math.MP`, `math-ph` | One mathematical-physics subject. |
 
-These patterns describe the measured system; they do not prove that AI caused
-the change.
+Verify the crosswalk against the [arXiv taxonomy](https://arxiv.org/category_taxonomy)
+and historical category metadata. Preserve the recorded primary label and all
+category tags. An alias does not create a second paper or an additional field
+membership. The proposed primary-subject definition includes these
+mathematics-labelled subject groups regardless of which equivalent label is
+stored; report literal `math.*` primary counts as a separate diagnostic.
 
-## 13. Relation to AI
+Compare primary-subject mathematics, any-mathematics membership, and a narrower
+primary-subject specification excluding the four alias groups above. The last
+is a deliberately changed subject scope, not automatically a cleaner estimate.
+Show individual categories as well, including GM/HO and information theory,
+rather than attributing any difference to “contamination.” The external
+editorial mathematics corpus provides another scope comparison.
 
-ArxivObservatory identifies **author-disclosed AI use**, not all AI use.
-Disclosure depends on both usage and willingness to disclose.
+Count one arXiv ID once, at its first-submission timestamp. Revisions and
+cross-listings are not new papers. Use ID month only as a flagged fallback.
+Record withdrawals separately under a fixed retention rule: for an upload
+estimand, retain the original submission if its metadata are available.
 
-An initial comparison can examine whether disclosed-AI papers differ in team
-size, author age, new-author participation, prior productivity, field breadth,
-and new or cross-field collaborations. Match or stratify by month, category,
-team size, and career stage. Report associations. A simple before/after-2022
-comparison does not identify a causal effect.
+Freeze extraction date, source versions, categories and authorship metadata.
+The current harvested author list need not be the v1 byline. Describe the
+main analysis as first-submission-dated papers with bylines from the frozen
+metadata; assess v1/current-byline differences where archived data permit.
+Never substitute journal-publication dates for arXiv submission dates.
 
-First establish the historical trend in mathematics independently of AI
-labels. The disclosure comparison is a second stage.
+## 7. Identity comparison and validation
 
-## 14. Paper length, references, and quality
+**Main paired comparison.** Count (a) name keys with only Unicode NFC and
+whitespace normalization, preserving initials, accents, punctuation and case;
+and (b) OpenAlex author IDs. Keep raw strings and the normalizer version.
+OpenAlex's existing model supplies the grouping; no new person resolver is
+assumed. Unknown and deleted placeholder IDs are not people. The provider
+[documents its signals, ID replacement and special IDs](https://help.openalex.org/data/authors/disambiguation/).
 
-Source-archive byte size is not a reliable paper-length measure. Better
-candidates are PDF page count, extracted word/token count, bibliography
-length, theorem/proposition count if validated, and appendix length.
+Paper matching and author alignment are different tasks. A published version
+can have a changed byline. A match to its DOI alone does not assign its author
+IDs to every arXiv author position. Flag additions, removals and ambiguous
+alignments; do not merge on a shared name alone.
 
-Reference statistics should include references per paper and per page,
-standardized by field and year. Neither longer papers nor more references
-imply higher quality. These belong under research practice and knowledge
-structure unless separately validated as quality indicators.
+Preserve individual byline slots before grouping. Two different coauthors can
+have the same recorded name on one paper. In the name specification, count
+their slots separately for \(I_t\) and allocate both fractional credits to the
+name key. Then \(I_t/A_t\) means authorship occurrences per name key, not
+necessarily distinct papers per person. Silently converting a byline to a set
+of names would corrupt team size and the accounting identities. Repeated
+OpenAlex IDs within a byline require review rather than automatic deduplication.
 
-## 15. Priority order
+**Additional diagnostics, not a replacement for the two main methods:**
 
-1. Publication-growth decomposition and top 1/5/10% concentration.
-2. Entry, observed academic age, and entrant persistence.
-3. Team size and single-author trends.
-4. Field-standardized versions of the first three analyses.
-5. Cross-field collaboration network.
-6. Paper length and reference structure.
-7. A separately designed quality study.
-8. AI-disclosure association and any later causal design.
+- Surname plus first initial, where structured parsing is reliable, can expose
+  sensitivity to aggressive name collapsing. It is not a lower bound on people.
+- ORCID-supported and zbMATH-linked cases can support an identity audit.
+  Distinguish source-supplied ORCID from a profile-level ORCID propagated by a
+  disambiguation model; [OpenAlex documents that distinction](https://help.openalex.org/data/authors/orcid/).
+  Agreement is evidence, not infallible or necessarily independent truth.
+- ORCID-only cases are selected. Compare methods on the same eligible cases;
+  do not divide all papers by the small ORCID-author population. If allocating
+  output only to those authors, retain original team-size denominators and
+  report their allocated credit, not the whole corpus paper count.
 
-The first four items form the initial democratization paper.
+Use two complementary audits: a probability sample stratified by period,
+name frequency, initials-only records, missing identifiers and first-observed
+status; and a targeted audit of the high-output tail before concentration is
+interpreted. Retain selection probabilities for population-error estimates.
+Audit suspected splits and merges, including works outside a sampled profile
+when necessary. High-output inspection alone cannot estimate population-wide
+author-count error. Preserve unresolved cases and independent review decisions.
+Sample sizes should follow the desired precision and tail coverage, not a
+claim that a convenient 100 profiles validates everything. Do not infer
+ethnicity or nationality from names; use observable ambiguity features.
 
-## 16. Current implementation and pilot
+Freeze one OpenAlex snapshot for all historical publication years. The July
+2023 replacement of IDs is a break between identifier regimes, not an automatic
+break at publication year 2023 inside a single recent snapshot. If archived
+snapshots are available, compare partitions of the same historical authorship
+records across snapshots. Separate newly indexed works from changed author
+assignments and global renumbering. Worse resolution for new authors is a
+hypothesis to audit, not an established error rate.
 
-The imported snapshot contains:
+## 8. Time windows, observed activity and cohorts
 
-- `analysis/democratization.py`;
-- `analysis/DEMOCRATIZATION.md`;
-- `tests/test_democratization.py`.
+The existing 36-month frame supports a technical pilot and, subject to matching
+coverage, the complete calendar-year comparison 2024 versus 2025. It supplies
+one complete three-year window, not a series of independent three-year
+observations, and supplies no five-year window. Recent 2026 series remain
+provisional until completeness is audited. Excluding an arbitrary last month
+alone does not establish complete coverage.
 
-It produces aggregate annual CSV output, a provenance manifest, and an SVG
-overview. It uses the Python standard library and runs offline on fixtures.
+For a longer study, retain the earlier provisional target of metadata from
+2010 onward and headline years from 2015 through the latest validated complete
+year. Earlier available history is useful for lookback, but a full 1992 harvest
+is not a prerequisite for every estimand. Final start/end years depend on a
+documented coverage audit, not a convenient historical break.
 
-The bounded 2023–2025 OpenAlex pilot was a technical validation, not a
-scientific result. It queried 77,949 candidate works, retained 69,166 usable
-arXiv-ID-dated mathematics works, created 155,781 identified paper-author
-links, and found 8,042 authorship slots without an OpenAlex author ID. The
-missing identities and short window make it unsuitable for headline claims.
+Compare active-author counts over 1-, 3- and 5-year windows where feasible.
+Deduplicate over each whole window; never sum annual unique-author counts.
+Report both total \(I(T)/A(T)\) and its annualized value \(I(T)/(T A(T))\).
+Neither measures a workforce including people with no observed publications.
+Use non-overlapping years for the primary transition decomposition. Rolling
+windows are useful visual summaries, but neighbouring points overlap and are
+not independent replications.
 
-The full historical analysis requires the longer acquisition window and a
-documented coverage audit.
+Report the frequency distribution
+\(h_{j,t}=\#\{a:n_{a,t}=j\}\), with counts and shares, particularly at
+\(j=1,2,3\), and the fuller distribution rather than only its mean. Do not
+use Good–Turing or Chao estimates as counts of unobserved mathematicians;
+publication events do not automatically satisfy their sampling assumptions.
 
-## 17. Planned aggregate output
+Later cohort comparisons will hold observed career exposure fixed, keep
+zero-output follow-up years and avoid requiring future publication to remain
+in the sample. Define cohorts by first observed publication with a fixed
+lookback and flag the left boundary. Only use cohorts with complete follow-up
+for a given horizon. Cohort tables do not identify separate age, period and
+cohort effects: period equals cohort plus observed age.
 
-The annual output should contain:
+## 9. External coverage and subfield composition
 
-```text
-year
-primary_category
-counting_method
-number_of_papers
-number_of_active_authors
-fractional_output_per_author
-full_count_output_per_author
-new_author_share_1y
-new_author_share_3y
-new_author_share_5y
-median_observed_math_age
-top_1_percent_output_share
-top_5_percent_output_share
-top_10_percent_output_share
-gini_author_output
-single_author_share
-median_team_size
-mean_team_size
-complete_authorship_paper_share
-openalex_author_id_coverage
-```
+arXiv use is part of what we observe. Its growth alone does not establish
+growth of all mathematical output. Use zbMATH Open's published corpus as a
+mathematics-specific external comparison when accessible; MathSciNet is another
+possible source if access permits. The [zbMATH API description](https://ems.press/content/serial-article-files/33042)
+documents work and author interfaces. Access through an institution is not
+assumed from the user's affiliation.
 
-No per-author rankings or paper-level labels should be committed.
+A better posting-coverage diagnostic than a ratio of unrelated annual totals is
 
-## 18. Repository and upstream workflow
+\[
+q_{y,s}=\frac{\#\{\text{eligible published zbMATH works in year }y,
+\text{ field }s\text{ linked to an arXiv version}\}}
+{\#\{\text{eligible published zbMATH works in year }y,\text{ field }s\}}.
+\]
 
-The authoritative upstream remains `schmittj/ArxivObservatory`. Follow its
-`CONTRIBUTING.md` and `AGENTS.md`: never commit paper content, databases,
-credentials, or per-paper labels; do not modify `pipeline/` or `TAXONOMY.md`;
-add analysis as new modules with fixture-based tests; and submit changes by
-Pull Request once suitable upstream access is available.
+Use mature publication cohorts or a common follow-up horizon, distinguish
+preprint-only entries, and report matching and publication lags. Changing
+indexing policies and link coverage still affect this diagnostic; it is not
+an unbiased correction factor for the total research population. Do not
+confound journal year in this diagnostic with submission year in our main series.
+
+Report within-subfield trends before interpreting pooled changes. Assign each
+paper to a single declared primary subject for additive paper accounting.
+Authors can occur in several fields, so global author totals must be set
+unions. Standardize paper-level quantities, such as team size, to a fixed
+declared field distribution when informative. Author-level standardization
+needs its own author weights or disjoint reference classification; weighting
+field ratios by paper shares does not reconstruct the global author ratio.
+
+## 10. Uncertainty and specification displays
+
+Exact counts in a frozen observed dataset need no conventional sampling error
+bars. Measurement uncertainty, exclusions and external generalization remain.
+Probability-sampled validation can have sampling intervals; any temporal or
+superpopulation interval needs an explicit model and dependence assumptions.
+
+Predeclare a manageable grid, recording infeasible cells explicitly:
+
+| Dimension | Core comparison |
+|---|---|
+| Corpus | Primary-subject, any-mathematics, narrower primary-subject scope |
+| Identity | Normalized recorded names and OpenAlex IDs, on the same papers |
+| Activity window | 1, 3, 5 years where complete data exist |
+| Output convention | Full authorship participation and conserved fractional credit |
+| Coverage | Complete aligned papers, plus separately labelled broader-frame diagnostics |
+| Field and recent cutoff | Within-field results; validated mature cutoff and provisional recent extension |
+
+Show identified curves or a specification range within comparable targets.
+Different activity windows and populations belong in separate panels. A fan
+of specifications is not a confidence interval, and the fraction of curves
+with positive growth is not a probability that growth is positive. If a sign
+changes across reasonable definitions, report that instability as a result.
+Always expose matched/retained denominators and missing periods.
+
+## 11. Concentration: second stage
+
+Retain top 1%, 5% and 10% shares, Lorenz curves, Gini and output quantiles.
+Add a fixed top-N share (initially N=100 where the population is large enough)
+to distinguish relative rank from a fixed number of authors. Declare tie rules;
+fractional allocation of tied boundary groups avoids ID-dependent rankings.
+
+Add Theil T when a disjoint group decomposition is needed. For nonnegative
+credit \(x_a\), population \(N\), and positive mean \(\mu\),
+
+\[
+T=\frac1N\sum_a\frac{x_a}{\mu}\log\frac{x_a}{\mu}.
+\]
+
+Use the continuous extension \(0\log0=0\). For disjoint groups with output
+shares \(s_g=N_g\mu_g/(N\mu)\),
+
+\[
+T=\sum_g s_g T_g+\sum_g s_g\log(\mu_g/\mu).
+\]
+
+Zero-output groups contribute zero to these weighted terms. Entry cohorts
+form a natural disjoint grouping. Overlapping field memberships do not; an
+explicit partition or a separately derived allocation is required. Theil
+complements Gini rather than replacing all other summaries.
+
+Compare the active-author distribution with a fixed reference cohort selected
+using pre-period history and followed with zero-output years retained. This
+answers a different question and excludes later entrants by design; it is not
+the population of all mathematicians. A retrospective surrounding-window
+population is another labelled sensitivity analysis only where both endpoints
+are observed.
+
+Entry can change concentration with no change in incumbents' output, but the
+direction is not universal. For example, Gini falls from about 0.490 for
+outputs [1,100] to 0.437 for [1,50,100], although 50 is below the old mean.
+Short-window singleton concentration also behaves differently under full
+and fractional credit because team sizes can vary.
+
+## 12. Interpretation and later questions
+
+Increasing observed participation does not, alone, establish lower barriers
+to a research career. Publication counts and fractional credits do not measure
+effort, quality, importance or causal productivity. Composition, posting
+propensity, field changes and collaboration must remain visible in the account.
+
+AI is a later research question. An association with disclosed AI use requires
+its own design and reflects disclosure as well as use. A uniform subfield
+trend is not a falsification of an AI effect, and a larger change in allegedly
+AI-adjacent fields would not establish one. Such predictions need independent
+exposure measures and justified identifying assumptions. Pre/post-2022 alone
+is insufficient.
+
+Keep career-stage composition, persistence and concentration as planned
+extensions once identity measurement is adequate. Paper length, references,
+field breadth and collaboration networks remain later descriptive modules.
+Preserve a separate design for any quality study.
+
+## 13. Execution sequence and deliverables
+
+1. Discuss this protocol and the closest prior studies; fix the corpus rules,
+   naming normalization and distinction between pilot and historical study.
+2. Run the aggregate metadata and matching audit on the existing database.
+   Attempt a definitions-level reproduction of the closest published study
+   when its released data are available.
+3. Freeze the paper frame, byline source, identity snapshot and feasible
+   periods. Document excluded records and validate author parsing/alignment.
+4. Produce paired name/ID counts and the exact paper/author/incidence account.
+   Audit identity errors across periods before interpreting person trends.
+5. Produce the continuing/entry/exit decomposition for validated adjacent
+   years; add returner and cohort analyses only with sufficient history.
+6. Extend the historical window through the owner's data workflow if required;
+   then evaluate 3-/5-year windows and external posting coverage.
+7. Audit the high-output tail and produce concentration statistics.
+8. Update the existing website with validated aggregates and specification
+   controls. Show papers and author series indexed to a common baseline,
+   team sizes and participation separately, and the signed transition
+   decomposition. Keep compact sparklines with exact values available.
+
+Retain work, authorship-slot, author-year, author-window and transition tables.
+Each output needs source snapshot, corpus rule, date rule, identity method,
+window, credit convention, coverage and exclusion counts. Work-level and
+authorship-level identifiers remain untracked under the contribution policy.
+
+The current aggregation prototype is not an implementation of all this
+protocol. Raw-name alignment, longitudinal decomposition, snapshot-drift
+audits and the additional concentration diagnostics require implementation.
+This revision checks formulas on synthetic examples only; it does not supply
+new contributor estimates or rerun empirical analyses. No owner decisions in
+the upstream AI-disclosure pipeline or taxonomy are changed by this proposal.
+
+## Appendix A. What the activity-window illustration does and does not show
+
+For a fixed underlying population with illustrative Poisson publication
+incidences \(N_i(T)\) of mean \(\lambda_iT\),
+
+\[
+\mathbb E[A_{obs}(T)]=\sum_i(1-e^{-\lambda_iT}),\qquad
+\mathbb E[I(T)]=T\sum_i\lambda_i.
+\]
+
+Under finite sums and positive total rate, the ratio of these expectations
+tends to 1 as \(T\to0\). It is not generally
+\(\mathbb E[I(T)/A_{obs}(T)]\); windows with no active author also need
+handling. The model is an illustration, not an assumption that coauthors'
+publication events are independent Poisson processes.
+
+Fixed-window comparisons validly describe observed active authors even when
+the distribution changes. Interpreting them as changes in individual rates
+requires separating composition from within-person change. Adding people with
+low fixed rates changes the population's rate distribution even if no
+incumbent changes rate. This motivates the frequency tables, window
+comparisons and observed-cohort analysis; it does not identify the unseen zeros.
+
+## Appendix B. Disposition of the supplied critique
+
+| Proposal or assertion | Decision and reason |
+|---|---|
+| Keep exact incidence/fractional identities | Adopt; mean fractional credit is derived, while its distribution is informative. |
+| Larger teams mechanically raise P/A | Correct the sign conditional on fixed participation; no unconditional direction. |
+| Replace aggregate ratios with continuing/entry/exit accounting | Add that account centrally; retain useful derived ratios. Neither is causal or immune to measurement error. |
+| Three years cannot support any transition decomposition | Adjacent-year observed transitions are feasible; first-observed/returner distinctions and long windows need more history. |
+| Window selection and low-output mass matter | Adopt frequency distributions, equal-exposure comparisons and explicit populations; do not estimate the unseen workforce with unvalidated capture models. |
+| Any-math is not mathematics; alias removal is always cleaner | Reject the categorical claim. Define alternative scopes explicitly and audit composition. |
+| Raw strings and initials provide bounds around true authors | Reject as bounds. They are informative stress tests with both splitting and merging errors. |
+| Backward extension necessarily crosses the OpenAlex 2023 break | Correct: using one recent snapshot for all publication years avoids mixing old and new ID regimes. |
+| Audit the top instead of a random sample | Use both, because author totals/entry and tail concentration have different validation needs. |
+| Entry always raises Gini | Reject the universal direction; composition effects depend on the distributions. |
+| Census data make every confidence interval meaningless | Avoid sampling bars for deterministic frame counts; retain justified uncertainty for validation samples or explicit stochastic targets. |
+| Cohort tables solve age-period-cohort identification | They improve comparisons but do not remove the exact age-period-cohort relation. |
+| AI-adjacent versus other fields is a ready-made falsification test | Do not adopt without an independently justified mechanism and exposure design. |
+| Engage prior work before running the analysis | Adopt; Hulek–Teschke is a particularly close mathematics-specific precedent, alongside the other studies above. |
+| Harvest everything immediately | Reuse and audit existing data first. Extend only to meet a specified estimand and through the established acquisition workflow. |
+
