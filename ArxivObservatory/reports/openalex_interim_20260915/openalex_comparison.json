@@ -1,0 +1,3800 @@
+{
+  "schema_version": 1,
+  "computed_at": "2026-09-15T11:58:47.258927+00:00",
+  "source": {
+    "started_at": "2026-09-15T11:29:16.093883+00:00",
+    "finished_at": "2026-09-15T11:55:32.489010+00:00",
+    "query_scope": "OpenAlex core; indexed_in:arxiv; primary_topic.field.id:26; publication_year:2024-2026",
+    "authentication": "anonymous, no payment account",
+    "requests_this_run": 599
+  },
+  "acquisition_sha256": "ca20dba9b006468c3a0d24fb2bde3937659fd37c66b4310e87555228ab14a47b",
+  "normalizer": "nfc-whitespace-v1; case, initials, accents, punctuation preserved",
+  "date_basis": "arXiv identifier month proxy, 2024-01 through 2025-12; OpenAlex publication dates not used as upload dates",
+  "scope_caveat": "OpenAlex core records with primary field Mathematics and indexed_in arxiv, limited to OpenAlex publication years 2024-2026. This is an observed subset, not all arXiv mathematics. Earlier/later OpenAlex publication years can omit otherwise eligible uploads.",
+  "authorship_caveat": "OpenAlex's source byline may describe the journal version, not the initial arXiv byline. Names and IDs are measured on the same OpenAlex authorship slots.",
+  "byline_completeness": "No missing name/ID, no repeated IDs, no group-name flag, no truncation flag and fewer than 100 returned slots. This verifies supplied slots, not source byline accuracy.",
+  "diagnostics": {
+    "candidate_works": 83017,
+    "arxiv_id_outside_window": 32552,
+    "multiple_arxiv_ids": 20,
+    "no_unique_modern_arxiv_id": 5,
+    "unique_arxiv_papers_in_window": 50440,
+    "duplicate_work_rows": 0
+  },
+  "quality": {
+    "linked_papers": 50440,
+    "paired_papers": 45365,
+    "retention": 0.899385408406027,
+    "excluded_papers": 5075,
+    "reasons_nonexclusive": {
+      "missing_or_placeholder_author_id": 5048,
+      "repeated_id_in_byline": 27,
+      "possible_group_name": 14,
+      "truncated_or_100plus_byline": 12
+    },
+    "observed_slots": 117327,
+    "slots_with_valid_id": 109761,
+    "slots_with_raw_name": 117327,
+    "name_collision_papers": 0,
+    "mean_observed_team_all": 2.3260705789056306,
+    "mean_team_paired": 2.242058855946214
+  },
+  "monthly": [
+    {
+      "period": "2024-01",
+      "papers": 2075,
+      "authorship_slots": 4480,
+      "mean_team_size": 2.1590361445783133,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4224,
+        "papers_per_author": 0.4912405303030303,
+        "incidences_per_author": 1.0606060606060606,
+        "fractional_credit_sum": 2075.0
+      },
+      "ids": {
+        "authors": 4223,
+        "papers_per_author": 0.491356855316126,
+        "incidences_per_author": 1.0608572105138527,
+        "fractional_credit_sum": 2075.0
+      },
+      "quality": {
+        "linked_papers": 2141,
+        "paired_papers": 2075,
+        "retention": 0.9691732835123774,
+        "excluded_papers": 66,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 64,
+          "repeated_id_in_byline": 2
+        },
+        "observed_slots": 4686,
+        "slots_with_valid_id": 4605,
+        "slots_with_raw_name": 4686,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.188696870621205,
+        "mean_team_paired": 2.1590361445783133
+      }
+    },
+    {
+      "period": "2024-02",
+      "papers": 1902,
+      "authorship_slots": 4431,
+      "mean_team_size": 2.329652996845426,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 4227,
+        "papers_per_author": 0.44996451383960256,
+        "incidences_per_author": 1.048261178140525,
+        "fractional_credit_sum": 1902.0
+      },
+      "ids": {
+        "authors": 4206,
+        "papers_per_author": 0.4522111269614836,
+        "incidences_per_author": 1.0534950071326676,
+        "fractional_credit_sum": 1902.0
+      },
+      "quality": {
+        "linked_papers": 1960,
+        "paired_papers": 1902,
+        "retention": 0.9704081632653061,
+        "excluded_papers": 58,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 57,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 4662,
+        "slots_with_valid_id": 4576,
+        "slots_with_raw_name": 4662,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3785714285714286,
+        "mean_team_paired": 2.329652996845426
+      }
+    },
+    {
+      "period": "2024-03",
+      "papers": 1957,
+      "authorship_slots": 4402,
+      "mean_team_size": 2.2493612672457846,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4216,
+        "papers_per_author": 0.4641840607210626,
+        "incidences_per_author": 1.0441176470588236,
+        "fractional_credit_sum": 1957.0
+      },
+      "ids": {
+        "authors": 4196,
+        "papers_per_author": 0.4663965681601525,
+        "incidences_per_author": 1.0490943755958055,
+        "fractional_credit_sum": 1957.0
+      },
+      "quality": {
+        "linked_papers": 2007,
+        "paired_papers": 1957,
+        "retention": 0.9750871948181365,
+        "excluded_papers": 50,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 49,
+          "possible_group_name": 1
+        },
+        "observed_slots": 4577,
+        "slots_with_valid_id": 4512,
+        "slots_with_raw_name": 4577,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.280518186347783,
+        "mean_team_paired": 2.2493612672457846
+      }
+    },
+    {
+      "period": "2024-04",
+      "papers": 2009,
+      "authorship_slots": 4510,
+      "mean_team_size": 2.2448979591836733,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4289,
+        "papers_per_author": 0.4684075542084402,
+        "incidences_per_author": 1.0515271625087432,
+        "fractional_credit_sum": 2009.0
+      },
+      "ids": {
+        "authors": 4280,
+        "papers_per_author": 0.469392523364486,
+        "incidences_per_author": 1.0537383177570094,
+        "fractional_credit_sum": 2009.0
+      },
+      "quality": {
+        "linked_papers": 2076,
+        "paired_papers": 2009,
+        "retention": 0.9677263969171483,
+        "excluded_papers": 67,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 66,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 4753,
+        "slots_with_valid_id": 4658,
+        "slots_with_raw_name": 4753,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.2894990366088632,
+        "mean_team_paired": 2.2448979591836733
+      }
+    },
+    {
+      "period": "2024-05",
+      "papers": 2129,
+      "authorship_slots": 4810,
+      "mean_team_size": 2.2592766557069046,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4584,
+        "papers_per_author": 0.4644415357766143,
+        "incidences_per_author": 1.0493019197207678,
+        "fractional_credit_sum": 2129.0
+      },
+      "ids": {
+        "authors": 4579,
+        "papers_per_author": 0.46494867875081897,
+        "incidences_per_author": 1.0504476960034943,
+        "fractional_credit_sum": 2129.0
+      },
+      "quality": {
+        "linked_papers": 2204,
+        "paired_papers": 2129,
+        "retention": 0.9659709618874773,
+        "excluded_papers": 75,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 73,
+          "repeated_id_in_byline": 2,
+          "truncated_or_100plus_byline": 1,
+          "possible_group_name": 1
+        },
+        "observed_slots": 5191,
+        "slots_with_valid_id": 5090,
+        "slots_with_raw_name": 5191,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3552631578947367,
+        "mean_team_paired": 2.2592766557069046
+      }
+    },
+    {
+      "period": "2024-06",
+      "papers": 1942,
+      "authorship_slots": 4491,
+      "mean_team_size": 2.312564366632338,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 4287,
+        "papers_per_author": 0.4529974341031024,
+        "incidences_per_author": 1.0475857242827151,
+        "fractional_credit_sum": 1942.0
+      },
+      "ids": {
+        "authors": 4282,
+        "papers_per_author": 0.4535263895375993,
+        "incidences_per_author": 1.0488089677720691,
+        "fractional_credit_sum": 1942.0
+      },
+      "quality": {
+        "linked_papers": 2000,
+        "paired_papers": 1942,
+        "retention": 0.971,
+        "excluded_papers": 58,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 55,
+          "truncated_or_100plus_byline": 2,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 4935,
+        "slots_with_valid_id": 4861,
+        "slots_with_raw_name": 4935,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.4675,
+        "mean_team_paired": 2.312564366632338
+      }
+    },
+    {
+      "period": "2024-07",
+      "papers": 1977,
+      "authorship_slots": 4486,
+      "mean_team_size": 2.269094587759231,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4303,
+        "papers_per_author": 0.45944689751336276,
+        "incidences_per_author": 1.0425284685103415,
+        "fractional_credit_sum": 1977.0
+      },
+      "ids": {
+        "authors": 4296,
+        "papers_per_author": 0.46019553072625696,
+        "incidences_per_author": 1.0442271880819367,
+        "fractional_credit_sum": 1977.0
+      },
+      "quality": {
+        "linked_papers": 2053,
+        "paired_papers": 1977,
+        "retention": 0.9629810034096444,
+        "excluded_papers": 76,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 74,
+          "truncated_or_100plus_byline": 1,
+          "repeated_id_in_byline": 2,
+          "possible_group_name": 1
+        },
+        "observed_slots": 4845,
+        "slots_with_valid_id": 4743,
+        "slots_with_raw_name": 4845,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.359961032635168,
+        "mean_team_paired": 2.269094587759231
+      }
+    },
+    {
+      "period": "2024-08",
+      "papers": 1682,
+      "authorship_slots": 3825,
+      "mean_team_size": 2.274078478002378,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3653,
+        "papers_per_author": 0.4604434711196277,
+        "incidences_per_author": 1.047084588009855,
+        "fractional_credit_sum": 1682.0
+      },
+      "ids": {
+        "authors": 3656,
+        "papers_per_author": 0.4600656455142232,
+        "incidences_per_author": 1.0462253829321664,
+        "fractional_credit_sum": 1682.0
+      },
+      "quality": {
+        "linked_papers": 1758,
+        "paired_papers": 1682,
+        "retention": 0.9567690557451649,
+        "excluded_papers": 76,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 76,
+          "truncated_or_100plus_byline": 1,
+          "repeated_id_in_byline": 1,
+          "possible_group_name": 1
+        },
+        "observed_slots": 4190,
+        "slots_with_valid_id": 4095,
+        "slots_with_raw_name": 4190,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.383390216154721,
+        "mean_team_paired": 2.274078478002378
+      }
+    },
+    {
+      "period": "2024-09",
+      "papers": 1968,
+      "authorship_slots": 4428,
+      "mean_team_size": 2.25,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 4226,
+        "papers_per_author": 0.46568859441552296,
+        "incidences_per_author": 1.0477993374349266,
+        "fractional_credit_sum": 1968.0
+      },
+      "ids": {
+        "authors": 4220,
+        "papers_per_author": 0.4663507109004739,
+        "incidences_per_author": 1.0492890995260664,
+        "fractional_credit_sum": 1968.0
+      },
+      "quality": {
+        "linked_papers": 2111,
+        "paired_papers": 1968,
+        "retention": 0.9322595926101374,
+        "excluded_papers": 143,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 142,
+          "truncated_or_100plus_byline": 1,
+          "possible_group_name": 1,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 4942,
+        "slots_with_valid_id": 4783,
+        "slots_with_raw_name": 4942,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3410705826622453,
+        "mean_team_paired": 2.25
+      }
+    },
+    {
+      "period": "2024-10",
+      "papers": 2217,
+      "authorship_slots": 5073,
+      "mean_team_size": 2.288227334235453,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4858,
+        "papers_per_author": 0.45636064223960476,
+        "incidences_per_author": 1.0442568958419103,
+        "fractional_credit_sum": 2217.0
+      },
+      "ids": {
+        "authors": 4855,
+        "papers_per_author": 0.45664263645726055,
+        "incidences_per_author": 1.0449021627188466,
+        "fractional_credit_sum": 2217.0
+      },
+      "quality": {
+        "linked_papers": 2377,
+        "paired_papers": 2217,
+        "retention": 0.9326882625157762,
+        "excluded_papers": 160,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 159,
+          "truncated_or_100plus_byline": 2,
+          "repeated_id_in_byline": 3,
+          "possible_group_name": 2
+        },
+        "observed_slots": 5775,
+        "slots_with_valid_id": 5579,
+        "slots_with_raw_name": 5775,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.429533024821203,
+        "mean_team_paired": 2.288227334235453
+      }
+    },
+    {
+      "period": "2024-11",
+      "papers": 1867,
+      "authorship_slots": 4241,
+      "mean_team_size": 2.2715586502410283,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4039,
+        "papers_per_author": 0.4622431294874969,
+        "incidences_per_author": 1.0500123793018075,
+        "fractional_credit_sum": 1867.0
+      },
+      "ids": {
+        "authors": 4046,
+        "papers_per_author": 0.46144340088976765,
+        "incidences_per_author": 1.0481957488877904,
+        "fractional_credit_sum": 1867.0
+      },
+      "quality": {
+        "linked_papers": 2060,
+        "paired_papers": 1867,
+        "retention": 0.9063106796116505,
+        "excluded_papers": 193,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 193,
+          "truncated_or_100plus_byline": 1
+        },
+        "observed_slots": 4930,
+        "slots_with_valid_id": 4703,
+        "slots_with_raw_name": 4930,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3932038834951457,
+        "mean_team_paired": 2.2715586502410283
+      }
+    },
+    {
+      "period": "2024-12",
+      "papers": 2031,
+      "authorship_slots": 4530,
+      "mean_team_size": 2.2304283604135895,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4357,
+        "papers_per_author": 0.4661464310305256,
+        "incidences_per_author": 1.0397062198760616,
+        "fractional_credit_sum": 2031.0
+      },
+      "ids": {
+        "authors": 4360,
+        "papers_per_author": 0.4658256880733945,
+        "incidences_per_author": 1.0389908256880733,
+        "fractional_credit_sum": 2031.0
+      },
+      "quality": {
+        "linked_papers": 2231,
+        "paired_papers": 2031,
+        "retention": 0.9103541012998655,
+        "excluded_papers": 200,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 198,
+          "repeated_id_in_byline": 1,
+          "possible_group_name": 1
+        },
+        "observed_slots": 5153,
+        "slots_with_valid_id": 4906,
+        "slots_with_raw_name": 5153,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.309726580008965,
+        "mean_team_paired": 2.2304283604135895
+      }
+    },
+    {
+      "period": "2025-01",
+      "papers": 1752,
+      "authorship_slots": 3849,
+      "mean_team_size": 2.1969178082191783,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3715,
+        "papers_per_author": 0.4716016150740242,
+        "incidences_per_author": 1.0360699865410499,
+        "fractional_credit_sum": 1752.0
+      },
+      "ids": {
+        "authors": 3710,
+        "papers_per_author": 0.47223719676549863,
+        "incidences_per_author": 1.037466307277628,
+        "fractional_credit_sum": 1752.0
+      },
+      "quality": {
+        "linked_papers": 1916,
+        "paired_papers": 1752,
+        "retention": 0.9144050104384134,
+        "excluded_papers": 164,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 163,
+          "truncated_or_100plus_byline": 1,
+          "repeated_id_in_byline": 1,
+          "possible_group_name": 2
+        },
+        "observed_slots": 4501,
+        "slots_with_valid_id": 4311,
+        "slots_with_raw_name": 4501,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3491649269311066,
+        "mean_team_paired": 2.1969178082191783
+      }
+    },
+    {
+      "period": "2025-02",
+      "papers": 1710,
+      "authorship_slots": 3956,
+      "mean_team_size": 2.3134502923976608,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3800,
+        "papers_per_author": 0.45,
+        "incidences_per_author": 1.0410526315789475,
+        "fractional_credit_sum": 1710.0
+      },
+      "ids": {
+        "authors": 3780,
+        "papers_per_author": 0.4523809523809524,
+        "incidences_per_author": 1.0465608465608465,
+        "fractional_credit_sum": 1710.0
+      },
+      "quality": {
+        "linked_papers": 1898,
+        "paired_papers": 1710,
+        "retention": 0.9009483667017913,
+        "excluded_papers": 188,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 188,
+          "possible_group_name": 2
+        },
+        "observed_slots": 4642,
+        "slots_with_valid_id": 4426,
+        "slots_with_raw_name": 4642,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.445732349841939,
+        "mean_team_paired": 2.3134502923976608
+      }
+    },
+    {
+      "period": "2025-03",
+      "papers": 1598,
+      "authorship_slots": 3577,
+      "mean_team_size": 2.2384230287859825,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3466,
+        "papers_per_author": 0.46105020196191576,
+        "incidences_per_author": 1.0320253894979803,
+        "fractional_credit_sum": 1598.0
+      },
+      "ids": {
+        "authors": 3439,
+        "papers_per_author": 0.46466996219831347,
+        "incidences_per_author": 1.0401279441698168,
+        "fractional_credit_sum": 1598.0
+      },
+      "quality": {
+        "linked_papers": 1750,
+        "paired_papers": 1598,
+        "retention": 0.9131428571428571,
+        "excluded_papers": 152,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 152,
+          "truncated_or_100plus_byline": 1
+        },
+        "observed_slots": 4114,
+        "slots_with_valid_id": 3937,
+        "slots_with_raw_name": 4114,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.350857142857143,
+        "mean_team_paired": 2.2384230287859825
+      }
+    },
+    {
+      "period": "2025-04",
+      "papers": 1887,
+      "authorship_slots": 4221,
+      "mean_team_size": 2.236883942766296,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4049,
+        "papers_per_author": 0.46604099777722896,
+        "incidences_per_author": 1.0424796245986663,
+        "fractional_credit_sum": 1887.0
+      },
+      "ids": {
+        "authors": 4036,
+        "papers_per_author": 0.46754212091179387,
+        "incidences_per_author": 1.0458374628344895,
+        "fractional_credit_sum": 1887.0
+      },
+      "quality": {
+        "linked_papers": 2088,
+        "paired_papers": 1887,
+        "retention": 0.9037356321839081,
+        "excluded_papers": 201,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 199,
+          "repeated_id_in_byline": 1,
+          "possible_group_name": 1
+        },
+        "observed_slots": 4776,
+        "slots_with_valid_id": 4560,
+        "slots_with_raw_name": 4776,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.2873563218390807,
+        "mean_team_paired": 2.236883942766296
+      }
+    },
+    {
+      "period": "2025-05",
+      "papers": 1906,
+      "authorship_slots": 4287,
+      "mean_team_size": 2.2492130115424973,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 4156,
+        "papers_per_author": 0.458614051973051,
+        "incidences_per_author": 1.0315206929740135,
+        "fractional_credit_sum": 1906.0
+      },
+      "ids": {
+        "authors": 4120,
+        "papers_per_author": 0.462621359223301,
+        "incidences_per_author": 1.0405339805825242,
+        "fractional_credit_sum": 1906.0
+      },
+      "quality": {
+        "linked_papers": 2122,
+        "paired_papers": 1906,
+        "retention": 0.8982092365692743,
+        "excluded_papers": 216,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 215,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 4972,
+        "slots_with_valid_id": 4721,
+        "slots_with_raw_name": 4972,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3430725730442976,
+        "mean_team_paired": 2.2492130115424973
+      }
+    },
+    {
+      "period": "2025-06",
+      "papers": 1841,
+      "authorship_slots": 4242,
+      "mean_team_size": 2.3041825095057034,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4095,
+        "papers_per_author": 0.4495726495726496,
+        "incidences_per_author": 1.035897435897436,
+        "fractional_credit_sum": 1841.0
+      },
+      "ids": {
+        "authors": 4076,
+        "papers_per_author": 0.4516683022571148,
+        "incidences_per_author": 1.0407262021589794,
+        "fractional_credit_sum": 1841.0
+      },
+      "quality": {
+        "linked_papers": 2155,
+        "paired_papers": 1841,
+        "retention": 0.854292343387471,
+        "excluded_papers": 314,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 312,
+          "truncated_or_100plus_byline": 1,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 5209,
+        "slots_with_valid_id": 4698,
+        "slots_with_raw_name": 5209,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.417169373549884,
+        "mean_team_paired": 2.3041825095057034
+      }
+    },
+    {
+      "period": "2025-07",
+      "papers": 1806,
+      "authorship_slots": 3979,
+      "mean_team_size": 2.2032115171650055,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3848,
+        "papers_per_author": 0.4693347193347193,
+        "incidences_per_author": 1.034043659043659,
+        "fractional_credit_sum": 1806.0
+      },
+      "ids": {
+        "authors": 3806,
+        "papers_per_author": 0.4745139253809774,
+        "incidences_per_author": 1.0454545454545454,
+        "fractional_credit_sum": 1806.0
+      },
+      "quality": {
+        "linked_papers": 1994,
+        "paired_papers": 1806,
+        "retention": 0.905717151454363,
+        "excluded_papers": 188,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 188,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 4542,
+        "slots_with_valid_id": 4326,
+        "slots_with_raw_name": 4542,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.2778335005015045,
+        "mean_team_paired": 2.2032115171650055
+      }
+    },
+    {
+      "period": "2025-08",
+      "papers": 1245,
+      "authorship_slots": 2696,
+      "mean_team_size": 2.165461847389558,
+      "median_team_size": 2,
+      "names": {
+        "authors": 2607,
+        "papers_per_author": 0.47756041426927504,
+        "incidences_per_author": 1.0341388569236671,
+        "fractional_credit_sum": 1245.0
+      },
+      "ids": {
+        "authors": 2605,
+        "papers_per_author": 0.4779270633397313,
+        "incidences_per_author": 1.034932821497121,
+        "fractional_credit_sum": 1245.0
+      },
+      "quality": {
+        "linked_papers": 1403,
+        "paired_papers": 1245,
+        "retention": 0.887384176764077,
+        "excluded_papers": 158,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 157,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 3190,
+        "slots_with_valid_id": 3001,
+        "slots_with_raw_name": 3190,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.2736992159657876,
+        "mean_team_paired": 2.165461847389558
+      }
+    },
+    {
+      "period": "2025-09",
+      "papers": 2003,
+      "authorship_slots": 4372,
+      "mean_team_size": 2.1827259111333,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4169,
+        "papers_per_author": 0.48045094746941713,
+        "incidences_per_author": 1.0486927320700408,
+        "fractional_credit_sum": 2003.0
+      },
+      "ids": {
+        "authors": 4169,
+        "papers_per_author": 0.48045094746941713,
+        "incidences_per_author": 1.0486927320700408,
+        "fractional_credit_sum": 2003.0
+      },
+      "quality": {
+        "linked_papers": 2212,
+        "paired_papers": 2003,
+        "retention": 0.9055153707052441,
+        "excluded_papers": 209,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 208,
+          "repeated_id_in_byline": 3
+        },
+        "observed_slots": 5160,
+        "slots_with_valid_id": 4918,
+        "slots_with_raw_name": 5160,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.332730560578662,
+        "mean_team_paired": 2.1827259111333
+      }
+    },
+    {
+      "period": "2025-10",
+      "papers": 1786,
+      "authorship_slots": 3907,
+      "mean_team_size": 2.187569988801792,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3774,
+        "papers_per_author": 0.4732379438261791,
+        "incidences_per_author": 1.0352411234764176,
+        "fractional_credit_sum": 1786.0
+      },
+      "ids": {
+        "authors": 3760,
+        "papers_per_author": 0.475,
+        "incidences_per_author": 1.039095744680851,
+        "fractional_credit_sum": 1786.0
+      },
+      "quality": {
+        "linked_papers": 1997,
+        "paired_papers": 1786,
+        "retention": 0.8943415122684026,
+        "excluded_papers": 211,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 209,
+          "repeated_id_in_byline": 2
+        },
+        "observed_slots": 4506,
+        "slots_with_valid_id": 4263,
+        "slots_with_raw_name": 4506,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.256384576865298,
+        "mean_team_paired": 2.187569988801792
+      }
+    },
+    {
+      "period": "2025-11",
+      "papers": 1774,
+      "authorship_slots": 3969,
+      "mean_team_size": 2.237316798196167,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 3783,
+        "papers_per_author": 0.4689399947131906,
+        "incidences_per_author": 1.049167327517843,
+        "fractional_credit_sum": 1774.0
+      },
+      "ids": {
+        "authors": 3785,
+        "papers_per_author": 0.4686922060766182,
+        "incidences_per_author": 1.0486129458388376,
+        "fractional_credit_sum": 1774.0
+      },
+      "quality": {
+        "linked_papers": 2792,
+        "paired_papers": 1774,
+        "retention": 0.6353868194842407,
+        "excluded_papers": 1018,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1018,
+          "possible_group_name": 1
+        },
+        "observed_slots": 6283,
+        "slots_with_valid_id": 4304,
+        "slots_with_raw_name": 6283,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.2503581661891117,
+        "mean_team_paired": 2.237316798196167
+      }
+    },
+    {
+      "period": "2025-12",
+      "papers": 2301,
+      "authorship_slots": 4949,
+      "mean_team_size": 2.150803998261625,
+      "median_team_size": 2,
+      "names": {
+        "authors": 4655,
+        "papers_per_author": 0.49430719656283567,
+        "incidences_per_author": 1.063157894736842,
+        "fractional_credit_sum": 2301.0
+      },
+      "ids": {
+        "authors": 4708,
+        "papers_per_author": 0.48874256584536957,
+        "incidences_per_author": 1.0511894647408666,
+        "fractional_credit_sum": 2301.0
+      },
+      "quality": {
+        "linked_papers": 3135,
+        "paired_papers": 2301,
+        "retention": 0.7339712918660287,
+        "excluded_papers": 834,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 833,
+          "repeated_id_in_byline": 1
+        },
+        "observed_slots": 6793,
+        "slots_with_valid_id": 5185,
+        "slots_with_raw_name": 6793,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.1668261562998405,
+        "mean_team_paired": 2.150803998261625
+      }
+    }
+  ],
+  "annual": [
+    {
+      "period": "2024",
+      "papers": 23756,
+      "authorship_slots": 53707,
+      "mean_team_size": 2.260776224953696,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 40831,
+        "papers_per_author": 0.5818128382846367,
+        "incidences_per_author": 1.315348632166736,
+        "fractional_credit_sum": 23756.0,
+        "fractional_distribution": {
+          "gini": 0.38395586910593815,
+          "top_1_share": 0.06037501343424058,
+          "top_5_share": 0.1864397807685819,
+          "top_10_share": 0.2887270741191856,
+          "top_100_share": 0.021979031084099276,
+          "median": 0.5
+        },
+        "full_distribution": {
+          "gini": 0.20394794248688441,
+          "top_1_share": 0.04778799784013257,
+          "top_5_share": 0.1487822816392649,
+          "top_10_share": 0.23533617591747819,
+          "top_100_share": 0.016943787588210104,
+          "median": 1
+        },
+        "activity_frequency": {
+          "1": 32428,
+          "2": 5796,
+          "3": 1679,
+          "4": 515,
+          "5": 206,
+          "6": 99,
+          "7": 43,
+          "8": 26,
+          "9": 13,
+          "10": 6,
+          "11": 8,
+          "12": 2,
+          "13": 2,
+          "14": 2,
+          "15": 1,
+          "16": 1,
+          "17": 1,
+          "20": 1,
+          "22": 1,
+          "24": 1
+        }
+      },
+      "ids": {
+        "authors": 40258,
+        "papers_per_author": 0.590093894381241,
+        "incidences_per_author": 1.334070246907447,
+        "fractional_credit_sum": 23756.0,
+        "fractional_distribution": {
+          "gini": 0.38411662773864474,
+          "top_1_share": 0.058373072667356224,
+          "top_5_share": 0.1824693425973103,
+          "top_10_share": 0.28542094598354073,
+          "top_100_share": 0.021292966588891828,
+          "median": 0.5
+        },
+        "full_distribution": {
+          "gini": 0.2111132487910201,
+          "top_1_share": 0.04652838549909696,
+          "top_5_share": 0.14813152847859684,
+          "top_10_share": 0.2383227512242352,
+          "top_100_share": 0.01660863574580595,
+          "median": 1.0
+        },
+        "activity_frequency": {
+          "1": 31557,
+          "2": 5870,
+          "3": 1820,
+          "4": 591,
+          "5": 226,
+          "6": 95,
+          "7": 38,
+          "8": 27,
+          "9": 8,
+          "10": 6,
+          "11": 8,
+          "12": 3,
+          "13": 3,
+          "14": 1,
+          "15": 2,
+          "17": 1,
+          "22": 1,
+          "26": 1
+        }
+      },
+      "team_size_frequency": {
+        "1": 7339,
+        "2": 8059,
+        "3": 5320,
+        "4": 2023,
+        "5": 573,
+        "6": 212,
+        "7": 96,
+        "8": 63,
+        "9": 19,
+        "10": 15,
+        "11": 11,
+        "12": 7,
+        "13": 3,
+        "14": 3,
+        "15": 2,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "19": 1,
+        "20": 2,
+        "21": 1,
+        "27": 2,
+        "28": 1,
+        "35": 1
+      },
+      "quality": {
+        "linked_papers": 24978,
+        "paired_papers": 23756,
+        "retention": 0.9510769477139883,
+        "excluded_papers": 1222,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1206,
+          "repeated_id_in_byline": 15,
+          "possible_group_name": 8,
+          "truncated_or_100plus_byline": 9
+        },
+        "observed_slots": 58639,
+        "slots_with_valid_id": 57111,
+        "slots_with_raw_name": 58639,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.347625910801505,
+        "mean_team_paired": 2.260776224953696
+      }
+    },
+    {
+      "period": "2025",
+      "papers": 21609,
+      "authorship_slots": 48004,
+      "mean_team_size": 2.2214817899949098,
+      "median_team_size": 2,
+      "names": {
+        "authors": 37875,
+        "papers_per_author": 0.5705346534653465,
+        "incidences_per_author": 1.2674323432343235,
+        "fractional_credit_sum": 21609.0,
+        "fractional_distribution": {
+          "gini": 0.36602465175823284,
+          "top_1_share": 0.05501686907351214,
+          "top_5_share": 0.17631139798408066,
+          "top_10_share": 0.2722275449692267,
+          "top_100_share": 0.020088851867277525,
+          "median": 0.5
+        },
+        "full_distribution": {
+          "gini": 0.1822141334206746,
+          "top_1_share": 0.04305891175735355,
+          "top_5_share": 0.14418069327556038,
+          "top_10_share": 0.22462711440713273,
+          "top_100_share": 0.015769519206732772,
+          "median": 1
+        },
+        "activity_frequency": {
+          "1": 30954,
+          "2": 4953,
+          "3": 1280,
+          "4": 415,
+          "5": 151,
+          "6": 51,
+          "7": 36,
+          "8": 14,
+          "9": 9,
+          "10": 4,
+          "11": 3,
+          "12": 2,
+          "13": 1,
+          "14": 2
+        }
+      },
+      "ids": {
+        "authors": 37190,
+        "papers_per_author": 0.5810432912073138,
+        "incidences_per_author": 1.290777090615757,
+        "fractional_credit_sum": 21609.0,
+        "fractional_distribution": {
+          "gini": 0.36834423050054155,
+          "top_1_share": 0.054827849507149806,
+          "top_5_share": 0.17577086286998825,
+          "top_10_share": 0.27233371109533816,
+          "top_100_share": 0.020404306847455537,
+          "median": 0.5
+        },
+        "full_distribution": {
+          "gini": 0.19245456577641562,
+          "top_1_share": 0.04330055828680944,
+          "top_5_share": 0.1446441963169736,
+          "top_10_share": 0.22821014915423715,
+          "top_100_share": 0.015915340388300975,
+          "median": 1.0
+        },
+        "activity_frequency": {
+          "1": 29893,
+          "2": 5145,
+          "3": 1378,
+          "4": 473,
+          "5": 175,
+          "6": 56,
+          "7": 38,
+          "8": 12,
+          "9": 5,
+          "10": 7,
+          "11": 3,
+          "12": 2,
+          "14": 1,
+          "17": 1,
+          "19": 1
+        }
+      },
+      "team_size_frequency": {
+        "1": 6915,
+        "2": 7329,
+        "3": 4696,
+        "4": 1778,
+        "5": 544,
+        "6": 188,
+        "7": 81,
+        "8": 28,
+        "9": 19,
+        "10": 8,
+        "11": 8,
+        "12": 3,
+        "13": 5,
+        "15": 4,
+        "17": 1,
+        "27": 1,
+        "48": 1
+      },
+      "quality": {
+        "linked_papers": 25462,
+        "paired_papers": 21609,
+        "retention": 0.8486764590369963,
+        "excluded_papers": 3853,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 3842,
+          "truncated_or_100plus_byline": 3,
+          "repeated_id_in_byline": 12,
+          "possible_group_name": 6
+        },
+        "observed_slots": 58688,
+        "slots_with_valid_id": 52650,
+        "slots_with_raw_name": 58688,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3049249862540258,
+        "mean_team_paired": 2.2214817899949098
+      }
+    }
+  ],
+  "rolling12": [
+    {
+      "period": "2024-12",
+      "start": "2024-01",
+      "papers": 23756,
+      "authorship_slots": 53707,
+      "mean_team_size": 2.260776224953696,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 40831,
+        "papers_per_author": 0.5818128382846367,
+        "incidences_per_author": 1.315348632166736,
+        "fractional_credit_sum": 23756.0
+      },
+      "ids": {
+        "authors": 40258,
+        "papers_per_author": 0.590093894381241,
+        "incidences_per_author": 1.334070246907447,
+        "fractional_credit_sum": 23756.0
+      },
+      "quality": {
+        "linked_papers": 24978,
+        "paired_papers": 23756,
+        "retention": 0.9510769477139883,
+        "excluded_papers": 1222,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1206,
+          "repeated_id_in_byline": 15,
+          "possible_group_name": 8,
+          "truncated_or_100plus_byline": 9
+        },
+        "observed_slots": 58639,
+        "slots_with_valid_id": 57111,
+        "slots_with_raw_name": 58639,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.347625910801505,
+        "mean_team_paired": 2.260776224953696
+      }
+    },
+    {
+      "period": "2025-01",
+      "start": "2024-02",
+      "papers": 23433,
+      "authorship_slots": 53076,
+      "mean_team_size": 2.2650108820893613,
+      "median_team_size": 2,
+      "names": {
+        "authors": 40667,
+        "papers_per_author": 0.5762165883886198,
+        "incidences_per_author": 1.30513684314063,
+        "fractional_credit_sum": 23433.0
+      },
+      "ids": {
+        "authors": 40153,
+        "papers_per_author": 0.5835927577017906,
+        "incidences_per_author": 1.3218439469030956,
+        "fractional_credit_sum": 23433.0
+      },
+      "quality": {
+        "linked_papers": 24753,
+        "paired_papers": 23433,
+        "retention": 0.9466731305296328,
+        "excluded_papers": 1320,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1305,
+          "repeated_id_in_byline": 14,
+          "possible_group_name": 10,
+          "truncated_or_100plus_byline": 10
+        },
+        "observed_slots": 58454,
+        "slots_with_valid_id": 56817,
+        "slots_with_raw_name": 58454,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.361491536379429,
+        "mean_team_paired": 2.2650108820893613
+      }
+    },
+    {
+      "period": "2025-02",
+      "start": "2024-03",
+      "papers": 23241,
+      "authorship_slots": 52601,
+      "mean_team_size": 2.2632847123617745,
+      "median_team_size": 2,
+      "names": {
+        "authors": 40355,
+        "papers_per_author": 0.5759137653326726,
+        "incidences_per_author": 1.3034568207161443,
+        "fractional_credit_sum": 23241.0
+      },
+      "ids": {
+        "authors": 39874,
+        "papers_per_author": 0.5828610121883935,
+        "incidences_per_author": 1.3191804183177007,
+        "fractional_credit_sum": 23241.0
+      },
+      "quality": {
+        "linked_papers": 24691,
+        "paired_papers": 23241,
+        "retention": 0.9412741484751529,
+        "excluded_papers": 1450,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1436,
+          "possible_group_name": 12,
+          "repeated_id_in_byline": 13,
+          "truncated_or_100plus_byline": 10
+        },
+        "observed_slots": 58434,
+        "slots_with_valid_id": 56667,
+        "slots_with_raw_name": 58434,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.36661131586408,
+        "mean_team_paired": 2.2632847123617745
+      }
+    },
+    {
+      "period": "2025-03",
+      "start": "2024-04",
+      "papers": 22882,
+      "authorship_slots": 51776,
+      "mean_team_size": 2.262739271042741,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 39987,
+        "papers_per_author": 0.572235976692425,
+        "incidences_per_author": 1.2948208167654487,
+        "fractional_credit_sum": 22882.0
+      },
+      "ids": {
+        "authors": 39443,
+        "papers_per_author": 0.5801282863879522,
+        "incidences_per_author": 1.3126790558527495,
+        "fractional_credit_sum": 22882.0
+      },
+      "quality": {
+        "linked_papers": 24434,
+        "paired_papers": 22882,
+        "retention": 0.9364819513792256,
+        "excluded_papers": 1552,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1539,
+          "repeated_id_in_byline": 13,
+          "truncated_or_100plus_byline": 11,
+          "possible_group_name": 11
+        },
+        "observed_slots": 57971,
+        "slots_with_valid_id": 56092,
+        "slots_with_raw_name": 57971,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.372554636981256,
+        "mean_team_paired": 2.262739271042741
+      }
+    },
+    {
+      "period": "2025-04",
+      "start": "2024-05",
+      "papers": 22760,
+      "authorship_slots": 51487,
+      "mean_team_size": 2.262170474516696,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 39875,
+        "papers_per_author": 0.5707836990595612,
+        "incidences_per_author": 1.2912100313479624,
+        "fractional_credit_sum": 22760.0
+      },
+      "ids": {
+        "authors": 39261,
+        "papers_per_author": 0.5797101449275363,
+        "incidences_per_author": 1.3114031736328673,
+        "fractional_credit_sum": 22760.0
+      },
+      "quality": {
+        "linked_papers": 24446,
+        "paired_papers": 22760,
+        "retention": 0.9310316616215332,
+        "excluded_papers": 1686,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1672,
+          "repeated_id_in_byline": 13,
+          "truncated_or_100plus_byline": 11,
+          "possible_group_name": 12
+        },
+        "observed_slots": 57994,
+        "slots_with_valid_id": 55994,
+        "slots_with_raw_name": 57994,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3723308516730754,
+        "mean_team_paired": 2.262170474516696
+      }
+    },
+    {
+      "period": "2025-05",
+      "start": "2024-06",
+      "papers": 22537,
+      "authorship_slots": 50964,
+      "mean_team_size": 2.261348005502063,
+      "median_team_size": 2,
+      "names": {
+        "authors": 39698,
+        "papers_per_author": 0.5677112197088015,
+        "incidences_per_author": 1.2837926343896418,
+        "fractional_credit_sum": 22537.0
+      },
+      "ids": {
+        "authors": 38888,
+        "papers_per_author": 0.5795361036823699,
+        "incidences_per_author": 1.310532812178564,
+        "fractional_credit_sum": 22537.0
+      },
+      "quality": {
+        "linked_papers": 24364,
+        "paired_papers": 22537,
+        "retention": 0.925012313249056,
+        "excluded_papers": 1827,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 1814,
+          "truncated_or_100plus_byline": 10,
+          "repeated_id_in_byline": 12,
+          "possible_group_name": 11
+        },
+        "observed_slots": 57775,
+        "slots_with_valid_id": 55625,
+        "slots_with_raw_name": 57775,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3713265473649647,
+        "mean_team_paired": 2.261348005502063
+      }
+    },
+    {
+      "period": "2025-06",
+      "start": "2024-07",
+      "papers": 22436,
+      "authorship_slots": 50715,
+      "mean_team_size": 2.2604296666072385,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 39576,
+        "papers_per_author": 0.5669092379219729,
+        "incidences_per_author": 1.281458459672529,
+        "fractional_credit_sum": 22436.0
+      },
+      "ids": {
+        "authors": 38723,
+        "papers_per_author": 0.5793972574438964,
+        "incidences_per_author": 1.309686749477055,
+        "fractional_credit_sum": 22436.0
+      },
+      "quality": {
+        "linked_papers": 24519,
+        "paired_papers": 22436,
+        "retention": 0.9150454749378033,
+        "excluded_papers": 2083,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 2071,
+          "truncated_or_100plus_byline": 9,
+          "repeated_id_in_byline": 12,
+          "possible_group_name": 11
+        },
+        "observed_slots": 58049,
+        "slots_with_valid_id": 55462,
+        "slots_with_raw_name": 58049,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.367510909906603,
+        "mean_team_paired": 2.2604296666072385
+      }
+    },
+    {
+      "period": "2025-07",
+      "start": "2024-08",
+      "papers": 22265,
+      "authorship_slots": 50208,
+      "mean_team_size": 2.255019088255109,
+      "median_team_size": 2,
+      "names": {
+        "authors": 39256,
+        "papers_per_author": 0.5671744446708783,
+        "incidences_per_author": 1.2789891991033218,
+        "fractional_credit_sum": 22265.0
+      },
+      "ids": {
+        "authors": 38287,
+        "papers_per_author": 0.5815289785044532,
+        "incidences_per_author": 1.311358946901037,
+        "fractional_credit_sum": 22265.0
+      },
+      "quality": {
+        "linked_papers": 24460,
+        "paired_papers": 22265,
+        "retention": 0.9102616516762061,
+        "excluded_papers": 2195,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 2185,
+          "truncated_or_100plus_byline": 8,
+          "repeated_id_in_byline": 11,
+          "possible_group_name": 10
+        },
+        "observed_slots": 57746,
+        "slots_with_valid_id": 55045,
+        "slots_with_raw_name": 57746,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.360834014717907,
+        "mean_team_paired": 2.255019088255109
+      }
+    },
+    {
+      "period": "2025-08",
+      "start": "2024-09",
+      "papers": 21828,
+      "authorship_slots": 49079,
+      "mean_team_size": 2.248442367601246,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 38628,
+        "papers_per_author": 0.5650823237030134,
+        "incidences_per_author": 1.2705550377964172,
+        "fractional_credit_sum": 21828.0
+      },
+      "ids": {
+        "authors": 37621,
+        "papers_per_author": 0.5802078626299142,
+        "incidences_per_author": 1.3045639403524627,
+        "fractional_credit_sum": 21828.0
+      },
+      "quality": {
+        "linked_papers": 24105,
+        "paired_papers": 21828,
+        "retention": 0.9055382700684506,
+        "excluded_papers": 2277,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 2266,
+          "truncated_or_100plus_byline": 7,
+          "possible_group_name": 9,
+          "repeated_id_in_byline": 11
+        },
+        "observed_slots": 56746,
+        "slots_with_valid_id": 53951,
+        "slots_with_raw_name": 56746,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3541174030284173,
+        "mean_team_paired": 2.248442367601246
+      }
+    },
+    {
+      "period": "2025-09",
+      "start": "2024-10",
+      "papers": 21863,
+      "authorship_slots": 49023,
+      "mean_team_size": 2.2422814801262407,
+      "median_team_size": 2,
+      "names": {
+        "authors": 38682,
+        "papers_per_author": 0.5651982834393258,
+        "incidences_per_author": 1.2673336435551419,
+        "fractional_credit_sum": 21863.0
+      },
+      "ids": {
+        "authors": 37667,
+        "papers_per_author": 0.5804284917832585,
+        "incidences_per_author": 1.3014840576632065,
+        "fractional_credit_sum": 21863.0
+      },
+      "quality": {
+        "linked_papers": 24206,
+        "paired_papers": 21863,
+        "retention": 0.9032058167396513,
+        "excluded_papers": 2343,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 2332,
+          "truncated_or_100plus_byline": 6,
+          "repeated_id_in_byline": 13,
+          "possible_group_name": 8
+        },
+        "observed_slots": 56964,
+        "slots_with_valid_id": 54086,
+        "slots_with_raw_name": 56964,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.353300834503842,
+        "mean_team_paired": 2.2422814801262407
+      }
+    },
+    {
+      "period": "2025-10",
+      "start": "2024-11",
+      "papers": 21432,
+      "authorship_slots": 47857,
+      "mean_team_size": 2.2329693915640165,
+      "median_team_size": 2.0,
+      "names": {
+        "authors": 37984,
+        "papers_per_author": 0.5642375737152485,
+        "incidences_per_author": 1.2599252316764953,
+        "fractional_credit_sum": 21432.0
+      },
+      "ids": {
+        "authors": 36904,
+        "papers_per_author": 0.5807500541946673,
+        "incidences_per_author": 1.2967970951658356,
+        "fractional_credit_sum": 21432.0
+      },
+      "quality": {
+        "linked_papers": 23826,
+        "paired_papers": 21432,
+        "retention": 0.8995215311004785,
+        "excluded_papers": 2394,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 2382,
+          "truncated_or_100plus_byline": 4,
+          "repeated_id_in_byline": 12,
+          "possible_group_name": 6
+        },
+        "observed_slots": 55695,
+        "slots_with_valid_id": 52770,
+        "slots_with_raw_name": 55695,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.33757239989927,
+        "mean_team_paired": 2.2329693915640165
+      }
+    },
+    {
+      "period": "2025-11",
+      "start": "2024-12",
+      "papers": 21339,
+      "authorship_slots": 47585,
+      "mean_team_size": 2.2299545433244297,
+      "median_team_size": 2,
+      "names": {
+        "authors": 37753,
+        "papers_per_author": 0.565226604508251,
+        "incidences_per_author": 1.2604296347310147,
+        "fractional_credit_sum": 21339.0
+      },
+      "ids": {
+        "authors": 36679,
+        "papers_per_author": 0.58177703863246,
+        "incidences_per_author": 1.2973363505002862,
+        "fractional_credit_sum": 21339.0
+      },
+      "quality": {
+        "linked_papers": 24558,
+        "paired_papers": 21339,
+        "retention": 0.8689225506963107,
+        "excluded_papers": 3219,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 3207,
+          "repeated_id_in_byline": 12,
+          "possible_group_name": 7,
+          "truncated_or_100plus_byline": 3
+        },
+        "observed_slots": 57048,
+        "slots_with_valid_id": 52371,
+        "slots_with_raw_name": 57048,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.32299047153677,
+        "mean_team_paired": 2.2299545433244297
+      }
+    },
+    {
+      "period": "2025-12",
+      "start": "2025-01",
+      "papers": 21609,
+      "authorship_slots": 48004,
+      "mean_team_size": 2.2214817899949098,
+      "median_team_size": 2,
+      "names": {
+        "authors": 37875,
+        "papers_per_author": 0.5705346534653465,
+        "incidences_per_author": 1.2674323432343235,
+        "fractional_credit_sum": 21609.0
+      },
+      "ids": {
+        "authors": 37190,
+        "papers_per_author": 0.5810432912073138,
+        "incidences_per_author": 1.290777090615757,
+        "fractional_credit_sum": 21609.0
+      },
+      "quality": {
+        "linked_papers": 25462,
+        "paired_papers": 21609,
+        "retention": 0.8486764590369963,
+        "excluded_papers": 3853,
+        "reasons_nonexclusive": {
+          "missing_or_placeholder_author_id": 3842,
+          "truncated_or_100plus_byline": 3,
+          "repeated_id_in_byline": 12,
+          "possible_group_name": 6
+        },
+        "observed_slots": 58688,
+        "slots_with_valid_id": 52650,
+        "slots_with_raw_name": 58688,
+        "name_collision_papers": 0,
+        "mean_observed_team_all": 2.3049249862540258,
+        "mean_team_paired": 2.2214817899949098
+      }
+    }
+  ],
+  "raw_name_coverage_diagnostic": {
+    "note": "A separate population sensitivity check: relax only the missing-ID gate, retaining all other byline exclusions. Never pair these paper counts with author IDs from the smaller complete-ID subset.",
+    "annual": [
+      {
+        "period": "2024",
+        "papers": 24957,
+        "name_keys": 43760,
+        "authorship_slots": 57681,
+        "papers_per_name": 0.5703153564899451,
+        "fractional_credit_sum": 24957.0
+      },
+      {
+        "period": "2025",
+        "papers": 25443,
+        "name_keys": 44816,
+        "authorship_slots": 58265,
+        "papers_per_name": 0.5677213495180293,
+        "fractional_credit_sum": 25443.0
+      }
+    ]
+  },
+  "transitions_exploratory": {
+    "names": {
+      "continuing_keys": 11002,
+      "appearing_keys": 26873,
+      "disappearing_keys": 29829,
+      "continuing_credit_change": -679.6379316217551,
+      "appearing_credit": 13711.416168199992,
+      "disappearing_credit": -15178.778236578237,
+      "paper_change": -2147,
+      "identity_residual": 0.0,
+      "log_decomposition": {
+        "papers": -0.09472523557827821,
+        "authors": -0.07515033299728066,
+        "incidences_per_author": -0.03710867307052742,
+        "minus_mean_team_size": 0.017533770489529865
+      }
+    },
+    "ids": {
+      "continuing_keys": 11635,
+      "appearing_keys": 25555,
+      "disappearing_keys": 28623,
+      "continuing_credit_change": -609.2903568166726,
+      "appearing_credit": 13251.635742035742,
+      "disappearing_credit": -14789.345385219069,
+      "paper_change": -2147,
+      "identity_residual": -4.547473508864641e-13,
+      "log_decomposition": {
+        "papers": -0.09472523557827821,
+        "authors": -0.07926883394186142,
+        "incidences_per_author": -0.03299017212594675,
+        "minus_mean_team_size": 0.017533770489529865
+      }
+    }
+  },
+  "identity_diagnostics": {
+    "name_keys": 67704,
+    "id_keys": 65813,
+    "names_associated_with_multiple_ids": 4461,
+    "ids_associated_with_multiple_names": 7346,
+    "raw_orcid_slots": 6228,
+    "distinct_raw_orcids": 5708,
+    "raw_orcids_associated_with_multiple_ids": 53,
+    "interpretation": "Many-to-many mapping diagnostics, not validated error rates. ORCID subset is selected."
+  },
+  "subfields": [
+    {
+      "subfield": "Algebra and Number Theory",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 2780,
+          "authorship_slots": 5599,
+          "mean_team_size": 2.0140287769784173,
+          "median_team_size": 2.0,
+          "names": {
+            "authors": 4635,
+            "papers_per_author": 0.5997842502696872,
+            "incidences_per_author": 1.207982740021575,
+            "fractional_credit_sum": 2780.0,
+            "fractional_distribution": {
+              "gini": 0.3417353176341791,
+              "top_1_share": 0.05747901678657074,
+              "top_5_share": 0.17012589928057553,
+              "top_10_share": 0.2566786570743405,
+              "top_100_share": 0.09659472422062351,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.1549945446029526,
+              "top_1_share": 0.047758528308626536,
+              "top_5_share": 0.14065011609215933,
+              "top_10_share": 0.22343275584925879,
+              "top_100_share": 0.0807287015538489,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 3995,
+              "2": 468,
+              "3": 102,
+              "4": 37,
+              "5": 12,
+              "6": 9,
+              "7": 6,
+              "8": 2,
+              "9": 2,
+              "11": 1,
+              "13": 1
+            }
+          },
+          "ids": {
+            "authors": 4570,
+            "papers_per_author": 0.6083150984682714,
+            "incidences_per_author": 1.225164113785558,
+            "fractional_credit_sum": 2780.0,
+            "fractional_distribution": {
+              "gini": 0.3438825109738006,
+              "top_1_share": 0.05669664268585132,
+              "top_5_share": 0.17192446043165469,
+              "top_10_share": 0.2588009592326139,
+              "top_100_share": 0.09708633093525179,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.16454200363225224,
+              "top_1_share": 0.049258796213609575,
+              "top_5_share": 0.1457403107697803,
+              "top_10_share": 0.22736202893373816,
+              "top_100_share": 0.08447937131630648,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 3900,
+              "2": 484,
+              "3": 106,
+              "4": 39,
+              "5": 18,
+              "6": 11,
+              "7": 5,
+              "8": 4,
+              "10": 1,
+              "11": 1,
+              "13": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 1059,
+            "2": 960,
+            "3": 535,
+            "4": 167,
+            "5": 35,
+            "6": 13,
+            "7": 4,
+            "8": 4,
+            "10": 1,
+            "11": 1,
+            "13": 1
+          },
+          "quality": {
+            "linked_papers": 2907,
+            "paired_papers": 2780,
+            "retention": 0.956312349501204,
+            "excluded_papers": 127,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 126,
+              "possible_group_name": 1
+            },
+            "observed_slots": 5956,
+            "slots_with_valid_id": 5806,
+            "slots_with_raw_name": 5956,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.048847609219126,
+            "mean_team_paired": 2.0140287769784173
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 1995,
+          "authorship_slots": 4028,
+          "mean_team_size": 2.019047619047619,
+          "median_team_size": 2,
+          "names": {
+            "authors": 3372,
+            "papers_per_author": 0.5916370106761566,
+            "incidences_per_author": 1.1945432977461448,
+            "fractional_credit_sum": 1995.0,
+            "fractional_distribution": {
+              "gini": 0.3277606672728821,
+              "top_1_share": 0.05092230576441103,
+              "top_5_share": 0.1583447507658034,
+              "top_10_share": 0.2442709949476867,
+              "top_100_share": 0.11003898635477583,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.14778475346359587,
+              "top_1_share": 0.045402184707050645,
+              "top_5_share": 0.13982125124131084,
+              "top_10_share": 0.22353525322740816,
+              "top_100_share": 0.09806355511420059,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 2942,
+              "2": 299,
+              "3": 84,
+              "4": 30,
+              "5": 7,
+              "6": 3,
+              "7": 2,
+              "8": 1,
+              "9": 2,
+              "11": 1,
+              "12": 1
+            }
+          },
+          "ids": {
+            "authors": 3310,
+            "papers_per_author": 0.6027190332326284,
+            "incidences_per_author": 1.216918429003021,
+            "fractional_credit_sum": 1995.0,
+            "fractional_distribution": {
+              "gini": 0.3312188570981476,
+              "top_1_share": 0.05255639097744361,
+              "top_5_share": 0.16199447030274097,
+              "top_10_share": 0.24699924414210128,
+              "top_100_share": 0.11486772486772485,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.16069642412478213,
+              "top_1_share": 0.048758689175769615,
+              "top_5_share": 0.1464746772591857,
+              "top_10_share": 0.22864945382323734,
+              "top_100_share": 0.10402184707050645,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 2851,
+              "2": 319,
+              "3": 85,
+              "4": 34,
+              "5": 8,
+              "6": 4,
+              "7": 3,
+              "8": 2,
+              "9": 1,
+              "10": 2,
+              "18": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 718,
+            "2": 747,
+            "3": 382,
+            "4": 104,
+            "5": 28,
+            "6": 8,
+            "7": 6,
+            "9": 1,
+            "15": 1
+          },
+          "quality": {
+            "linked_papers": 2327,
+            "paired_papers": 1995,
+            "retention": 0.857327030511388,
+            "excluded_papers": 332,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 331,
+              "possible_group_name": 2,
+              "repeated_id_in_byline": 2
+            },
+            "observed_slots": 4856,
+            "slots_with_valid_id": 4374,
+            "slots_with_raw_name": 4856,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.0868070477009026,
+            "mean_team_paired": 2.019047619047619
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Applied Mathematics",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 4405,
+          "authorship_slots": 9880,
+          "mean_team_size": 2.242905788876277,
+          "median_team_size": 2,
+          "names": {
+            "authors": 8476,
+            "papers_per_author": 0.5197026899480888,
+            "incidences_per_author": 1.165644171779141,
+            "fractional_credit_sum": 4405.0,
+            "fractional_distribution": {
+              "gini": 0.3342276332189429,
+              "top_1_share": 0.05047496531719006,
+              "top_5_share": 0.15453398915373942,
+              "top_10_share": 0.25074284272922187,
+              "top_100_share": 0.05739437507882457,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.12880997166565078,
+              "top_1_share": 0.04010931174089069,
+              "top_5_share": 0.12425101214574898,
+              "top_10_share": 0.2100404858299595,
+              "top_100_share": 0.04473684210526316,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 7452,
+              "2": 786,
+              "3": 156,
+              "4": 47,
+              "5": 22,
+              "6": 7,
+              "7": 3,
+              "8": 2,
+              "11": 1
+            }
+          },
+          "ids": {
+            "authors": 8372,
+            "papers_per_author": 0.5261586239847109,
+            "incidences_per_author": 1.1801242236024845,
+            "fractional_credit_sum": 4405.0,
+            "fractional_distribution": {
+              "gini": 0.33744454494993836,
+              "top_1_share": 0.050020431328036324,
+              "top_5_share": 0.15638037583554043,
+              "top_10_share": 0.2514087526800353,
+              "top_100_share": 0.05741203178206584,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.13700115673799895,
+              "top_1_share": 0.03996761133603239,
+              "top_5_share": 0.12572874493927125,
+              "top_10_share": 0.2104655870445344,
+              "top_100_share": 0.045040485829959516,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 7269,
+              "2": 843,
+              "3": 175,
+              "4": 50,
+              "5": 22,
+              "6": 7,
+              "7": 3,
+              "8": 2,
+              "11": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 1299,
+            "2": 1563,
+            "3": 1035,
+            "4": 373,
+            "5": 81,
+            "6": 22,
+            "7": 14,
+            "8": 8,
+            "9": 2,
+            "10": 2,
+            "11": 1,
+            "13": 1,
+            "17": 1,
+            "18": 1,
+            "27": 1,
+            "35": 1
+          },
+          "quality": {
+            "linked_papers": 4595,
+            "paired_papers": 4405,
+            "retention": 0.9586507072905331,
+            "excluded_papers": 190,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 186,
+              "repeated_id_in_byline": 3,
+              "truncated_or_100plus_byline": 1
+            },
+            "observed_slots": 10625,
+            "slots_with_valid_id": 10387,
+            "slots_with_raw_name": 10625,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.312295973884657,
+            "mean_team_paired": 2.242905788876277
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 4282,
+          "authorship_slots": 9353,
+          "mean_team_size": 2.184259691732835,
+          "median_team_size": 2.0,
+          "names": {
+            "authors": 7983,
+            "papers_per_author": 0.5363898283853188,
+            "incidences_per_author": 1.1716146811975447,
+            "fractional_credit_sum": 4282.0,
+            "fractional_distribution": {
+              "gini": 0.32601620496482364,
+              "top_1_share": 0.043599564066635524,
+              "top_5_share": 0.14922154756344388,
+              "top_10_share": 0.24243733457885727,
+              "top_100_share": 0.05302039545383777,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.1321902381596496,
+              "top_1_share": 0.03907730140062012,
+              "top_5_share": 0.12491179300759117,
+              "top_10_share": 0.21026408638939378,
+              "top_100_share": 0.045546883352934886,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 6983,
+              "2": 756,
+              "3": 166,
+              "4": 48,
+              "5": 16,
+              "6": 11,
+              "7": 2,
+              "8": 1
+            }
+          },
+          "ids": {
+            "authors": 7733,
+            "papers_per_author": 0.55373076425708,
+            "incidences_per_author": 1.209491788439157,
+            "fractional_credit_sum": 4282.0,
+            "fractional_distribution": {
+              "gini": 0.33289894476501813,
+              "top_1_share": 0.046051689241787326,
+              "top_5_share": 0.15369695402682323,
+              "top_10_share": 0.2440392784857988,
+              "top_100_share": 0.05664019928382376,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.15386899250787556,
+              "top_1_share": 0.040555971346092165,
+              "top_5_share": 0.13453437399764784,
+              "top_10_share": 0.21721372821554583,
+              "top_100_share": 0.05025125628140704,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 6598,
+              "2": 822,
+              "3": 211,
+              "4": 62,
+              "5": 21,
+              "6": 12,
+              "7": 5,
+              "9": 2
+            }
+          },
+          "team_size_frequency": {
+            "1": 1328,
+            "2": 1527,
+            "3": 980,
+            "4": 332,
+            "5": 75,
+            "6": 29,
+            "7": 5,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "17": 1,
+            "27": 1,
+            "48": 1
+          },
+          "quality": {
+            "linked_papers": 5058,
+            "paired_papers": 4282,
+            "retention": 0.8465796757611704,
+            "excluded_papers": 776,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 773,
+              "possible_group_name": 2,
+              "truncated_or_100plus_byline": 2,
+              "repeated_id_in_byline": 1
+            },
+            "observed_slots": 11720,
+            "slots_with_valid_id": 10469,
+            "slots_with_raw_name": 11720,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.3171213918544877,
+            "mean_team_paired": 2.184259691732835
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Computational Mathematics",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 208,
+          "authorship_slots": 645,
+          "mean_team_size": 3.1009615384615383,
+          "median_team_size": 3.0,
+          "names": {
+            "authors": 602,
+            "papers_per_author": 0.34551495016611294,
+            "incidences_per_author": 1.0714285714285714,
+            "fractional_credit_sum": 208.0,
+            "fractional_distribution": {
+              "gini": 0.3223176187046619,
+              "top_1_share": 0.04073717948717948,
+              "top_5_share": 0.15729166666666666,
+              "top_10_share": 0.2606934731934732,
+              "top_100_share": 0.3563665501165501,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.06323366555924692,
+              "top_1_share": 0.029519379844961238,
+              "top_5_share": 0.10418604651162791,
+              "top_10_share": 0.16,
+              "top_100_share": 0.22170542635658916,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 566,
+              "2": 30,
+              "3": 5,
+              "4": 1
+            }
+          },
+          "ids": {
+            "authors": 601,
+            "papers_per_author": 0.34608985024958405,
+            "incidences_per_author": 1.0732113144758735,
+            "fractional_credit_sum": 208.0,
+            "fractional_distribution": {
+              "gini": 0.3197385254789582,
+              "top_1_share": 0.03827724358974359,
+              "top_5_share": 0.15464743589743593,
+              "top_10_share": 0.25869026806526807,
+              "top_100_share": 0.35460372960372954,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.06459002437797468,
+              "top_1_share": 0.029488372093023255,
+              "top_5_share": 0.10403100775193798,
+              "top_10_share": 0.1613953488372093,
+              "top_100_share": 0.22325581395348837,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 564,
+              "2": 31,
+              "3": 5,
+              "4": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 29,
+            "2": 56,
+            "3": 60,
+            "4": 29,
+            "5": 21,
+            "6": 4,
+            "7": 3,
+            "8": 2,
+            "10": 2,
+            "11": 2
+          },
+          "quality": {
+            "linked_papers": 220,
+            "paired_papers": 208,
+            "retention": 0.9454545454545454,
+            "excluded_papers": 12,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 12
+            },
+            "observed_slots": 696,
+            "slots_with_valid_id": 682,
+            "slots_with_raw_name": 696,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 3.1636363636363636,
+            "mean_team_paired": 3.1009615384615383
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 275,
+          "authorship_slots": 848,
+          "mean_team_size": 3.0836363636363635,
+          "median_team_size": 3,
+          "names": {
+            "authors": 773,
+            "papers_per_author": 0.35575679172056923,
+            "incidences_per_author": 1.0970245795601552,
+            "fractional_credit_sum": 275.0,
+            "fractional_distribution": {
+              "gini": 0.31880367153329625,
+              "top_1_share": 0.04638787878787879,
+              "top_5_share": 0.16127272727272732,
+              "top_10_share": 0.267939393939394,
+              "top_100_share": 0.3092121212121212,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.08315433620542367,
+              "top_1_share": 0.03678066037735849,
+              "top_5_share": 0.11120283018867926,
+              "top_10_share": 0.1795990566037736,
+              "top_100_share": 0.20636792452830188,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 715,
+              "2": 49,
+              "3": 5,
+              "4": 2,
+              "5": 1,
+              "7": 1
+            }
+          },
+          "ids": {
+            "authors": 767,
+            "papers_per_author": 0.35853976531942633,
+            "incidences_per_author": 1.105606258148631,
+            "fractional_credit_sum": 275.0,
+            "fractional_distribution": {
+              "gini": 0.32191390530373565,
+              "top_1_share": 0.04599393939393939,
+              "top_5_share": 0.15896969696969698,
+              "top_10_share": 0.2686060606060606,
+              "top_100_share": 0.31096969696969695,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.08885082777791431,
+              "top_1_share": 0.034209905660377356,
+              "top_5_share": 0.10931603773584905,
+              "top_10_share": 0.18596698113207547,
+              "top_100_share": 0.2134433962264151,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 702,
+              "2": 55,
+              "3": 7,
+              "4": 2,
+              "7": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 39,
+            "2": 73,
+            "3": 73,
+            "4": 57,
+            "5": 14,
+            "6": 8,
+            "7": 5,
+            "8": 1,
+            "9": 2,
+            "11": 2,
+            "15": 1
+          },
+          "quality": {
+            "linked_papers": 347,
+            "paired_papers": 275,
+            "retention": 0.792507204610951,
+            "excluded_papers": 72,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 72
+            },
+            "observed_slots": 1139,
+            "slots_with_valid_id": 1001,
+            "slots_with_raw_name": 1139,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 3.282420749279539,
+            "mean_team_paired": 3.0836363636363635
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Discrete Mathematics and Combinatorics",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 920,
+          "authorship_slots": 2048,
+          "mean_team_size": 2.226086956521739,
+          "median_team_size": 2.0,
+          "names": {
+            "authors": 1793,
+            "papers_per_author": 0.5131065253764641,
+            "incidences_per_author": 1.1422197434467374,
+            "fractional_credit_sum": 920.0,
+            "fractional_distribution": {
+              "gini": 0.33422658255240867,
+              "top_1_share": 0.04609006211180124,
+              "top_5_share": 0.14555300677583288,
+              "top_10_share": 0.24299865894974593,
+              "top_100_share": 0.15680300677583286,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.11511945325571671,
+              "top_1_share": 0.039448242187499996,
+              "top_5_share": 0.125146484375,
+              "top_10_share": 0.212060546875,
+              "top_100_share": 0.13525390625,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 1615,
+              "2": 128,
+              "3": 34,
+              "4": 10,
+              "5": 3,
+              "6": 1,
+              "7": 2
+            }
+          },
+          "ids": {
+            "authors": 1775,
+            "papers_per_author": 0.5183098591549296,
+            "incidences_per_author": 1.1538028169014085,
+            "fractional_credit_sum": 920.0,
+            "fractional_distribution": {
+              "gini": 0.33876968451022327,
+              "top_1_share": 0.046821946169772255,
+              "top_5_share": 0.14864177489177488,
+              "top_10_share": 0.2451091661961227,
+              "top_100_share": 0.1608700357613401,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.12306172975352103,
+              "top_1_share": 0.04248046875,
+              "top_5_share": 0.130126953125,
+              "top_10_share": 0.216796875,
+              "top_100_share": 0.14111328125,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 1591,
+              "2": 130,
+              "3": 35,
+              "4": 11,
+              "5": 4,
+              "6": 2,
+              "8": 2
+            }
+          },
+          "team_size_frequency": {
+            "1": 300,
+            "2": 307,
+            "3": 192,
+            "4": 92,
+            "5": 15,
+            "6": 6,
+            "7": 2,
+            "8": 3,
+            "9": 1,
+            "11": 1,
+            "21": 1
+          },
+          "quality": {
+            "linked_papers": 970,
+            "paired_papers": 920,
+            "retention": 0.9484536082474226,
+            "excluded_papers": 50,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 50
+            },
+            "observed_slots": 2192,
+            "slots_with_valid_id": 2125,
+            "slots_with_raw_name": 2192,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.2597938144329897,
+            "mean_team_paired": 2.226086956521739
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 1348,
+          "authorship_slots": 3039,
+          "mean_team_size": 2.2544510385756675,
+          "median_team_size": 2.0,
+          "names": {
+            "authors": 2598,
+            "papers_per_author": 0.5188606620477291,
+            "incidences_per_author": 1.1697459584295613,
+            "fractional_credit_sum": 1348.0,
+            "fractional_distribution": {
+              "gini": 0.3311909355061984,
+              "top_1_share": 0.042687932739861524,
+              "top_5_share": 0.1496228981206726,
+              "top_10_share": 0.24598788328387738,
+              "top_100_share": 0.12577274975272007,
+              "median": 0.45
+            },
+            "full_distribution": {
+              "gini": 0.1302689111349733,
+              "top_1_share": 0.03617637380717341,
+              "top_5_share": 0.12102665350444225,
+              "top_10_share": 0.20651530108588353,
+              "top_100_share": 0.10134912800263245,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 2265,
+              "2": 257,
+              "3": 54,
+              "4": 15,
+              "5": 5,
+              "6": 1,
+              "7": 1
+            }
+          },
+          "ids": {
+            "authors": 2543,
+            "papers_per_author": 0.5300825796303579,
+            "incidences_per_author": 1.1950452221785293,
+            "fractional_credit_sum": 1348.0,
+            "fractional_distribution": {
+              "gini": 0.3328310116997948,
+              "top_1_share": 0.04354104846686448,
+              "top_5_share": 0.14947453016815035,
+              "top_10_share": 0.24379945598417407,
+              "top_100_share": 0.12667532146389712,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.14412609856114833,
+              "top_1_share": 0.0377492596248766,
+              "top_5_share": 0.1238236261928266,
+              "top_10_share": 0.207502467917078,
+              "top_100_share": 0.10595590654820665,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 2169,
+              "2": 291,
+              "3": 57,
+              "4": 20,
+              "5": 3,
+              "7": 2,
+              "8": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 442,
+            "2": 425,
+            "3": 280,
+            "4": 132,
+            "5": 46,
+            "6": 15,
+            "7": 6,
+            "8": 1,
+            "9": 1
+          },
+          "quality": {
+            "linked_papers": 1637,
+            "paired_papers": 1348,
+            "retention": 0.8234575442883323,
+            "excluded_papers": 289,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 289
+            },
+            "observed_slots": 3810,
+            "slots_with_valid_id": 3335,
+            "slots_with_raw_name": 3810,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.327428222357972,
+            "mean_team_paired": 2.2544510385756675
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Geometry and Topology",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 5193,
+          "authorship_slots": 10694,
+          "mean_team_size": 2.059310610437127,
+          "median_team_size": 2,
+          "names": {
+            "authors": 9266,
+            "papers_per_author": 0.5604360025901144,
+            "incidences_per_author": 1.1541118066047917,
+            "fractional_credit_sum": 5193.0,
+            "fractional_distribution": {
+              "gini": 0.32529133665660437,
+              "top_1_share": 0.04327684703767892,
+              "top_5_share": 0.14863346262826332,
+              "top_10_share": 0.23784971527605844,
+              "top_100_share": 0.046103729379292635,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.12020980314137542,
+              "top_1_share": 0.03384888722648214,
+              "top_5_share": 0.11479334206096876,
+              "top_10_share": 0.20144005984664295,
+              "top_100_share": 0.03590798578642229,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 8139,
+              "2": 910,
+              "3": 167,
+              "4": 30,
+              "5": 13,
+              "6": 3,
+              "7": 3,
+              "10": 1
+            }
+          },
+          "ids": {
+            "authors": 9100,
+            "papers_per_author": 0.5706593406593407,
+            "incidences_per_author": 1.1751648351648352,
+            "fractional_credit_sum": 5193.0,
+            "fractional_distribution": {
+              "gini": 0.3281218854198964,
+              "top_1_share": 0.04330829963412286,
+              "top_5_share": 0.14916944054725684,
+              "top_10_share": 0.23688367124242343,
+              "top_100_share": 0.046774504140188716,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.13255550508963632,
+              "top_1_share": 0.03553394426781373,
+              "top_5_share": 0.11810360950065457,
+              "top_10_share": 0.20319805498410323,
+              "top_100_share": 0.038058724518421544,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 7859,
+              "2": 995,
+              "3": 180,
+              "4": 40,
+              "5": 18,
+              "6": 5,
+              "7": 1,
+              "8": 1,
+              "10": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 1895,
+            "2": 1832,
+            "3": 979,
+            "4": 345,
+            "5": 84,
+            "6": 30,
+            "7": 14,
+            "8": 10,
+            "9": 1,
+            "10": 2,
+            "11": 1
+          },
+          "quality": {
+            "linked_papers": 5433,
+            "paired_papers": 5193,
+            "retention": 0.9558255107675317,
+            "excluded_papers": 240,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 238,
+              "repeated_id_in_byline": 2
+            },
+            "observed_slots": 11424,
+            "slots_with_valid_id": 11129,
+            "slots_with_raw_name": 11424,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.102705687465489,
+            "mean_team_paired": 2.059310610437127
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 4969,
+          "authorship_slots": 10046,
+          "mean_team_size": 2.0217347554840006,
+          "median_team_size": 2,
+          "names": {
+            "authors": 8651,
+            "papers_per_author": 0.5743844642237892,
+            "incidences_per_author": 1.1612530343312912,
+            "fractional_credit_sum": 4969.0,
+            "fractional_distribution": {
+              "gini": 0.3252008042537671,
+              "top_1_share": 0.044449587442141274,
+              "top_5_share": 0.1488826104241681,
+              "top_10_share": 0.23593231861495095,
+              "top_100_share": 0.049879251358422215,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.12508446580937504,
+              "top_1_share": 0.035688831375671914,
+              "top_5_share": 0.11866414493330678,
+              "top_10_share": 0.20477802110292653,
+              "top_100_share": 0.03971730041807685,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 7583,
+              "2": 840,
+              "3": 163,
+              "4": 46,
+              "5": 9,
+              "6": 6,
+              "7": 3,
+              "8": 1
+            }
+          },
+          "ids": {
+            "authors": 8560,
+            "papers_per_author": 0.5804906542056075,
+            "incidences_per_author": 1.1735981308411214,
+            "fractional_credit_sum": 4969.0,
+            "fractional_distribution": {
+              "gini": 0.3254538851540907,
+              "top_1_share": 0.04500570201918562,
+              "top_5_share": 0.14905142765376211,
+              "top_10_share": 0.23520558341950978,
+              "top_100_share": 0.050801636814919164,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.1324824266318858,
+              "top_1_share": 0.036810670913796535,
+              "top_5_share": 0.12144136969938284,
+              "top_10_share": 0.20664941270157278,
+              "top_100_share": 0.04111088990643042,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 7438,
+              "2": 871,
+              "3": 179,
+              "4": 55,
+              "5": 8,
+              "6": 3,
+              "7": 2,
+              "8": 2,
+              "9": 1,
+              "12": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 1886,
+            "2": 1748,
+            "3": 885,
+            "4": 318,
+            "5": 90,
+            "6": 28,
+            "7": 6,
+            "8": 3,
+            "9": 2,
+            "11": 2,
+            "13": 1
+          },
+          "quality": {
+            "linked_papers": 5791,
+            "paired_papers": 4969,
+            "retention": 0.8580556035227076,
+            "excluded_papers": 822,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 820,
+              "repeated_id_in_byline": 2
+            },
+            "observed_slots": 11907,
+            "slots_with_valid_id": 10681,
+            "slots_with_raw_name": 11907,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.056121567950268,
+            "mean_team_paired": 2.0217347554840006
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Mathematical Physics",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 6044,
+          "authorship_slots": 13270,
+          "mean_team_size": 2.1955658504301785,
+          "median_team_size": 2.0,
+          "names": {
+            "authors": 11460,
+            "papers_per_author": 0.5273996509598604,
+            "incidences_per_author": 1.1579406631762652,
+            "fractional_credit_sum": 6044.0,
+            "fractional_distribution": {
+              "gini": 0.33131571929397796,
+              "top_1_share": 0.048567909405103325,
+              "top_5_share": 0.15105286102969756,
+              "top_10_share": 0.2458576260859517,
+              "top_100_share": 0.043736671814103976,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.12307104032110638,
+              "top_1_share": 0.035403165033911076,
+              "top_5_share": 0.11793519216277318,
+              "top_10_share": 0.20429540316503392,
+              "top_100_share": 0.0321024868123587,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 10069,
+              "2": 1098,
+              "3": 221,
+              "4": 48,
+              "5": 14,
+              "6": 4,
+              "7": 1,
+              "8": 2,
+              "9": 1,
+              "11": 1,
+              "13": 1
+            }
+          },
+          "ids": {
+            "authors": 11316,
+            "papers_per_author": 0.5341109932838459,
+            "incidences_per_author": 1.1726758571933544,
+            "fractional_credit_sum": 6044.0,
+            "fractional_distribution": {
+              "gini": 0.3306831928274383,
+              "top_1_share": 0.04809232296492389,
+              "top_5_share": 0.1487847058082002,
+              "top_10_share": 0.24239820680092025,
+              "top_100_share": 0.04373759099933819,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.1316093570653607,
+              "top_1_share": 0.036358703843255465,
+              "top_5_share": 0.11971363978899775,
+              "top_10_share": 0.20498869630746044,
+              "top_100_share": 0.0333835719668425,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 9819,
+              "2": 1183,
+              "3": 225,
+              "4": 59,
+              "5": 20,
+              "6": 5,
+              "7": 2,
+              "8": 2,
+              "14": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 1943,
+            "2": 2049,
+            "3": 1371,
+            "4": 477,
+            "5": 127,
+            "6": 41,
+            "7": 16,
+            "8": 8,
+            "9": 4,
+            "10": 2,
+            "12": 4,
+            "19": 1,
+            "28": 1
+          },
+          "quality": {
+            "linked_papers": 6335,
+            "paired_papers": 6044,
+            "retention": 0.9540647198105762,
+            "excluded_papers": 291,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 285,
+              "repeated_id_in_byline": 8,
+              "truncated_or_100plus_byline": 6,
+              "possible_group_name": 5
+            },
+            "observed_slots": 14728,
+            "slots_with_valid_id": 14389,
+            "slots_with_raw_name": 14728,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.3248618784530386,
+            "mean_team_paired": 2.1955658504301785
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 4947,
+          "authorship_slots": 10319,
+          "mean_team_size": 2.0859106529209623,
+          "median_team_size": 2,
+          "names": {
+            "authors": 9046,
+            "papers_per_author": 0.5468715454344462,
+            "incidences_per_author": 1.1407251824010611,
+            "fractional_credit_sum": 4947.0,
+            "fractional_distribution": {
+              "gini": 0.31943449665769674,
+              "top_1_share": 0.04521999865238192,
+              "top_5_share": 0.14494161925938762,
+              "top_10_share": 0.23637076823856687,
+              "top_100_share": 0.04907688161175123,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.1120479027233765,
+              "top_1_share": 0.03269502858804148,
+              "top_5_share": 0.11344122492489582,
+              "top_10_share": 0.2011047582130051,
+              "top_100_share": 0.03546855315437542,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 8039,
+              "2": 807,
+              "3": 154,
+              "4": 33,
+              "5": 7,
+              "6": 5,
+              "7": 1
+            }
+          },
+          "ids": {
+            "authors": 8950,
+            "papers_per_author": 0.5527374301675978,
+            "incidences_per_author": 1.1529608938547486,
+            "fractional_credit_sum": 4947.0,
+            "fractional_distribution": {
+              "gini": 0.3220417576618082,
+              "top_1_share": 0.04520247961727646,
+              "top_5_share": 0.1462168028723517,
+              "top_10_share": 0.236675666830306,
+              "top_100_share": 0.04944747658513578,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.11980197076391597,
+              "top_1_share": 0.033675743773621473,
+              "top_5_share": 0.11619342959589107,
+              "top_10_share": 0.20292664017831186,
+              "top_100_share": 0.03672836515166198,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 7885,
+              "2": 840,
+              "3": 169,
+              "4": 42,
+              "5": 7,
+              "6": 6,
+              "8": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 1751,
+            "2": 1670,
+            "3": 1071,
+            "4": 323,
+            "5": 98,
+            "6": 19,
+            "7": 8,
+            "8": 4,
+            "9": 2,
+            "13": 1
+          },
+          "quality": {
+            "linked_papers": 5776,
+            "paired_papers": 4947,
+            "retention": 0.8564750692520776,
+            "excluded_papers": 829,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 825,
+              "truncated_or_100plus_byline": 1,
+              "repeated_id_in_byline": 5,
+              "possible_group_name": 2
+            },
+            "observed_slots": 12366,
+            "slots_with_valid_id": 11143,
+            "slots_with_raw_name": 12366,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.1409279778393353,
+            "mean_team_paired": 2.0859106529209623
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Modeling and Simulation",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 603,
+          "authorship_slots": 1829,
+          "mean_team_size": 3.033167495854063,
+          "median_team_size": 3,
+          "names": {
+            "authors": 1705,
+            "papers_per_author": 0.3536656891495601,
+            "incidences_per_author": 1.0727272727272728,
+            "fractional_credit_sum": 603.0,
+            "fractional_distribution": {
+              "gini": 0.34100986016248425,
+              "top_1_share": 0.04852819237147595,
+              "top_5_share": 0.16254836926478716,
+              "top_10_share": 0.27432283029297955,
+              "top_100_share": 0.18700939745715864,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.06440453495251641,
+              "top_1_share": 0.030153089119737565,
+              "top_5_share": 0.10579551667577912,
+              "top_10_share": 0.16101694915254236,
+              "top_100_share": 0.12192454893384364,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 1604,
+              "2": 82,
+              "3": 15,
+              "4": 4
+            }
+          },
+          "ids": {
+            "authors": 1674,
+            "papers_per_author": 0.3602150537634409,
+            "incidences_per_author": 1.0925925925925926,
+            "fractional_credit_sum": 603.0,
+            "fractional_distribution": {
+              "gini": 0.34875185997531255,
+              "top_1_share": 0.053167495854063024,
+              "top_5_share": 0.16766169154228858,
+              "top_10_share": 0.28319513543394137,
+              "top_100_share": 0.1946932006633499,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.0798469239447035,
+              "top_1_share": 0.03401858939311099,
+              "top_5_share": 0.11066156369600876,
+              "top_10_share": 0.17627118644067796,
+              "top_100_share": 0.12848551120831056,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 1554,
+              "2": 97,
+              "3": 15,
+              "4": 6,
+              "5": 1,
+              "7": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 87,
+            "2": 179,
+            "3": 176,
+            "4": 91,
+            "5": 22,
+            "6": 21,
+            "7": 9,
+            "8": 6,
+            "9": 5,
+            "10": 3,
+            "14": 2,
+            "15": 1,
+            "27": 1
+          },
+          "quality": {
+            "linked_papers": 639,
+            "paired_papers": 603,
+            "retention": 0.9436619718309859,
+            "excluded_papers": 36,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 35,
+              "repeated_id_in_byline": 1
+            },
+            "observed_slots": 2040,
+            "slots_with_valid_id": 1990,
+            "slots_with_raw_name": 2040,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 3.192488262910798,
+            "mean_team_paired": 3.033167495854063
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 528,
+          "authorship_slots": 1575,
+          "mean_team_size": 2.9829545454545454,
+          "median_team_size": 3.0,
+          "names": {
+            "authors": 1463,
+            "papers_per_author": 0.3609022556390977,
+            "incidences_per_author": 1.076555023923445,
+            "fractional_credit_sum": 528.0,
+            "fractional_distribution": {
+              "gini": 0.3164769891572694,
+              "top_1_share": 0.046616161616161625,
+              "top_5_share": 0.15744949494949495,
+              "top_10_share": 0.25510010822510826,
+              "top_100_share": 0.20192550505050505,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.06731981468823589,
+              "top_1_share": 0.030406349206349208,
+              "top_5_share": 0.10558730158730159,
+              "top_10_share": 0.164,
+              "top_100_share": 0.1346031746031746,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 1371,
+              "2": 76,
+              "3": 12,
+              "4": 4
+            }
+          },
+          "ids": {
+            "authors": 1458,
+            "papers_per_author": 0.36213991769547327,
+            "incidences_per_author": 1.0802469135802468,
+            "fractional_credit_sum": 528.0,
+            "fractional_distribution": {
+              "gini": 0.31652181456708206,
+              "top_1_share": 0.048036616161616155,
+              "top_5_share": 0.1584911616161616,
+              "top_10_share": 0.2571022727272727,
+              "top_100_share": 0.205145202020202,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.07035730615977531,
+              "top_1_share": 0.030946031746031746,
+              "top_5_share": 0.10780952380952381,
+              "top_10_share": 0.16685714285714287,
+              "top_100_share": 0.13777777777777778,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 1365,
+              "2": 74,
+              "3": 16,
+              "4": 2,
+              "6": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 72,
+            "2": 161,
+            "3": 150,
+            "4": 79,
+            "5": 37,
+            "6": 12,
+            "7": 7,
+            "8": 2,
+            "10": 1,
+            "11": 3,
+            "12": 2,
+            "13": 2
+          },
+          "quality": {
+            "linked_papers": 637,
+            "paired_papers": 528,
+            "retention": 0.8288854003139717,
+            "excluded_papers": 109,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 109
+            },
+            "observed_slots": 2007,
+            "slots_with_valid_id": 1788,
+            "slots_with_raw_name": 2007,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 3.1507064364207222,
+            "mean_team_paired": 2.9829545454545454
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Numerical Analysis",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 1286,
+          "authorship_slots": 3302,
+          "mean_team_size": 2.567651632970451,
+          "median_team_size": 2.0,
+          "names": {
+            "authors": 3049,
+            "papers_per_author": 0.42177763201049523,
+            "incidences_per_author": 1.0829780255821582,
+            "fractional_credit_sum": 1286.0,
+            "fractional_distribution": {
+              "gini": 0.2964524094071195,
+              "top_1_share": 0.04117094349403837,
+              "top_5_share": 0.1370408427756795,
+              "top_10_share": 0.2554728578834333,
+              "top_100_share": 0.0962554617492409,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.07192456582859519,
+              "top_1_share": 0.02951847365233192,
+              "top_5_share": 0.10384615384615385,
+              "top_10_share": 0.16895820714718354,
+              "top_100_share": 0.07207752877044216,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 2834,
+              "2": 183,
+              "3": 27,
+              "4": 4,
+              "5": 1
+            }
+          },
+          "ids": {
+            "authors": 3026,
+            "papers_per_author": 0.4249834765366821,
+            "incidences_per_author": 1.091209517514871,
+            "fractional_credit_sum": 1286.0,
+            "fractional_distribution": {
+              "gini": 0.2982653853067372,
+              "top_1_share": 0.040817781233799894,
+              "top_5_share": 0.13623731763311855,
+              "top_10_share": 0.2538889506035696,
+              "top_100_share": 0.09634618232985263,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.07816989282867692,
+              "top_1_share": 0.03142943670502726,
+              "top_5_share": 0.10557238037552999,
+              "top_10_share": 0.17522713506965476,
+              "top_100_share": 0.07450030284675954,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 2796,
+              "2": 197,
+              "3": 22,
+              "4": 9,
+              "5": 2
+            }
+          },
+          "team_size_frequency": {
+            "1": 263,
+            "2": 429,
+            "3": 350,
+            "4": 157,
+            "5": 54,
+            "6": 18,
+            "7": 6,
+            "8": 5,
+            "9": 2,
+            "12": 1,
+            "13": 1
+          },
+          "quality": {
+            "linked_papers": 1382,
+            "paired_papers": 1286,
+            "retention": 0.9305354558610709,
+            "excluded_papers": 96,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 96,
+              "truncated_or_100plus_byline": 1,
+              "possible_group_name": 1
+            },
+            "observed_slots": 3743,
+            "slots_with_valid_id": 3612,
+            "slots_with_raw_name": 3743,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.7083936324167874,
+            "mean_team_paired": 2.567651632970451
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 871,
+          "authorship_slots": 2164,
+          "mean_team_size": 2.484500574052813,
+          "median_team_size": 2,
+          "names": {
+            "authors": 2068,
+            "papers_per_author": 0.4211798839458414,
+            "incidences_per_author": 1.04642166344294,
+            "fractional_credit_sum": 871.0,
+            "fractional_distribution": {
+              "gini": 0.2786244717492732,
+              "top_1_share": 0.03672330654420206,
+              "top_5_share": 0.13170685036356677,
+              "top_10_share": 0.24988518943742824,
+              "top_100_share": 0.12780329123612705,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.042962116147116314,
+              "top_1_share": 0.02743068391866913,
+              "top_5_share": 0.09214417744916821,
+              "top_10_share": 0.1399260628465804,
+              "top_100_share": 0.09057301293900184,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 1990,
+              "2": 65,
+              "3": 10,
+              "4": 1,
+              "5": 2
+            }
+          },
+          "ids": {
+            "authors": 2043,
+            "papers_per_author": 0.42633382280959375,
+            "incidences_per_author": 1.0592266275085658,
+            "fractional_credit_sum": 871.0,
+            "fractional_distribution": {
+              "gini": 0.2820190624122507,
+              "top_1_share": 0.036834290088021436,
+              "top_5_share": 0.1319364714887103,
+              "top_10_share": 0.24921546115575965,
+              "top_100_share": 0.12946804439341753,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.053752364821766374,
+              "top_1_share": 0.03043438077634011,
+              "top_5_share": 0.1031192236598891,
+              "top_10_share": 0.15032347504621071,
+              "top_100_share": 0.10212569316081331,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 1947,
+              "2": 78,
+              "3": 14,
+              "4": 2,
+              "5": 1,
+              "6": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 191,
+            "2": 288,
+            "3": 236,
+            "4": 112,
+            "5": 30,
+            "6": 10,
+            "7": 2,
+            "8": 1,
+            "9": 1
+          },
+          "quality": {
+            "linked_papers": 995,
+            "paired_papers": 871,
+            "retention": 0.8753768844221106,
+            "excluded_papers": 124,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 124
+            },
+            "observed_slots": 2562,
+            "slots_with_valid_id": 2383,
+            "slots_with_raw_name": 2562,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.5748743718592966,
+            "mean_team_paired": 2.484500574052813
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Statistics and Probability",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 2148,
+          "authorship_slots": 6113,
+          "mean_team_size": 2.845903165735568,
+          "median_team_size": 3.0,
+          "names": {
+            "authors": 5508,
+            "papers_per_author": 0.3899782135076253,
+            "incidences_per_author": 1.109840232389252,
+            "fractional_credit_sum": 2148.0,
+            "fractional_distribution": {
+              "gini": 0.32737578800777123,
+              "top_1_share": 0.0496927374301676,
+              "top_5_share": 0.1540469539771216,
+              "top_10_share": 0.2721306440300854,
+              "top_100_share": 0.07238959829741952,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.0915997622125353,
+              "top_1_share": 0.032429249141174545,
+              "top_5_share": 0.10875184034025848,
+              "top_10_share": 0.1890724685097334,
+              "top_100_share": 0.05136594143628333,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 5017,
+              "2": 410,
+              "3": 60,
+              "4": 15,
+              "5": 2,
+              "6": 2,
+              "7": 2
+            }
+          },
+          "ids": {
+            "authors": 5451,
+            "papers_per_author": 0.3940561364887177,
+            "incidences_per_author": 1.1214456063107687,
+            "fractional_credit_sum": 2148.0,
+            "fractional_distribution": {
+              "gini": 0.3301426980294526,
+              "top_1_share": 0.04785311918063314,
+              "top_5_share": 0.15297286512370312,
+              "top_10_share": 0.2725582843599604,
+              "top_100_share": 0.07264232508645917,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.0997720332382579,
+              "top_1_share": 0.03345820382790774,
+              "top_5_share": 0.11190904629478161,
+              "top_10_share": 0.1974644200883363,
+              "top_100_share": 0.0554555864550957,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 4928,
+              "2": 425,
+              "3": 72,
+              "4": 14,
+              "5": 9,
+              "6": 3
+            }
+          },
+          "team_size_frequency": {
+            "1": 382,
+            "2": 637,
+            "3": 598,
+            "4": 284,
+            "5": 128,
+            "6": 56,
+            "7": 28,
+            "8": 17,
+            "9": 4,
+            "10": 3,
+            "11": 4,
+            "12": 2,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "20": 2
+          },
+          "quality": {
+            "linked_papers": 2318,
+            "paired_papers": 2148,
+            "retention": 0.9266609145815358,
+            "excluded_papers": 170,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 168,
+              "repeated_id_in_byline": 1,
+              "truncated_or_100plus_byline": 1,
+              "possible_group_name": 1
+            },
+            "observed_slots": 6875,
+            "slots_with_valid_id": 6647,
+            "slots_with_raw_name": 6875,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.9659188955996547,
+            "mean_team_paired": 2.845903165735568
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 2305,
+          "authorship_slots": 6469,
+          "mean_team_size": 2.8065075921908895,
+          "median_team_size": 3,
+          "names": {
+            "authors": 5787,
+            "papers_per_author": 0.39830654916191466,
+            "incidences_per_author": 1.117850354242267,
+            "fractional_credit_sum": 2305.0,
+            "fractional_distribution": {
+              "gini": 0.32879466059019147,
+              "top_1_share": 0.05019228385497366,
+              "top_5_share": 0.1544375581035017,
+              "top_10_share": 0.2746536327013551,
+              "top_100_share": 0.07229005268050821,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.09789411039925833,
+              "top_1_share": 0.035339310558046066,
+              "top_5_share": 0.11465450610604422,
+              "top_10_share": 0.194883289534704,
+              "top_100_share": 0.05487710619879425,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 5268,
+              "2": 411,
+              "3": 81,
+              "4": 15,
+              "5": 6,
+              "6": 2,
+              "7": 2,
+              "9": 1,
+              "11": 1
+            }
+          },
+          "ids": {
+            "authors": 5765,
+            "papers_per_author": 0.3998265394622723,
+            "incidences_per_author": 1.1221162185602775,
+            "fractional_credit_sum": 2305.0,
+            "fractional_distribution": {
+              "gini": 0.3276714099983473,
+              "top_1_share": 0.048218159281066,
+              "top_5_share": 0.15261078400991632,
+              "top_10_share": 0.2724932153890939,
+              "top_100_share": 0.07083927280239645,
+              "median": 0.3333333333333333
+            },
+            "full_distribution": {
+              "gini": 0.10045872254586108,
+              "top_1_share": 0.034773535322306384,
+              "top_5_share": 0.11323233884680785,
+              "top_10_share": 0.197944040810017,
+              "top_100_share": 0.054413356005565,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 5217,
+              "2": 444,
+              "3": 76,
+              "4": 18,
+              "5": 3,
+              "6": 3,
+              "7": 2,
+              "8": 1,
+              "9": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 439,
+            "2": 670,
+            "3": 628,
+            "4": 317,
+            "5": 121,
+            "6": 59,
+            "7": 36,
+            "8": 15,
+            "9": 9,
+            "10": 6,
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "15": 2
+          },
+          "quality": {
+            "linked_papers": 2793,
+            "paired_papers": 2305,
+            "retention": 0.8252774794128177,
+            "excluded_papers": 488,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 487,
+              "repeated_id_in_byline": 2
+            },
+            "observed_slots": 8118,
+            "slots_with_valid_id": 7290,
+            "slots_with_raw_name": 8118,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.906552094522019,
+            "mean_team_paired": 2.8065075921908895
+          }
+        }
+      ]
+    },
+    {
+      "subfield": "Theoretical Computer Science",
+      "annual": [
+        {
+          "period": "2024",
+          "papers": 169,
+          "authorship_slots": 327,
+          "mean_team_size": 1.9349112426035502,
+          "median_team_size": 2,
+          "names": {
+            "authors": 321,
+            "papers_per_author": 0.5264797507788161,
+            "incidences_per_author": 1.0186915887850467,
+            "fractional_credit_sum": 169.0,
+            "fractional_distribution": {
+              "gini": 0.33011361192525834,
+              "top_1_share": 0.04562130177514793,
+              "top_5_share": 0.12159763313609467,
+              "top_10_share": 0.2165680473372781,
+              "top_100_share": 0.5552268244575936,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.018177141387293316,
+              "top_1_share": 0.025749235474006114,
+              "top_5_share": 0.06743119266055046,
+              "top_10_share": 0.11651376146788991,
+              "top_100_share": 0.3241590214067278,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 317,
+              "2": 3,
+              "4": 1
+            }
+          },
+          "ids": {
+            "authors": 321,
+            "papers_per_author": 0.5264797507788161,
+            "incidences_per_author": 1.0186915887850467,
+            "fractional_credit_sum": 169.0,
+            "fractional_distribution": {
+              "gini": 0.32564041119037546,
+              "top_1_share": 0.039704142011834316,
+              "top_5_share": 0.11568047337278108,
+              "top_10_share": 0.2106508875739645,
+              "top_100_share": 0.5527613412228797,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.018177141387293316,
+              "top_1_share": 0.025749235474006114,
+              "top_5_share": 0.06743119266055046,
+              "top_10_share": 0.11651376146788991,
+              "top_100_share": 0.3241590214067278,
+              "median": 1
+            },
+            "activity_frequency": {
+              "1": 317,
+              "2": 3,
+              "4": 1
+            }
+          },
+          "team_size_frequency": {
+            "1": 82,
+            "2": 47,
+            "3": 24,
+            "4": 8,
+            "5": 6,
+            "6": 1,
+            "11": 1
+          },
+          "quality": {
+            "linked_papers": 179,
+            "paired_papers": 169,
+            "retention": 0.9441340782122905,
+            "excluded_papers": 10,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 10
+            },
+            "observed_slots": 360,
+            "slots_with_valid_id": 344,
+            "slots_with_raw_name": 360,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.011173184357542,
+            "mean_team_paired": 1.9349112426035502
+          }
+        },
+        {
+          "period": "2025",
+          "papers": 89,
+          "authorship_slots": 163,
+          "mean_team_size": 1.8314606741573034,
+          "median_team_size": 1,
+          "names": {
+            "authors": 160,
+            "papers_per_author": 0.55625,
+            "incidences_per_author": 1.01875,
+            "fractional_credit_sum": 89.0,
+            "fractional_distribution": {
+              "gini": 0.3157303370786515,
+              "top_1_share": 0.029213483146067417,
+              "top_5_share": 0.10112359550561797,
+              "top_10_share": 0.19101123595505617,
+              "top_100_share": 0.8258426966292135,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.01805981595092021,
+              "top_1_share": 0.0196319018404908,
+              "top_5_share": 0.06748466257668712,
+              "top_10_share": 0.1165644171779141,
+              "top_100_share": 0.6319018404907976,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 157,
+              "2": 3
+            }
+          },
+          "ids": {
+            "authors": 160,
+            "papers_per_author": 0.55625,
+            "incidences_per_author": 1.01875,
+            "fractional_credit_sum": 89.0,
+            "fractional_distribution": {
+              "gini": 0.3157303370786515,
+              "top_1_share": 0.029213483146067417,
+              "top_5_share": 0.10112359550561797,
+              "top_10_share": 0.19101123595505617,
+              "top_100_share": 0.8258426966292135,
+              "median": 0.5
+            },
+            "full_distribution": {
+              "gini": 0.01805981595092021,
+              "top_1_share": 0.0196319018404908,
+              "top_5_share": 0.06748466257668712,
+              "top_10_share": 0.1165644171779141,
+              "top_100_share": 0.6319018404907976,
+              "median": 1.0
+            },
+            "activity_frequency": {
+              "1": 157,
+              "2": 3
+            }
+          },
+          "team_size_frequency": {
+            "1": 49,
+            "2": 20,
+            "3": 11,
+            "4": 4,
+            "5": 5
+          },
+          "quality": {
+            "linked_papers": 101,
+            "paired_papers": 89,
+            "retention": 0.8811881188118812,
+            "excluded_papers": 12,
+            "reasons_nonexclusive": {
+              "missing_or_placeholder_author_id": 12
+            },
+            "observed_slots": 203,
+            "slots_with_valid_id": 186,
+            "slots_with_raw_name": 203,
+            "name_collision_papers": 0,
+            "mean_observed_team_all": 2.00990099009901,
+            "mean_team_paired": 1.8314606741573034
+          }
+        }
+      ]
+    }
+  ],
+  "publication_year_by_upload_year": {
+    "2024": {
+      "2024": 22732,
+      "2025": 550,
+      "2026": 1696
+    },
+    "2025": {
+      "2024": 166,
+      "2025": 21834,
+      "2026": 3462
+    }
+  },
+  "manifest_overlap": {
+    "sha256": "a505dad378833aed1cbbdb050d04014ea014dc52a97060c903e945ded20759a0",
+    "note": "Overlap with the existing project ID manifest; not an independently validated arXiv census",
+    "annual": [
+      {
+        "period": "2024",
+        "manifest_papers": 52081,
+        "linked_overlap": 21565,
+        "paired_overlap": 20639,
+        "linked_fraction_of_manifest": 0.4140665501814481,
+        "paired_fraction_of_manifest": 0.39628655363760296,
+        "papers": 20639,
+        "authorship_slots": 43794,
+        "mean_team_size": 2.1219051310625514,
+        "median_team_size": 2,
+        "names": {
+          "authors": 32187,
+          "papers_per_author": 0.6412216112094945,
+          "incidences_per_author": 1.360611426973623,
+          "fractional_credit_sum": 20639.0
+        },
+        "ids": {
+          "authors": 31511,
+          "papers_per_author": 0.6549776268604615,
+          "incidences_per_author": 1.3898003871663864,
+          "fractional_credit_sum": 20639.0
+        }
+      },
+      {
+        "period": "2025",
+        "manifest_papers": 55751,
+        "linked_overlap": 22362,
+        "paired_overlap": 19079,
+        "linked_fraction_of_manifest": 0.40110491291636025,
+        "paired_fraction_of_manifest": 0.3422180768057972,
+        "papers": 19079,
+        "authorship_slots": 40046,
+        "mean_team_size": 2.09895696839457,
+        "median_team_size": 2,
+        "names": {
+          "authors": 30918,
+          "papers_per_author": 0.6170838993466589,
+          "incidences_per_author": 1.295232550617763,
+          "fractional_credit_sum": 19079.0
+        },
+        "ids": {
+          "authors": 30164,
+          "papers_per_author": 0.6325089510674977,
+          "incidences_per_author": 1.3276090704150643,
+          "fractional_credit_sum": 19079.0
+        }
+      }
+    ]
+  }
+}
