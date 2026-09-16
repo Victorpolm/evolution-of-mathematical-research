@@ -1,6 +1,79 @@
 # RESEARCH_CONTEXT.md
 
-_Last updated: 2026-09-04_
+_Last updated: 2026-09-16_
+
+The detailed first-stage proposal is the
+[revised statistical research plan](ArxivObservatory/analysis/STATISTICAL_RESEARCH_PLAN.md).
+It incorporates a mathematical and prior-literature review, preserves the
+paired recorded-name/OpenAlex-ID comparison, and distinguishes the existing
+three-year pilot from a longer historical study. The 2010–2025 descriptive P/A calculation has now run; person-level validation
+and the broader research program remain incomplete.
+
+## Contributor populations and concentration now available
+
+The updated dashboard keeps annual/window-active P_t/A_t first and adds P_t/A_all using the full 2010–2025 contributor union. A whole-study table reports P_all/A_all. The same 300,011 paired papers contain 178,730 OpenAlex author IDs or 231,929 distinct names across the study. One paper with three contributors explains why P/A can be below one: fractional credit is shared even though each contributor coauthored a paper.
+
+The new Top 10% view ranks fractional credit and coauthored-paper counts separately under both identity definitions, in annual, monthly and rolling windows, and over the full study. Proportional cutoff ties preserve an exact 10% group weight. In 2025 the top-decile fractional share is 27.35% for IDs and 27.26% for names; cumulative 2010–2025 shares are 52.02% and 46.56%. Cumulative and annual ranks have different exposure lengths and memberships. This extension remains descriptive and does not validate identities or establish an AI effect. See the dated addendum in the research plan and the aggregate report in draft PR #2.
+
+## Current historical result
+
+The dashboard now opens with papers per observed contributor, P_t/A_t, from 2010 to 2025. It compares distinct raw names with OpenAlex's existing resolved author IDs on the same retained papers. Annual, monthly and rolling 12-month views are accompanied by component counts, retention and a broader partial-byline sensitivity calculation. The new acquisition queries publication years 2010–2026 and derives analysis months from arXiv IDs.
+
+These are descriptive results on recorded contributor keys in a selected Mathematics frame. They do not establish individual productivity, true researcher counts or an AI effect. The five-year lookback is not required for annual active-key counts; it remains relevant to future entry studies. Code, manifest and aggregate results are in draft PR #2. The raw frozen metadata is supplied separately. Mathematical and prior-literature foundations remain intact.
+
+## Earlier empirical checkpoint · 15 September snapshot
+
+**After the second September 15 reply, population trend interpretations are
+on hold.** The main dashboard is now a coverage audit. Earlier contributor and
+concentration charts are withdrawn from its primary view and retained in the
+archived diagnostic output.
+
+The new audit finds 206 entirely unidentified bylines in 2024 and 2,090 in 2025,
+accounting for 7.38 percentage points of the 10.24-point retention gap. Of the
+2025 entirely unidentified bylines, 1,577 occur in November–December. Retention
+remains 95.26% versus 85.04% after standardizing on common exact-team-size and
+subfield cells. This locates the problem; it does not establish indexing lag
+or neutralize selection. The snapshot has no indexing-history clock.
+
+`analysis/retention_audit.py` implements partial-ID credit with explicitly
+unallocated missing-ID and unusable-byline credit. It also reports upstream
+date-window filtering, repeated-observation ORCID diagnostics and baseline
+observed-key cohorts with zero follow-up retained. The mathematical and
+prior-work protocol remains intact. The updated offline code, aggregate results
+and frozen acquisition manifest are submitted in draft analysis PR #2; the
+revised method is submitted in draft PR #3. Raw source metadata remains a
+separate input. Main-branch integration remains an owner review decision.
+
+The 2024–2025 interval is a technical pilot, not the intended historical scope.
+Those are the only full calendar years in the existing August 2023–July 2026
+repository ID window. The historical target remains metadata from 2010 onward,
+with main comparisons from 2015 after a five-year lookback, subject to coverage
+validation. An aggregate OpenAlex availability check on September 15 found
+330,421 candidate works with publication years 2010–2023 under the same field
+and indexing filters. Those are not upload-year counts or contributor estimates;
+at that checkpoint the historical work-level backfill had not been collected. See the
+[historical extension note](ArxivObservatory/reports/historical_extension_20260915/HISTORICAL_EXTENSION.md).
+
+A frozen OpenAlex-only run now compares minimally normalized source names with
+existing OpenAlex author IDs on identical eligible papers for 2024–2025.
+It is available in [draft analysis PR #2](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2)
+and the [participation dashboard](https://mathematics-research-observatory.tim-gehrunge-2308.chatgpt.site).
+This is separate from the upstream AI-disclosure dashboard reviewed at main
+commit `7d10633`; both new analysis and method documents remain in draft PRs.
+
+The main finding is coverage sensitivity: paired byline retention falls from
+95.11% to 84.87%. The paired raw-name count falls 7.24%, but relaxing only the
+missing-ID rule gives a 2.41% increase. Neither result establishes the direction
+of change in real-person participation. Names and IDs remain two specifications,
+not upper/lower bounds or validated corrected counts.
+
+The response to the second review adds annual name/ID mapping diagnostics,
+source-ORCID coverage, full versus fractional concentration, single-appearance
+shares and explicit log-growth terms. It preserves the mathematical identities
+and prior-work comparison. Exact arXiv primary-category reconciliation,
+independent identity validation and any AI causal design remain outstanding.
+The newly collected history addresses the earlier data-window limitation. See the protocol's September 15 addendum for the methodological
+decisions and the analysis PR for the full response.
 
 ## 1. Research program
 
@@ -48,27 +121,32 @@ Geographic, institutional, and career-stage democratization are possible later e
 
 ## 3. Core decomposition of publication growth
 
-A first-order decomposition is
+For one fixed corpus, window and author-identification method, let
+\(P_t\) be paper count, \(A_t\) active-author count and \(I_t\) authorship
+incidences. With mean team size \(\bar k_t=I_t/P_t\) and mean publication
+participation \(\bar n_t=I_t/A_t\), the exact identity is
 
 \[
-\text{number of papers}
-\approx
-\text{number of active researchers}
-\times
-\text{publication output per active researcher},
+P_t=A_t\frac{\bar n_t}{\bar k_t},
+\qquad
+\Delta\log P=\Delta\log A+\Delta\log\bar n-\Delta\log\bar k.
 \]
 
-with adjustments for coauthorship.
+For equal paper-level fractional credit
+\(f_{a,t}=\sum_{p\ni a}1/k_p\), \(\sum_a f_{a,t}=P_t\) and its
+mean is exactly \(P_t/A_t\). The mean is therefore a derived quantity;
+the distribution of fractional credit remains informative. At fixed
+\(\bar n_t\), larger teams lower \(P_t/A_t\).
 
-The empirical analysis therefore needs to separate:
+The revised protocol also accounts for adjacent-year paper changes through
+continuing-author credit change, entry credit and exit credit. These are
+descriptive identities, not causal effects or direct measures of research
+effort. Entry means newly observed activity relative to the previous window;
+distinguishing first-observed authors from returners requires lookback.
 
-1. growth in the number of mathematical papers,
-2. growth in the number of active mathematical authors,
-3. changes in output per active author,
-4. changes in coauthorship,
-5. changes in database coverage and publication indexing.
-
-Absolute paper counts alone are not sufficient to characterize changes in research production.
+Coverage, identity errors, field composition and changing arXiv participation
+must be assessed before interpreting these quantities as changes in people
+or publication behavior.
 
 ---
 
@@ -133,7 +211,9 @@ Then
 
 measures mean publication participations per active author.
 
-Both full-counting and fractional-counting productivity measures should be studied.
+Both full-counting and fractional-counting publication activity should be studied.
+Their distributions answer different questions; mean fractional output is already
+\(P_t/A_t\), not an additional independent outcome.
 
 For fractional counting, an author on a paper with \(n_p\) authors receives \(1/n_p\) paper-equivalents.
 
@@ -301,7 +381,11 @@ The historical analyses in the initial project are intended to establish the bas
 
 ## 9. Primary data source
 
-The initial bibliometric source is **OpenAlex**.
+For the first-stage study, **arXiv defines the paper population** and
+**OpenAlex supplies the initial author-identity layer**. Compare OpenAlex IDs
+with recorded-name counts on the same papers. zbMATH Open supplies a
+mathematics-specific prior study and a proposed external coverage/identity
+comparison; it is not assumed to provide infallible person identities.
 
 Relevant objects include:
 
@@ -491,9 +575,12 @@ Core analyses:
 9. years-since-first-observed-publication distributions,
 10. cohort/entry analysis,
 11. metadata coverage diagnostics,
-12. robustness to counting convention, active-author definition, time window, and mathematics-corpus definition.
+12. robustness to counting convention, active-author definition, time window, and mathematics-corpus definition,
+13. continuing-author, entry and exit credit accounting for validated adjacent years.
 
-Collaboration, article length, references, interdisciplinarity, and AI should remain secondary until this core analysis is credible.
+Team size belongs in the core accounting. Extended collaboration networks,
+article length, references, interdisciplinarity, and AI remain secondary until
+this core analysis is credible.
 
 ---
 
@@ -538,7 +625,7 @@ What has been established so far:
 
 - The broad research program concerns the historical evolution of mathematical research.
 - The first substantive focus is democratization/concentration of mathematical publishing.
-- OpenAlex is the initial primary data source.
+- arXiv is the initial paper frame and OpenAlex the initial author-ID layer.
 - The main first-wave statistics and methodological risks have been identified.
 - Concentration should be measured with top shares, Lorenz curves, Gini coefficients, and the full productivity distribution rather than a single statistic.
 - Publication growth should be decomposed into researcher-population growth, researcher productivity, and coauthorship.
@@ -553,7 +640,9 @@ No substantive empirical result has yet been established merely by inclusion in 
 
 ### 1. Validate the mathematics corpus
 
-Determine a reproducible and historically stable definition of mathematical works in OpenAlex.
+Audit the existing arXiv metadata and establish a reproducible mathematics
+corpus with explicit primary-category, cross-listing and alias rules. Assess
+historical stability and matching to OpenAlex before interpreting trends.
 
 ### 2. Build coverage diagnostics
 
