@@ -46,3 +46,10 @@
 .history-details p{margin-top:10px}
 @media(max-width:720px){.explained-chart{padding:22px 0}.chart-heading h3{font-size:19px}.chart-legend{gap:9px 16px}.chart-legend>span{gap:6px}.chart-plot{grid-template-columns:61px minmax(0,1fr);gap:5px}.chart-explanation{padding:14px 13px}.chart-x-ticks>span:not(:first-child):not(:last-child){display:none}.history-note{padding:15px}.chart-unit{line-height:1.6}}
 #view-trends > .panel + .panel{margin-top:24px}
+
+/* Contributor population and decile comparison */
+#view-decile > .panel + .panel{margin-top:24px}
+.ratio-example{max-width:1000px;padding:16px 20px;background:#edf3ff;border-left:3px solid #365bc9;border-radius:6px;color:#273b59;font-size:14px;line-height:1.75;margin:0 0 24px}
+.decile-controls{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.decile-controls .eyebrow{margin:0 0 10px}
+@media(max-width:650px){.decile-controls{display:block}.decile-controls>div+div{margin-top:18px}.decile-controls .segmented{flex-wrap:wrap}.ratio-example{padding:14px;font-size:13px}}

@@ -4,10 +4,11 @@ Quantitative study of the evolution, participation, concentration, collaboration
 
 ## Current checkpoint
 
-The dashboard now opens with **papers per observed contributor, 2010–2025**. It compares distinct raw-name keys with OpenAlex's existing resolved author IDs on exactly the same retained papers. Annual, monthly and rolling 12-month views are available, followed by paper counts, contributor counts and retention.
+The dashboard now opens with **papers per observed contributor, 2010–2025**. It compares distinct raw-name keys with OpenAlex's existing resolved author IDs on exactly the same retained papers. Annual, monthly and rolling 12-month views are available. The first ratio uses contributors active within each window; a second uses the fixed 2010–2025 contributor union. A cumulative whole-study table and a dedicated Top 10% view compare fractional paper credit and coauthored-paper counts under both identity definitions. Component counts and retention remain visible.
 
 These are descriptive results for a selected OpenAlex arXiv-linked Mathematics population. They do not establish counts of real people, individual productivity changes or causal AI effects. Names and IDs can both split or combine people; changing metadata completeness remains a limitation.
 
+- [Contributor populations, denominator comparison and top-decile results](ArxivObservatory/reports/contributor_populations_20260916/CONTRIBUTOR_POPULATIONS.md)
 - [Historical analysis, results and reproduction](ArxivObservatory/reports/historical_participation_20260916/HISTORICAL_PARTICIPATION.md)
 - [Earlier 2024–2025 retention audit](ArxivObservatory/reports/openalex_interim_20260915/RETENTION_AUDIT.md)
 - [Static dashboard source and local viewing instructions](dashboard/README.md)
@@ -18,7 +19,7 @@ The historical metadata query covers publication years 2010–2026; analysis dat
 
 ## Reproduction and scope
 
-Analysis code runs offline. From `ArxivObservatory/`, run the 27 focused fixture checks with:
+Analysis code runs offline. From `ArxivObservatory/`, run the 35 focused fixture checks with:
 
 ```sh
 python tests/run_participation_checks.py

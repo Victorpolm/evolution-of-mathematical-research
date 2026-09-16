@@ -16,10 +16,10 @@ const modules = {
     description: 'Measure how publication credit is distributed across active authors, including the upper tail.',
     formula: 'C<sub>q,t</sub> = Σ<sub>i ∈ T(q,t)</sub> y<sub>it</sub> / Σ<sub>i</sub> y<sub>it</sub>',
     formulaNote: 'q ∈ {0.01, 0.05, 0.10}',
-    definition: 'The new interim comparison uses fractional rank boundaries for top-percent shares; the earlier prototype used ceil(q × A). Authors are ranked anew each year. This does not track persistence of a fixed elite cohort.',
+    definition: 'The historical top-decile comparison uses exactly 0.1 × A population weight, sharing boundary membership equally across tied keys. Contributors are ranked anew in each window and separately over the whole study. Coauthored counts deduplicate keys within each paper; fractional credit preserves every byline slot.',
     measures: [['Fractional top 1%, 5%, and 10% shares', 'Implemented'], ['Fractional Gini coefficient', 'Implemented'], ['Full-count top 10% share and Gini', 'Implemented'], ['Lorenz curves and richer productivity quantiles', 'Planned']],
     limitation: 'The current partial-ID calculation keeps credit for missing slots unallocated. Concentration among observed IDs still depends on missing papers and identity errors. An independent identity audit is required before population interpretation.',
-    pending: 'Exploratory 2024–2025 concentration estimates are archived. The Coverage audit explains the retention problem; identity and high-output-tail audits remain pending.'
+    pending: 'The Top 10% contributors view now reports 2010–2025 annual, monthly, rolling and cumulative top-decile shares under both identity definitions and output measures. Older pilot top-1%, top-5% and Gini estimates remain archived; identity and high-output-tail validation remain pending.'
   },
   entry: {
     title: 'Entry & observed age', label: 'COHORTS & PERSISTENCE',
@@ -95,7 +95,7 @@ function renderModule(key) {
 
 function route() {
   const hash = window.location.hash.slice(1);
-  const view = hash.startsWith('analysis') ? 'analysis' : hash === 'methods' ? 'methods' : hash === 'overview' ? 'overview' : hash === 'manifest' ? 'manifest' : hash === 'papers' ? 'papers' : 'trends';
+  const view = hash.startsWith('analysis') ? 'analysis' : hash === 'decile' ? 'decile' : hash === 'methods' ? 'methods' : hash === 'overview' ? 'overview' : hash === 'manifest' ? 'manifest' : hash === 'papers' ? 'papers' : 'trends';
   const key = hash.startsWith('analysis-') ? hash.slice(9) : 'growth';
   document.querySelectorAll('.view').forEach(section => { section.hidden = section.id !== 'view-' + view; });
   document.querySelectorAll('[data-view]').forEach(link => {
@@ -104,7 +104,7 @@ function route() {
     if (selected) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
   });
   if (view === 'analysis') renderModule(Object.hasOwn(modules, key) ? key : 'growth');
-  document.title = `${view === 'trends' ? 'Papers per observed contributor' : view === 'papers' ? 'Earlier coverage audit' : view === 'manifest' ? 'Repository upload counts' : view === 'overview' ? 'Growth & participation' : view === 'analysis' ? 'Measures & results' : 'Methods & sources'} · Mathematics Observatory`;
+  document.title = `${view === 'decile' ? 'Top 10% contributors' : view === 'trends' ? 'Papers per observed contributor' : view === 'papers' ? 'Earlier coverage audit' : view === 'manifest' ? 'Repository upload counts' : view === 'overview' ? 'Growth & participation' : view === 'analysis' ? 'Measures & results' : 'Methods & sources'} · Mathematics Observatory`;
 }
 
 document.querySelectorAll('[data-pilot]').forEach(button => button.addEventListener('click', () => { pilotView = button.dataset.pilot; renderPilot(); }));

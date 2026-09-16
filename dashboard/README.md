@@ -30,3 +30,9 @@ The current hosted dashboard is [Mathematics Research Observatory](https://mathe
 The underlying offline analysis and focused tests are in `ArxivObservatory/analysis/` and `ArxivObservatory/tests/`. See the [historical report and reproduction instructions](../ArxivObservatory/reports/historical_participation_20260916/HISTORICAL_PARTICIPATION.md) and the [earlier pilot instructions](../ArxivObservatory/analysis/OPENALEX_INTERIM.md).
 
 Only aggregate data is included here. The private reproduction archives, raw metadata cache and hosting configuration are intentionally absent. The repository version links to reproduction instructions and an SVG export instead of those private download archives. The dataset remains frozen; the dashboard does not update itself from GitHub or OpenAlex.
+
+## Contributor populations and top 10%
+
+The first graph divides papers by active keys within each window. The second divides by the fixed 2010–2025 union; the cumulative table covers all sixteen years. The Top 10% view provides fractional-credit and coauthored-paper rankings, with exact proportional boundary ties and separate cumulative rankings. All new calculations use the same retained papers and frozen metadata.
+
+Run `node check_dashboard.cjs` from this directory for the dependency-free control, caption, route and invalid-data smoke checks. The offline mathematical fixtures are part of `ArxivObservatory/tests/run_participation_checks.py`.

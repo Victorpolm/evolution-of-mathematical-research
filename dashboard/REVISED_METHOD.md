@@ -5,6 +5,20 @@ the mathematical and prior-literature foundations. The addendum records the
 bounded OpenAlex run and decisions following the second supplied review.
 The historical P/A calculation is now available; independent person-level validation and the broader research program remain incomplete.
 
+## Contributor populations and top-decile extension, 16 September 2026
+
+The original headline ratio uses contributors active in the same year or window: $P_t/A_t$. One paper with three contributor keys gives $P/A=1/3$, even though each key coauthored one paper. The dashboard now also shows $P_t/A_{all}$ using the union of keys on all retained 2010–2025 papers, and $P_{all}/A_{all}$ for the whole sixteen-year total. The fixed pool includes zero output for keys inactive in a given year. It is not the active research workforce; its annual trend has the same percentage changes as paper counts. Full-study keys are never calculated by summing annual counts.
+
+An offline extension reuses exactly the same 300,011 paired papers and verifies agreement with the historical baseline in all 389 windows. The full-study union contains 231,929 raw-name keys or 178,730 OpenAlex author IDs. Whole-study P/A is 1.2935 per name and 1.6786 per ID, spanning sixteen years rather than a single year.
+
+The most prolific decile is ranked separately under fractional paper credit and full coauthored-paper counts, for both identity definitions. Annual, monthly and rolling rankings use keys active within each window. A separate cumulative ranking uses all output over the whole study; it is not an average of annual deciles or a fixed cohort followed over time. Fractional credit remains 1/k per returned slot. Full coauthored-paper counts award one paper per distinct key per paper, so repeated raw-name slots count once. Their total J can differ from the byline-slot total I used in earlier archived tables; those tables remain unchanged.
+
+The top group has exactly 0.1 A population weight. Cutoff ties share the remaining membership proportionally, with fractional scores rounded to 12 decimals for tie identification only. Output sums use unrounded credit. Fractional top-decile share divides by P; full-count share divides by J, not the distinct-paper count. The ratio of top-decile mean output to the other 90% mean is $9S/(1-S)$ when S is the top-decile share. All cutoff counts, tie weights, means and totals are available in the aggregate JSON.
+
+In 2025 the annual top-decile fractional share is 27.35% using IDs and 27.26% using names. Across the whole study the cumulative shares are 52.02% and 46.56%, respectively. The different exposure lengths and ranking populations prevent interpreting the gap between annual and cumulative shares as a time trend. These are descriptive observed-key results; identity, coverage and high-output-tail validation remain outstanding. The mathematical and prior-literature foundations below remain intact.
+
+Implementation and the full report are in [analysis draft PR #2](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2): `analysis/contributor_populations.py` and `reports/contributor_populations_20260916/CONTRIBUTOR_POPULATIONS.md`. All calculations reuse the frozen September 16 metadata; no additional API requests were made.
+
 ## Historical P/A implementation, 16 September 2026
 
 The user authorized free-quota acquisition with an OpenAlex API key and requested that the first visible graph be papers per observed contributor, P_t/A_t, under both identity definitions. The new frozen extraction queries publication years 2010–2026; the descriptive analysis covers arXiv ID dates 2010–2025. The offline historical module and aggregate report are submitted in draft PR #2.

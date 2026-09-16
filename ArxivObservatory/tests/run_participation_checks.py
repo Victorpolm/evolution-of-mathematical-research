@@ -13,7 +13,7 @@ def main():
     for filename in (
         "test_openalex_names.py", "test_retention_audit.py",
         "test_papers_contributors.py", "test_export_metadata.py",
-        "test_historical_participation.py",
+        "test_historical_participation.py", "test_contributor_populations.py",
     ):
         spec = importlib.util.spec_from_file_location(filename[:-3], root / "tests" / filename)
         module = importlib.util.module_from_spec(spec)
