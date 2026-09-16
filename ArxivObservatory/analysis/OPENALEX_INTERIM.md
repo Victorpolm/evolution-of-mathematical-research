@@ -1,5 +1,12 @@
 # Interim OpenAlex-only comparison
 
+**Current status after the second September 15 reply:** population participation
+and concentration interpretations are on hold. The main dashboard presents the
+retention audit; the earlier comparison remains archived for reproducibility.
+Use `analysis/retention_audit.py` for partial-ID accounting and the new audit,
+then `analysis/render_retention_audit.py` for its report and figure. Details and
+commands are in `reports/openalex_interim_20260915/RETENTION_AUDIT.md`.
+
 The user requested an OpenAlex-only run on 15 September 2026 while the existing
 Observatory database and old pilot CSV remain unavailable. This is a bounded
 substitute for the paired identity comparison, not completion of every stage
@@ -52,17 +59,47 @@ Extract the supplied metadata snapshot and run from `ArxivObservatory/`:
       --input /absolute/path/to/results/openalex_comparison.json \
       --output /absolute/path/to/results
 
+    python -m analysis.retention_audit \
+      --snapshot /absolute/path/to/snapshot \
+      --output /absolute/path/to/results
+
+    python -m analysis.render_retention_audit \
+      --input /absolute/path/to/results/retention_audit.json \
+      --output /absolute/path/to/results
+
 Calculation uses only the Python standard library. Figure rendering adds
 matplotlib. Raw metadata and the user-authorized free-API session helper remain
 outside this repository; contributed analysis code performs no network calls.
 Committed outputs contain only aggregates. No paper text was fetched from
 arXiv, no paid API account was used, and pipeline/taxonomy files are unchanged.
 
-The six new fixture tests can be collected by pytest alongside existing tests.
-They also run as standard-library `unittest.FunctionTestCase` instances in
-environments without pytest. The focused run covers 15 tests including the
-existing paper-count and metadata-export checks. The unavailable full upstream
-checkout was not reconstructed just to claim its test suite ran.
+The seven comparison fixtures, six retention-audit fixtures, and nine existing
+paper-count/export tests provide 22 focused offline checks. Run them with:
+
+    python -m pytest tests/test_openalex_names.py tests/test_retention_audit.py tests/test_papers_contributors.py tests/test_export_metadata.py
+
+For an environment without pytest, the same checks run with the standard library:
+
+    python tests/run_participation_checks.py
+
+No full upstream-suite result is claimed. Calculation has no third-party
+dependency; the optional figure renderers require matplotlib. The frozen
+metadata snapshot is a separate required input: the committed acquisition
+manifest and hashes do not replace access to its exact bytes.
 
 See `reports/openalex_interim_20260915/OPENALEX_COMPARISON.md` for empirical
 results, query provenance, exclusion counts and prior-work references.
+
+The September 15 review extension computes annual name/ID multiplicity and
+source-ORCID coverage on the same cached data. The archived comparison reports
+full and fractional Gini, single-appearance shares and the three-factor log
+decomposition. The current dashboard instead leads with the retention audit
+and unallocated-credit accounting. No paired input population, name normalizer
+or person-resolution method changed. See `REVIEW_RESPONSE.md` and
+`RETENTION_AUDIT.md` alongside the report for the mathematical corrections.
+
+The root `dashboard/` directory contains the standalone static presentation,
+including the graph titles, labelled scales and explanations beneath each
+figure. It uses aggregate JSON only and makes no OpenAlex or arXiv API calls.
+The 2010-onward extension remains a declared next stage; the availability query
+recorded in the method PR is not a historical author-level dataset.

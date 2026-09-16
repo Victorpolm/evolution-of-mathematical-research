@@ -1,6 +1,6 @@
 import math
 from analysis.openalex_names import (
-    arxiv_ids, author_key, credits, metrics, name_key, prepare, top_share, transition,
+    arxiv_ids, author_key, credits, crosswalk_diagnostics, metrics, name_key, prepare, top_share, transition,
 )
 
 
@@ -75,3 +75,26 @@ def test_fractional_rank_boundary_and_missing_id_paired_exclusion():
     rows, _ = prepare([work(1, "2401.00001", [("A", "A1"), ("B", None)])])
     assert rows[0]["reasons"] == ["missing_or_placeholder_author_id"]
     assert rows[0]["slots"] == 2
+
+
+def test_mapping_multiplicity_is_window_specific_and_slot_weighted():
+    rows, _ = prepare([
+        work(1, "2401.00001", [("Shared", "A1"), ("Shared", "A2")]),
+        work(2, "2402.00001", [("Shared", "A1"), ("Unique", "A3")]),
+        work(3, "2501.00001", [("Variant", "A1"), ("Shared", "A2")]),
+    ])
+    rows[0]["raw_orcids"] = ["0000-0002-1825-0097", None]
+    rows[2]["raw_orcids"] = [None, "0000-0002-1825-0097"]
+    first = crosswalk_diagnostics(rows[:2])
+    last = crosswalk_diagnostics(rows[2:])
+    pooled = crosswalk_diagnostics(rows)
+    assert first["distinct_ids_per_name_frequency"] == {1: 1, 2: 1}
+    assert first["share_of_slots_in_names_with_multiple_ids"] == 3/4
+    assert first["raw_orcid_slot_share"] == 1/4
+    assert last["names_associated_with_multiple_ids"] == 0
+    assert first["ids_associated_with_multiple_names"] == last["ids_associated_with_multiple_names"] == 0
+    assert pooled["ids_associated_with_multiple_names"] == 1
+    assert pooled["share_of_slots_in_ids_with_multiple_names"] == 3/6
+    assert pooled["raw_orcids_associated_with_multiple_ids"] == 1
+    assert first["raw_orcids_associated_with_multiple_ids"] == last["raw_orcids_associated_with_multiple_ids"] == 0
+    assert crosswalk_diagnostics([])["raw_orcid_slot_share"] is None

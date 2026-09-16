@@ -1,0 +1,129 @@
+{
+  "retrieved_at": "2026-09-15T22:03:21.267047+00:00",
+  "request_url": "https://api.openalex.org/works?filter=indexed_in%3Aarxiv%2Cprimary_topic.field.id%3A26%2Cpublication_year%3A2010-2023&group_by=publication_year&per_page=100",
+  "purpose": "Historical acquisition sizing only; OpenAlex publication-year groups are not arXiv upload-year counts or contributor counts. No per-paper metadata collected.",
+  "meta": {
+    "count": 330421,
+    "db_response_time_ms": 15,
+    "page": 1,
+    "per_page": 100,
+    "groups_count": 14,
+    "x_query": {
+      "oql": "works where indexed in is (arxiv)\n  and field is (26)\n  and year >= (2010)\n  and year <= (2023)\ngroup by year",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "indexed_in",
+            "value": "arxiv"
+          },
+          {
+            "column_id": "primary_topic.field.id",
+            "value": "26"
+          },
+          {
+            "column_id": "publication_year",
+            "value": 2010,
+            "operator": ">="
+          },
+          {
+            "column_id": "publication_year",
+            "value": 2023,
+            "operator": "<="
+          }
+        ],
+        "group_by": [
+          {
+            "column_id": "publication_year"
+          }
+        ]
+      },
+      "url": "/works?filter=indexed_in:arxiv,primary_topic.field.id:26,publication_year:2010-2023&group_by=publication_year&per_page=100"
+    },
+    "cost_usd": 0.0001
+  },
+  "group_by": [
+    {
+      "key": "2021",
+      "key_display_name": "2021",
+      "count": 32713
+    },
+    {
+      "key": "2020",
+      "key_display_name": "2020",
+      "count": 32186
+    },
+    {
+      "key": "2022",
+      "key_display_name": "2022",
+      "count": 29999
+    },
+    {
+      "key": "2019",
+      "key_display_name": "2019",
+      "count": 27981
+    },
+    {
+      "key": "2023",
+      "key_display_name": "2023",
+      "count": 27496
+    },
+    {
+      "key": "2018",
+      "key_display_name": "2018",
+      "count": 26001
+    },
+    {
+      "key": "2017",
+      "key_display_name": "2017",
+      "count": 24612
+    },
+    {
+      "key": "2016",
+      "key_display_name": "2016",
+      "count": 23239
+    },
+    {
+      "key": "2015",
+      "key_display_name": "2015",
+      "count": 21319
+    },
+    {
+      "key": "2014",
+      "key_display_name": "2014",
+      "count": 20172
+    },
+    {
+      "key": "2013",
+      "key_display_name": "2013",
+      "count": 18705
+    },
+    {
+      "key": "2012",
+      "key_display_name": "2012",
+      "count": 17058
+    },
+    {
+      "key": "2011",
+      "key_display_name": "2011",
+      "count": 15569
+    },
+    {
+      "key": "2010",
+      "key_display_name": "2010",
+      "count": 13371
+    }
+  ],
+  "rate_headers": {
+    "X-RateLimit-Cost-USD": "0.0001",
+    "X-RateLimit-Credits-Used": "1",
+    "X-RateLimit-Limit": "1000",
+    "X-RateLimit-Limit-USD": "0.1",
+    "X-RateLimit-Onetime-Remaining": "0",
+    "X-RateLimit-Prepaid-Remaining-USD": "0",
+    "X-RateLimit-Remaining": "999",
+    "X-RateLimit-Remaining-USD": "0.0999",
+    "X-RateLimit-Reset": "6999"
+  },
+  "minimum_100_record_pages": 3311
+}

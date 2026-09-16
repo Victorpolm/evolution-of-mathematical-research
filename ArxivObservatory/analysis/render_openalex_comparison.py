@@ -73,10 +73,22 @@ def render(source, output):
     for key,value in d["identity_diagnostics"].items():
         if isinstance(value,int): lines.append(f"| {key.replace('_',' ')} | {value:,} |")
     lines += ["", "These mapping patterns have not been manually adjudicated. Source-supplied ORCIDs describe a selected subset; profile ORCIDs are not independent validation. Longitudinal identity and high-output-tail audits remain outstanding.", "",
+              "### Annual mapping ambiguity", "",
+              "Each mapping is rebuilt within its calendar year on the paired papers. Shares below use all paired authorship slots in that year, so frequent keys have proportionate weight. A shared name can represent different people; an ID with several names can correctly join spelling variants. Neither pattern alone identifies an error.", "",
+              "| Year | Names with multiple IDs | Slots in those name groups | IDs with multiple names | Slots in those ID groups | Source-ORCID slot coverage | Source ORCIDs with multiple IDs |",
+              "|---|---:|---:|---:|---:|---:|---:|"]
+    for r in d["annual"]:
+        q=r["identity_diagnostics"]
+        lines.append(f"| {r['period']} | {q['names_associated_with_multiple_ids']:,} | {100*q['share_of_slots_in_names_with_multiple_ids']:.2f}% | {q['ids_associated_with_multiple_names']:,} | {100*q['share_of_slots_in_ids_with_multiple_names']:.2f}% | {100*q['raw_orcid_slot_share']:.2f}% | {q['raw_orcids_associated_with_multiple_ids']:,} |")
+    lines += ["", "The JSON includes the full distributions of distinct IDs per name and names per ID, the slot numerators, and source-ORCID denominators. Pooled mappings need not equal the sum of annual mappings. ORCID multiplicity supplies audit candidates; it does not calibrate population error or correct the headline counts.", "",
               "## Mathematical accounting", "",
               r"For papers \(P\), distinct author keys \(A\), and byline incidences \(I\), mean team size is \(\bar k=I/P\), mean participation is \(\bar n=I/A\), and", "", r"\[P=A\bar n/\bar k,\qquad \Delta\log P=\Delta\log A+\Delta\log\bar n-\Delta\log\bar k.\]", "",
               r"Each slot on a \(k_p\)-author paper receives \(1/k_p\) credit. Credits sum to \(P\), so mean fractional credit equals \(P/A\). Shared-name coauthors keep separate slots and both credits accumulate to the name key. Thus name-based \(I/A\) counts occurrences per name key, not necessarily distinct papers per person.", "",
               "All accounting and credit-conservation checks pass for every annual, monthly, rolling-12-month, subfield and manifest-overlap result. Overlapping windows deduplicate author keys across their whole duration; unique-author counts are never summed across periods or subfields.", "",
+              "| 2024 to 2025 log-growth term | OpenAlex IDs | Distinct names |", "|---|---:|---:|"]
+    for key,label in (("authors","Change in log active keys"),("incidences_per_author","Change in log incidences per key"),("minus_mean_team_size","Minus change in log mean team size"),("papers","Sum: change in log papers")):
+        lines.append(f"| {label} | {d['transitions_exploratory']['ids']['log_decomposition'][key]:+.6f} | {d['transitions_exploratory']['names']['log_decomposition'][key]:+.6f} |")
+    lines += ["", "These are additive natural-log changes, not independent causal contributions or percentage-point changes.", "",
               "### Exploratory transition identity", "",
               "Continuing keys occur in both years, appearing keys only in 2025, and disappearing keys only in 2024. The following signed paper-equivalent terms add to the paper change. They are an accounting diagnostic before independent longitudinal identity validation; appearing keys are not established career entrants.", "",
               "| Term | OpenAlex IDs | Distinct names |", "|---|---:|---:|"]
@@ -89,13 +101,21 @@ def render(source, output):
         x,y=s["annual"]
         lines.append(f"| {s['subfield']} | {fmt(x['papers'])} | {fmt(y['papers'])} | {delta(x['papers'],y['papers'])} | {delta(x['ids']['authors'],y['ids']['authors'])} | {delta(x['names']['authors'],y['names']['authors'])} |")
     lines += ["", "## Exploratory concentration", "",
-              "Fractional-credit distribution over active keys. Higher values indicate more concentrated credit. Top-percent shares allocate a fractional rank at the boundary, including tied groups without ID-based selection. These estimates remain sensitive to high-output profile errors and selective exclusions.", "",
-              "| Year / definition | Gini | Top 1% | Top 5% | Top 10% | Top 100 |", "|---|---:|---:|---:|---:|---:|"]
+              "Full counting measures authorship participation; fractional counting divides each paper's credit by team size. They answer different distributional questions. Neither measures effort, quality or elitism. Top-percent shares allocate a fractional rank at the boundary. Both remain sensitive to identity errors, team structure, the active-key population and selective exclusions.", "",
+              "| Year / definition | Full-count Gini | Fractional Gini | Single-appearance keys | Single-appearance share |", "|---|---:|---:|---:|---:|"]
     for r in d["annual"]:
         for m in names:
-            c=r[m]["fractional_distribution"]
-            lines.append(f"| {r['period']} / {names[m]} | {c['gini']:.4f} | {100*c['top_1_share']:.2f}% | {100*c['top_5_share']:.2f}% | {100*c['top_10_share']:.2f}% | {100*c['top_100_share']:.2f}% |")
-    lines += ["", "Full-count distributions, activity-frequency and team-size-frequency tables are in the aggregate JSON. Exact frozen-data counts do not need conventional sampling error bars. Measurement uncertainty and generalization remain; this report does not supply a validated confidence interval for real-person counts.", "",
+            count=r[m]["activity_frequency"].get("1",0)
+            lines.append(f"| {r['period']} / {names[m]} | {r[m]['full_distribution']['gini']:.4f} | {r[m]['fractional_distribution']['gini']:.4f} | {count:,} | {100*count/r[m]['authors']:.2f}% |")
+    lines += ["", "A single appearance means one authorship occurrence in the retained year, not first-ever publication. No paired paper in this snapshot repeats a normalized name within its byline, so here one occurrence also means one retained paper. Both Ginis decline under both identity definitions, while coverage changes substantially. That is a property of this selected dataset, not evidence that mathematics became less elitist.", "",
+              "Team-size variation can change fractional credit without changing full counts. A divergence warrants investigation of collaboration, composition and identity; it does not uniquely identify a mechanism. Mean paired team size falls from 2.261 to 2.221 in this run.", "",
+              "| Year / definition / convention | Gini | Top 1% | Top 5% | Top 10% | Top 100 |", "|---|---:|---:|---:|---:|---:|"]
+    for r in d["annual"]:
+        for m in names:
+            for convention in ("full", "fractional"):
+                c=r[m][convention+"_distribution"]
+                lines.append(f"| {r['period']} / {names[m]} / {convention} | {c['gini']:.4f} | {100*c['top_1_share']:.2f}% | {100*c['top_5_share']:.2f}% | {100*c['top_10_share']:.2f}% | {100*c['top_100_share']:.2f}% |")
+    lines += ["", "Activity-frequency and team-size-frequency tables are in the aggregate JSON. Exact frozen-data counts do not need conventional sampling error bars. Measurement uncertainty and generalization remain; this report does not supply a validated confidence interval for real-person counts. Resampling author keys independently would not resolve splitting, homonyms or missing-byline selection.", "",
               "## Connection to prior work", "",
               "[Hulek and Teschke (2023)](https://ems.press/content/serial-article-files/29073) provide the closest mathematics-specific precedent: annual documents, active authors and collaboration in zbMATH. Their retained unambiguous assignments are a coverage restriction, not an independently established identity accuracy rate. We preserve their separation of output, participation and team size, while displaying both identity definitions.", "",
               "[Grossman (2005)](https://www.math.buffalo.edu/mad/stats/2005.research.patterns.pdf) used Mathematical Reviews person identification and long observation windows to examine publication and collaboration. This two-year OpenAlex comparison is a shorter, differently covered extension; it cannot establish the same historical conclusions.", "",
@@ -107,11 +127,12 @@ def render(source, output):
               f"- Acquisition manifest SHA-256: `{d['acquisition_sha256']}`", f"- Normalizer: {d['normalizer']}",
               "- Offline calculation: `analysis/openalex_names.py`; rendering: `analysis/render_openalex_comparison.py`.",
               "- Snapshot contains only selected public bibliographic metadata, cached page hashes and acquisition details. No paper text was downloaded.",
-              "- Source code and aggregates are in the project's draft analysis PR; main is unchanged.",
-              "- Six new fixtures exercise identity ambiguity and conservation, alongside nine existing analysis/export tests; all 15 pass. No claim is made about unavailable upstream tests.", "",
+              "- The initial run and review extensions are submitted in draft analysis PR #2, with the revised protocol in draft PR #3. Main remains unchanged pending owner review.",
+              "- Seven comparison fixtures exercise identity ambiguity, window-specific mapping diagnostics and conservation, alongside nine existing analysis/export tests; all 16 pass. No claim is made about unavailable upstream tests.", "",
               "To rerun from the extracted snapshot:", "",
               "    python -m analysis.openalex_names --snapshot /path/to/snapshot --output /path/to/results --math-manifest /path/to/math_ids.txt", "",
               "    python -m analysis.render_openalex_comparison --input /path/to/results/openalex_comparison.json --output /path/to/results", ""]
+    lines = ["> **Archived comparison.** Population participation and concentration interpretations are on hold following the second review. See RETENTION_AUDIT.md for the current coverage audit.", ""] + lines
     output.mkdir(parents=True,exist_ok=True)
     (output/"OPENALEX_COMPARISON.md").write_text("\n".join(lines))
     plot(d, output)

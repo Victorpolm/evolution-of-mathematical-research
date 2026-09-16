@@ -233,6 +233,7 @@ def transition(before, after, method):
 
 
 def crosswalk_diagnostics(papers):
+    """Describe mappings within this window; multiplicity is not an error rate."""
     by_name, by_id, by_raw_orcid = defaultdict(set), defaultdict(set), defaultdict(set)
     raw_orcid_slots = 0
     for p in papers:
@@ -242,12 +243,25 @@ def crosswalk_diagnostics(papers):
             if orcid:
                 by_raw_orcid[orcid].add(aid)
                 raw_orcid_slots += 1
+    slots = sum(p["slots"] for p in papers)
+    multi_names = {key for key, values in by_name.items() if len(values) > 1}
+    multi_ids = {key for key, values in by_id.items() if len(values) > 1}
+    name_slots = sum(name in multi_names for p in papers for name in p["names"])
+    id_slots = sum(aid in multi_ids for p in papers for aid in p["ids"])
     return {"name_keys": len(by_name), "id_keys": len(by_id),
-            "names_associated_with_multiple_ids": sum(len(s) > 1 for s in by_name.values()),
-            "ids_associated_with_multiple_names": sum(len(s) > 1 for s in by_id.values()),
+            "authorship_slots": slots,
+            "names_associated_with_multiple_ids": len(multi_names),
+            "ids_associated_with_multiple_names": len(multi_ids),
+            "distinct_ids_per_name_frequency": dict(sorted(Counter(map(len, by_name.values())).items())),
+            "distinct_names_per_id_frequency": dict(sorted(Counter(map(len, by_id.values())).items())),
+            "slots_in_names_with_multiple_ids": name_slots,
+            "share_of_slots_in_names_with_multiple_ids": name_slots / slots if slots else None,
+            "slots_in_ids_with_multiple_names": id_slots,
+            "share_of_slots_in_ids_with_multiple_names": id_slots / slots if slots else None,
             "raw_orcid_slots": raw_orcid_slots, "distinct_raw_orcids": len(by_raw_orcid),
+            "raw_orcid_slot_share": raw_orcid_slots / slots if slots else None,
             "raw_orcids_associated_with_multiple_ids": sum(len(s) > 1 for s in by_raw_orcid.values()),
-            "interpretation": "Many-to-many mapping diagnostics, not validated error rates. ORCID subset is selected."}
+            "interpretation": "Many-to-many mappings on paired papers within the stated window, not validated error rates. Slot shares use all paired slots. Raw ORCIDs are source-reported strings; profile ORCIDs are not used. The ORCID subset is selected."}
 
 
 def run(root, output, manifest_path=None):
@@ -273,7 +287,8 @@ def run(root, output, manifest_path=None):
     for year in (2024, 2025):
         frame = [p for p in papers if p["month"].startswith(str(year))]
         kept = [p for p in frame if not p["reasons"]]
-        result["annual"].append({"period": str(year), **metrics(kept, True), "quality": quality(frame)})
+        result["annual"].append({"period": str(year), **metrics(kept, True), "quality": quality(frame),
+                                 "identity_diagnostics": crosswalk_diagnostics(kept)})
     for end in range(11, len(months)):
         window = set(months[end-11:end+1])
         kept = [p for p in paired if p["month"] in window]
