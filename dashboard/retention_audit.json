@@ -1,0 +1,4128 @@
+{
+  "schema_version": 1,
+  "computed_at": "2026-09-15T16:56:38.857838+00:00",
+  "status": "Coverage audit; population participation and concentration interpretations on hold",
+  "snapshot_manifest_sha256": "ca20dba9b006468c3a0d24fb2bde3937659fd37c66b4310e87555228ab14a47b",
+  "source_scope": "OpenAlex core; indexed_in:arxiv; primary_topic.field.id:26; publication_year:2024-2026",
+  "work_flow": {
+    "acquired_works": 83017,
+    "stages": {
+      "target_id_window": 50440,
+      "outside_target_id_window": 32552,
+      "multiple_arxiv_ids": 20,
+      "no_unique_modern_arxiv_id": 5
+    },
+    "outside_target_window_by_id_year": {
+      "2008": 1,
+      "2010": 2,
+      "2011": 2,
+      "2012": 6,
+      "2013": 4,
+      "2014": 5,
+      "2015": 20,
+      "2016": 18,
+      "2017": 35,
+      "2018": 59,
+      "2019": 100,
+      "2020": 249,
+      "2021": 568,
+      "2022": 490,
+      "2023": 931,
+      "2026": 30062
+    },
+    "by_openalex_publication_year": {
+      "2024": {
+        "target_id_window": 22898,
+        "outside_target_id_window": 702,
+        "multiple_arxiv_ids": 6
+      },
+      "2025": {
+        "target_id_window": 22384,
+        "outside_target_id_window": 530,
+        "multiple_arxiv_ids": 7,
+        "no_unique_modern_arxiv_id": 1
+      },
+      "2026": {
+        "target_id_window": 5158,
+        "outside_target_id_window": 31320,
+        "multiple_arxiv_ids": 7,
+        "no_unique_modern_arxiv_id": 4
+      }
+    }
+  },
+  "link_diagnostics": {
+    "candidate_works": 83017,
+    "arxiv_id_outside_window": 32552,
+    "multiple_arxiv_ids": 20,
+    "no_unique_modern_arxiv_id": 5,
+    "unique_arxiv_papers_in_window": 50440
+  },
+  "coverage_state_definition": "Paired first; then nonempty bylines with all IDs missing; then bylines with some IDs missing; then other exclusions. Missing-ID states take precedence when other exclusion flags overlap. This partition is accounting, not a causal attribution of exclusions.",
+  "duplicate_cached_work_rows": 0,
+  "observation_clock": {
+    "created_date_available": 0,
+    "updated_date_available": 83017,
+    "note": "Created/indexing history was not collected. Updated date is not an indexing date or a history of author resolution. A single snapshot cannot reconstruct equal-age historical completeness."
+  },
+  "annual": [
+    {
+      "period": "2024",
+      "linked_papers": 24978,
+      "paired_papers": 23756,
+      "retention": 0.9510769477139883,
+      "states": {
+        "paired": 23756,
+        "all_ids_missing": 206,
+        "some_ids_missing": 1000,
+        "other_byline_exclusion": 16
+      },
+      "state_shares": {
+        "paired": 0.9510769477139883,
+        "all_ids_missing": 0.008247257586676274,
+        "some_ids_missing": 0.04003523100328289,
+        "other_byline_exclusion": 0.0006405636960525262
+      },
+      "missing_id_slot_types": {
+        "null_or_absent": 1528
+      },
+      "partial_id_accounting": {
+        "linked_papers": 24978,
+        "usable_byline_papers": 24957,
+        "unusable_byline_papers": 21,
+        "observed_slots_usable": 57681,
+        "identified_slots_usable": 56169,
+        "unidentified_slots_usable": 1512,
+        "identified_id_keys": 42030,
+        "raw_name_keys_usable": 43760,
+        "allocated_credit_to_ids": 24376.2857235057,
+        "unallocated_missing_id_credit": 580.7142764942954,
+        "unallocated_unusable_byline_credit": 21,
+        "total_unallocated_credit": 601.7142764942954,
+        "mean_allocated_credit_per_id": 0.5799734885440329,
+        "usable_papers_per_identified_id": 0.5937901498929337,
+        "mean_full_participation_per_id": 1.3364025695931478,
+        "mean_returned_team_size_usable": 2.3112152902993146,
+        "ids_full_distribution": {
+          "gini": 0.21236341761803645,
+          "top_1_share": 0.04690309601381545,
+          "top_5_share": 0.14895226904520287,
+          "top_10_share": 0.23963396179387206,
+          "top_100_share": 0.016201107372394025,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.38988992237541154,
+          "top_1_share": 0.05911048401560268,
+          "top_5_share": 0.18474031125628632,
+          "top_10_share": 0.28823351444424367,
+          "top_100_share": 0.020867373043980418,
+          "median": 0.5
+        },
+        "ids_activity_frequency": {
+          "1": 32945,
+          "2": 6093,
+          "3": 1915,
+          "4": 625,
+          "5": 240,
+          "6": 101,
+          "7": 45,
+          "8": 29,
+          "9": 9,
+          "10": 6,
+          "11": 7,
+          "12": 5,
+          "13": 4,
+          "14": 1,
+          "15": 2,
+          "17": 1,
+          "22": 1,
+          "27": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.20559735268746437,
+          "top_1_share": 0.0486121946568194,
+          "top_5_share": 0.15024011372895754,
+          "top_10_share": 0.237149147899655,
+          "top_100_share": 0.016331200915379415,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.390333035245237,
+          "top_1_share": 0.061087966926008354,
+          "top_5_share": 0.18871094924188597,
+          "top_10_share": 0.2919394200879827,
+          "top_100_share": 0.021101649334209337,
+          "median": 0.5
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      },
+      "orcid_on_paired_papers": {
+        "authorship_slots": 53707,
+        "source_orcid_slots": 2300,
+        "source_orcid_slot_share": 0.04282495764053103,
+        "distinct_source_orcids": 2216,
+        "orcids_on_multiple_papers": 75,
+        "orcids_with_multiple_ids": 5,
+        "multiple_ids_and_multiple_papers": 5,
+        "multiple_id_share_all_orcids": 0.002256317689530686,
+        "multiple_id_share_repeated_orcids": 0.06666666666666667,
+        "multiple_id_orcids_on_only_one_paper": 0,
+        "papers_per_source_orcid_frequency": {
+          "1": 2141,
+          "2": 67,
+          "3": 7,
+          "4": 1
+        },
+        "interpretation": "Source-recorded ORCID strings; neither rate is an adjudicated split rate or a population bound. Repeated observation changes the opportunity to detect a mapping to several IDs."
+      },
+      "orcid_on_usable_bylines": {
+        "authorship_slots": 57681,
+        "source_orcid_slots": 2632,
+        "source_orcid_slot_share": 0.045630276867599386,
+        "distinct_source_orcids": 2535,
+        "orcids_on_multiple_papers": 86,
+        "orcids_with_multiple_ids": 7,
+        "multiple_ids_and_multiple_papers": 7,
+        "multiple_id_share_all_orcids": 0.0027613412228796844,
+        "multiple_id_share_repeated_orcids": 0.08139534883720931,
+        "multiple_id_orcids_on_only_one_paper": 0,
+        "papers_per_source_orcid_frequency": {
+          "1": 2449,
+          "2": 76,
+          "3": 9,
+          "4": 1
+        },
+        "interpretation": "Source-recorded ORCID strings; neither rate is an adjudicated split rate or a population bound. Repeated observation changes the opportunity to detect a mapping to several IDs."
+      }
+    },
+    {
+      "period": "2025",
+      "linked_papers": 25462,
+      "paired_papers": 21609,
+      "retention": 0.8486764590369963,
+      "states": {
+        "paired": 21609,
+        "all_ids_missing": 2090,
+        "some_ids_missing": 1752,
+        "other_byline_exclusion": 11
+      },
+      "state_shares": {
+        "paired": 0.8486764590369963,
+        "all_ids_missing": 0.08208310423376011,
+        "some_ids_missing": 0.06880842039117116,
+        "other_byline_exclusion": 0.00043201633807242164
+      },
+      "missing_id_slot_types": {
+        "null_or_absent": 6038
+      },
+      "partial_id_accounting": {
+        "linked_papers": 25462,
+        "usable_byline_papers": 25443,
+        "unusable_byline_papers": 19,
+        "observed_slots_usable": 58265,
+        "identified_slots_usable": 52242,
+        "unidentified_slots_usable": 6023,
+        "identified_id_keys": 40115,
+        "raw_name_keys_usable": 44816,
+        "allocated_credit_to_ids": 22698.981346651497,
+        "unallocated_missing_id_credit": 2744.018653348527,
+        "unallocated_unusable_byline_credit": 19,
+        "total_unallocated_credit": 2763.018653348527,
+        "mean_allocated_credit_per_id": 0.5658477214670696,
+        "usable_papers_per_identified_id": 0.6342515268602767,
+        "mean_full_participation_per_id": 1.302305870621962,
+        "mean_returned_team_size_usable": 2.290020830876862,
+        "ids_full_distribution": {
+          "gini": 0.1979188656165456,
+          "top_1_share": 0.044496765054936646,
+          "top_5_share": 0.14640040580375943,
+          "top_10_share": 0.23174840166915509,
+          "top_100_share": 0.015485624593239156,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.37986223048390455,
+          "top_1_share": 0.056004034031115396,
+          "top_5_share": 0.17927828996982165,
+          "top_10_share": 0.27815663242010485,
+          "top_100_share": 0.01963597660440466,
+          "median": 0.5
+        },
+        "ids_activity_frequency": {
+          "1": 32072,
+          "2": 5590,
+          "3": 1542,
+          "4": 554,
+          "5": 203,
+          "6": 69,
+          "7": 42,
+          "8": 17,
+          "9": 8,
+          "10": 6,
+          "11": 6,
+          "12": 2,
+          "13": 1,
+          "15": 1,
+          "18": 1,
+          "21": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.19769062453728248,
+          "top_1_share": 0.04643679739122973,
+          "top_5_share": 0.1482776967304557,
+          "top_10_share": 0.23311078692182272,
+          "top_100_share": 0.015051917961040075,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.38315155090816155,
+          "top_1_share": 0.05763099776718455,
+          "top_5_share": 0.18354360802606912,
+          "top_10_share": 0.283683623697735,
+          "top_100_share": 0.018684981493022997,
+          "median": 0.5
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      },
+      "orcid_on_paired_papers": {
+        "authorship_slots": 48004,
+        "source_orcid_slots": 3928,
+        "source_orcid_slot_share": 0.08182651445712857,
+        "distinct_source_orcids": 3699,
+        "orcids_on_multiple_papers": 198,
+        "orcids_with_multiple_ids": 29,
+        "multiple_ids_and_multiple_papers": 29,
+        "multiple_id_share_all_orcids": 0.007839956745066235,
+        "multiple_id_share_repeated_orcids": 0.14646464646464646,
+        "multiple_id_orcids_on_only_one_paper": 0,
+        "papers_per_source_orcid_frequency": {
+          "1": 3501,
+          "2": 175,
+          "3": 19,
+          "4": 1,
+          "5": 2,
+          "6": 1
+        },
+        "interpretation": "Source-recorded ORCID strings; neither rate is an adjudicated split rate or a population bound. Repeated observation changes the opportunity to detect a mapping to several IDs."
+      },
+      "orcid_on_usable_bylines": {
+        "authorship_slots": 58265,
+        "source_orcid_slots": 4678,
+        "source_orcid_slot_share": 0.08028833776709861,
+        "distinct_source_orcids": 4388,
+        "orcids_on_multiple_papers": 250,
+        "orcids_with_multiple_ids": 35,
+        "multiple_ids_and_multiple_papers": 35,
+        "multiple_id_share_all_orcids": 0.007976298997265268,
+        "multiple_id_share_repeated_orcids": 0.14,
+        "multiple_id_orcids_on_only_one_paper": 0,
+        "papers_per_source_orcid_frequency": {
+          "1": 4138,
+          "2": 218,
+          "3": 28,
+          "4": 1,
+          "5": 2,
+          "6": 1
+        },
+        "interpretation": "Source-recorded ORCID strings; neither rate is an adjudicated split rate or a population bound. Repeated observation changes the opportunity to detect a mapping to several IDs."
+      }
+    }
+  ],
+  "monthly": [
+    {
+      "period": "2024-01",
+      "linked_papers": 2141,
+      "paired_papers": 2075,
+      "retention": 0.9691732835123774,
+      "states": {
+        "paired": 2075,
+        "all_ids_missing": 8,
+        "some_ids_missing": 56,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9691732835123774,
+        "all_ids_missing": 0.0037365716954694066,
+        "some_ids_missing": 0.026156001868285848,
+        "other_byline_exclusion": 0.0009341429238673517
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2141,
+        "usable_byline_papers": 2139,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4677,
+        "identified_slots_usable": 4596,
+        "unidentified_slots_usable": 81,
+        "identified_id_keys": 4322,
+        "raw_name_keys_usable": 4389,
+        "allocated_credit_to_ids": 2108.7166666666667,
+        "unallocated_missing_id_credit": 30.283333333333324,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 32.283333333333324,
+        "mean_allocated_credit_per_id": 0.48790297701681323,
+        "usable_papers_per_identified_id": 0.494909763998149,
+        "mean_full_participation_per_id": 1.063396575659417,
+        "mean_returned_team_size_usable": 2.1865357643758765,
+        "ids_full_distribution": {
+          "gini": 0.05671309860816942,
+          "top_1_share": 0.026640557006092254,
+          "top_5_share": 0.10187119234116625,
+          "top_10_share": 0.15365535248041776,
+          "top_100_share": 0.05134899912967798,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.294413917221807,
+          "top_1_share": 0.03779391889221722,
+          "top_5_share": 0.12183555559068313,
+          "top_10_share": 0.22431494668953472,
+          "top_100_share": 0.0667783723117536,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4084,
+          "2": 206,
+          "3": 28,
+          "4": 4
+        },
+        "names_full_distribution": {
+          "gini": 0.0586254837630551,
+          "top_1_share": 0.028389993585631816,
+          "top_5_share": 0.10346375881975627,
+          "top_10_share": 0.15542014111610009,
+          "top_100_share": 0.05238400684199273,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.29469250874200825,
+          "top_1_share": 0.0384385226741468,
+          "top_5_share": 0.12227676484338479,
+          "top_10_share": 0.2248714352501169,
+          "top_100_share": 0.06643291257597007,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-02",
+      "linked_papers": 1960,
+      "paired_papers": 1902,
+      "retention": 0.9704081632653061,
+      "states": {
+        "paired": 1902,
+        "all_ids_missing": 7,
+        "some_ids_missing": 50,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9704081632653061,
+        "all_ids_missing": 0.0035714285714285713,
+        "some_ids_missing": 0.025510204081632654,
+        "other_byline_exclusion": 0.0005102040816326531
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1960,
+        "usable_byline_papers": 1959,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4655,
+        "identified_slots_usable": 4569,
+        "unidentified_slots_usable": 86,
+        "identified_id_keys": 4337,
+        "raw_name_keys_usable": 4439,
+        "allocated_credit_to_ids": 1932.5333333333333,
+        "unallocated_missing_id_credit": 26.46666666666665,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 27.46666666666665,
+        "mean_allocated_credit_per_id": 0.44559219122281146,
+        "usable_papers_per_identified_id": 0.45169471985243254,
+        "mean_full_participation_per_id": 1.0534931980631772,
+        "mean_returned_team_size_usable": 2.3762123532414496,
+        "ids_full_distribution": {
+          "gini": 0.04890573676407861,
+          "top_1_share": 0.02795797767564018,
+          "top_5_share": 0.09823812650470563,
+          "top_10_share": 0.14569927774130007,
+          "top_100_share": 0.05274677172247757,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3184879526445248,
+          "top_1_share": 0.043005726507520346,
+          "top_5_share": 0.1356595832758383,
+          "top_10_share": 0.24786980819649512,
+          "top_100_share": 0.07519490823789154,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4146,
+          "2": 169,
+          "3": 14,
+          "4": 3,
+          "6": 4,
+          "7": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.04484390263142157,
+          "top_1_share": 0.027235230934479056,
+          "top_5_share": 0.09408163265306123,
+          "top_10_share": 0.14176154672395275,
+          "top_100_share": 0.05112781954887218,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.31710298765388223,
+          "top_1_share": 0.041757699506550956,
+          "top_5_share": 0.13387782882423005,
+          "top_10_share": 0.2471754296409733,
+          "top_100_share": 0.07162668027905393,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-03",
+      "linked_papers": 2007,
+      "paired_papers": 1957,
+      "retention": 0.9750871948181365,
+      "states": {
+        "paired": 1957,
+        "all_ids_missing": 4,
+        "some_ids_missing": 45,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9750871948181365,
+        "all_ids_missing": 0.001993024414549078,
+        "some_ids_missing": 0.02242152466367713,
+        "other_byline_exclusion": 0.0004982561036372695
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2007,
+        "usable_byline_papers": 2006,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4575,
+        "identified_slots_usable": 4510,
+        "unidentified_slots_usable": 65,
+        "identified_id_keys": 4302,
+        "raw_name_keys_usable": 4385,
+        "allocated_credit_to_ids": 1984.9979797979797,
+        "unallocated_missing_id_credit": 21.002020202020194,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 22.002020202020194,
+        "mean_allocated_credit_per_id": 0.46141282654532306,
+        "usable_papers_per_identified_id": 0.4662947466294747,
+        "mean_full_participation_per_id": 1.0483496048349605,
+        "mean_returned_team_size_usable": 2.280658025922233,
+        "ids_full_distribution": {
+          "gini": 0.044227662892832864,
+          "top_1_share": 0.022847006651884702,
+          "top_5_share": 0.09381374722838139,
+          "top_10_share": 0.14150776053215078,
+          "top_100_share": 0.04811529933481153,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.305261740601924,
+          "top_1_share": 0.03863647928807398,
+          "top_5_share": 0.12672556977896832,
+          "top_10_share": 0.23508840046652976,
+          "top_100_share": 0.06874062411584267,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4111,
+          "2": 176,
+          "3": 13,
+          "4": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.04014839461402819,
+          "top_1_share": 0.024633879781420766,
+          "top_5_share": 0.0894535519125683,
+          "top_10_share": 0.13737704918032786,
+          "top_100_share": 0.04918032786885246,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3039985562751133,
+          "top_1_share": 0.03882519109338651,
+          "top_5_share": 0.12706879361914258,
+          "top_10_share": 0.23636590229312063,
+          "top_100_share": 0.0676221335992024,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-04",
+      "linked_papers": 2076,
+      "paired_papers": 2009,
+      "retention": 0.9677263969171483,
+      "states": {
+        "paired": 2009,
+        "all_ids_missing": 12,
+        "some_ids_missing": 54,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9677263969171483,
+        "all_ids_missing": 0.005780346820809248,
+        "some_ids_missing": 0.02601156069364162,
+        "other_byline_exclusion": 0.0004816955684007707
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2076,
+        "usable_byline_papers": 2075,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4750,
+        "identified_slots_usable": 4655,
+        "unidentified_slots_usable": 95,
+        "identified_id_keys": 4414,
+        "raw_name_keys_usable": 4504,
+        "allocated_credit_to_ids": 2043.0055555555555,
+        "unallocated_missing_id_credit": 31.994444444444436,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 32.99444444444444,
+        "mean_allocated_credit_per_id": 0.46284675023913807,
+        "usable_papers_per_identified_id": 0.47009515178975986,
+        "mean_full_participation_per_id": 1.0545990031717263,
+        "mean_returned_team_size_usable": 2.289156626506024,
+        "ids_full_distribution": {
+          "gini": 0.049708110654654636,
+          "top_1_share": 0.026912996777658432,
+          "top_5_share": 0.09918367346938776,
+          "top_10_share": 0.1465950590762621,
+          "top_100_share": 0.05091299677765843,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.31091184284207074,
+          "top_1_share": 0.04232489714228221,
+          "top_5_share": 0.13111867941217945,
+          "top_10_share": 0.23914579632326635,
+          "top_100_share": 0.07203905543769741,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4210,
+          "2": 177,
+          "3": 19,
+          "4": 6,
+          "5": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.049744133869309204,
+          "top_1_share": 0.02717473684210526,
+          "top_5_share": 0.09920000000000001,
+          "top_10_share": 0.1466105263157895,
+          "top_100_share": 0.05031578947368421,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3126830049689515,
+          "top_1_share": 0.043723694779116466,
+          "top_5_share": 0.134570281124498,
+          "top_10_share": 0.2431004016064257,
+          "top_100_share": 0.07423293172690763,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-05",
+      "linked_papers": 2204,
+      "paired_papers": 2129,
+      "retention": 0.9659709618874773,
+      "states": {
+        "paired": 2129,
+        "all_ids_missing": 13,
+        "some_ids_missing": 60,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9659709618874773,
+        "all_ids_missing": 0.005898366606170599,
+        "some_ids_missing": 0.02722323049001815,
+        "other_byline_exclusion": 0.0009074410163339383
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2204,
+        "usable_byline_papers": 2202,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 5088,
+        "identified_slots_usable": 4987,
+        "unidentified_slots_usable": 101,
+        "identified_id_keys": 4747,
+        "raw_name_keys_usable": 4854,
+        "allocated_credit_to_ids": 2168.0704927425513,
+        "unallocated_missing_id_credit": 33.92950725744843,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 35.92950725744843,
+        "mean_allocated_credit_per_id": 0.4567243506936068,
+        "usable_papers_per_identified_id": 0.4638719191068043,
+        "mean_full_participation_per_id": 1.050558247314093,
+        "mean_returned_team_size_usable": 2.310626702997275,
+        "ids_full_distribution": {
+          "gini": 0.04612160143865096,
+          "top_1_share": 0.023649488670543412,
+          "top_5_share": 0.09571886905955485,
+          "top_10_share": 0.1433126127932625,
+          "top_100_share": 0.044716262281933025,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3074419249994702,
+          "top_1_share": 0.039955650407421134,
+          "top_5_share": 0.1281989886282951,
+          "top_10_share": 0.23767421131801428,
+          "top_100_share": 0.06484772746784456,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4530,
+          "2": 199,
+          "3": 14,
+          "4": 3,
+          "5": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.04415731822033564,
+          "top_1_share": 0.023404088050314464,
+          "top_5_share": 0.09369103773584907,
+          "top_10_share": 0.14139150943396228,
+          "top_100_share": 0.04363207547169811,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.307841241622266,
+          "top_1_share": 0.03976082349379352,
+          "top_5_share": 0.12899312313481254,
+          "top_10_share": 0.2392111067860387,
+          "top_100_share": 0.06418840015570261,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-06",
+      "linked_papers": 2000,
+      "paired_papers": 1942,
+      "retention": 0.971,
+      "states": {
+        "paired": 1942,
+        "all_ids_missing": 5,
+        "some_ids_missing": 50,
+        "other_byline_exclusion": 3
+      },
+      "state_shares": {
+        "paired": 0.971,
+        "all_ids_missing": 0.0025,
+        "some_ids_missing": 0.025,
+        "other_byline_exclusion": 0.0015
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2000,
+        "usable_byline_papers": 1997,
+        "unusable_byline_papers": 3,
+        "observed_slots_usable": 4732,
+        "identified_slots_usable": 4658,
+        "unidentified_slots_usable": 74,
+        "identified_id_keys": 4444,
+        "raw_name_keys_usable": 4517,
+        "allocated_credit_to_ids": 1974.6198823207444,
+        "unallocated_missing_id_credit": 22.380117679255605,
+        "unallocated_unusable_byline_credit": 3,
+        "total_unallocated_credit": 25.380117679255605,
+        "mean_allocated_credit_per_id": 0.4443339069128588,
+        "usable_papers_per_identified_id": 0.44936993699369937,
+        "mean_full_participation_per_id": 1.048154815481548,
+        "mean_returned_team_size_usable": 2.369554331497246,
+        "ids_full_distribution": {
+          "gini": 0.044486243386038904,
+          "top_1_share": 0.028097896092743664,
+          "top_5_share": 0.09364534134821813,
+          "top_10_share": 0.14134821811936454,
+          "top_100_share": 0.05195362816659511,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.31566937823763097,
+          "top_1_share": 0.04178356928610365,
+          "top_5_share": 0.13180595870470965,
+          "top_10_share": 0.24433394547796716,
+          "top_100_share": 0.0699206302452494,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4272,
+          "2": 149,
+          "3": 19,
+          "4": 3,
+          "19": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.043947248405619366,
+          "top_1_share": 0.027121724429416738,
+          "top_5_share": 0.09316356720202874,
+          "top_10_share": 0.14089180050718514,
+          "top_100_share": 0.05029585798816568,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3173070121138031,
+          "top_1_share": 0.04414321482223336,
+          "top_5_share": 0.13495242864296444,
+          "top_10_share": 0.2480470706059089,
+          "top_100_share": 0.07193289934902354,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-07",
+      "linked_papers": 2053,
+      "paired_papers": 1977,
+      "retention": 0.9629810034096444,
+      "states": {
+        "paired": 1977,
+        "all_ids_missing": 20,
+        "some_ids_missing": 54,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9629810034096444,
+        "all_ids_missing": 0.00974184120798831,
+        "some_ids_missing": 0.026302971261568435,
+        "other_byline_exclusion": 0.000974184120798831
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2053,
+        "usable_byline_papers": 2051,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4733,
+        "identified_slots_usable": 4631,
+        "unidentified_slots_usable": 102,
+        "identified_id_keys": 4435,
+        "raw_name_keys_usable": 4540,
+        "allocated_credit_to_ids": 2012.2472222222223,
+        "unallocated_missing_id_credit": 38.75277777777778,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 40.75277777777778,
+        "mean_allocated_credit_per_id": 0.45371977953150444,
+        "usable_papers_per_identified_id": 0.4624577226606539,
+        "mean_full_participation_per_id": 1.044193912063134,
+        "mean_returned_team_size_usable": 2.3076548025353487,
+        "ids_full_distribution": {
+          "gini": 0.040685863635998354,
+          "top_1_share": 0.02196069963290866,
+          "top_5_share": 0.09020729863960268,
+          "top_10_share": 0.138091125026992,
+          "top_100_share": 0.04599438566184409,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30461834840797986,
+          "top_1_share": 0.036767114394532056,
+          "top_5_share": 0.12492725597201107,
+          "top_10_share": 0.23512743294385982,
+          "top_100_share": 0.06442276196379196,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4252,
+          "2": 171,
+          "3": 11,
+          "4": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.03937249102049423,
+          "top_1_share": 0.0234100993027678,
+          "top_5_share": 0.08873864356644834,
+          "top_10_share": 0.13669976758926686,
+          "top_100_share": 0.046482146630044366,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.30418739158997465,
+          "top_1_share": 0.036474658122634715,
+          "top_5_share": 0.12501683267163521,
+          "top_10_share": 0.23569455085788582,
+          "top_100_share": 0.06309581853219104,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-08",
+      "linked_papers": 1758,
+      "paired_papers": 1682,
+      "retention": 0.9567690557451649,
+      "states": {
+        "paired": 1682,
+        "all_ids_missing": 12,
+        "some_ids_missing": 64,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9567690557451649,
+        "all_ids_missing": 0.006825938566552901,
+        "some_ids_missing": 0.03640500568828214,
+        "other_byline_exclusion": 0.0
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1758,
+        "usable_byline_papers": 1757,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4090,
+        "identified_slots_usable": 3996,
+        "unidentified_slots_usable": 94,
+        "identified_id_keys": 3822,
+        "raw_name_keys_usable": 3908,
+        "allocated_credit_to_ids": 1721.2107015533486,
+        "unallocated_missing_id_credit": 35.78929844665139,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 36.78929844665139,
+        "mean_allocated_credit_per_id": 0.45034293604221576,
+        "usable_papers_per_identified_id": 0.4597069597069597,
+        "mean_full_participation_per_id": 1.0455259026687598,
+        "mean_returned_team_size_usable": 2.327831531018782,
+        "ids_full_distribution": {
+          "gini": 0.041757482233672594,
+          "top_1_share": 0.02138138138138138,
+          "top_5_share": 0.09136636636636637,
+          "top_10_share": 0.1391891891891892,
+          "top_100_share": 0.0523023023023023,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30759525016502987,
+          "top_1_share": 0.037988763727565066,
+          "top_5_share": 0.12680996374800982,
+          "top_10_share": 0.23783646377356576,
+          "top_100_share": 0.07388210319160926,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3657,
+          "2": 158,
+          "3": 5,
+          "4": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.04262224313238727,
+          "top_1_share": 0.02131051344743276,
+          "top_5_share": 0.09227383863080683,
+          "top_10_share": 0.14004889975550122,
+          "top_100_share": 0.05110024449877751,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3097996812282964,
+          "top_1_share": 0.03937962435970404,
+          "top_5_share": 0.1289508632138114,
+          "top_10_share": 0.24016315689622464,
+          "top_100_share": 0.07465376588882565,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-09",
+      "linked_papers": 2111,
+      "paired_papers": 1968,
+      "retention": 0.9322595926101374,
+      "states": {
+        "paired": 1968,
+        "all_ids_missing": 22,
+        "some_ids_missing": 120,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9322595926101374,
+        "all_ids_missing": 0.010421601136901942,
+        "some_ids_missing": 0.05684509711037423,
+        "other_byline_exclusion": 0.0004737091425864519
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2111,
+        "usable_byline_papers": 2109,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4839,
+        "identified_slots_usable": 4691,
+        "unidentified_slots_usable": 148,
+        "identified_id_keys": 4464,
+        "raw_name_keys_usable": 4621,
+        "allocated_credit_to_ids": 2042.5495098039216,
+        "unallocated_missing_id_credit": 66.45049019607843,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 68.45049019607843,
+        "mean_allocated_credit_per_id": 0.4575603740600183,
+        "usable_papers_per_identified_id": 0.4724462365591398,
+        "mean_full_participation_per_id": 1.0508512544802868,
+        "mean_returned_team_size_usable": 2.294452347083926,
+        "ids_full_distribution": {
+          "gini": 0.04631051109078688,
+          "top_1_share": 0.023082498401193776,
+          "top_5_share": 0.09597100831379238,
+          "top_10_share": 0.1435514815604349,
+          "top_100_share": 0.04668514176081859,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3026620989942046,
+          "top_1_share": 0.03627166260159772,
+          "top_5_share": 0.12375465015007917,
+          "top_10_share": 0.23302984711772892,
+          "top_100_share": 0.06343787476291764,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4256,
+          "2": 191,
+          "3": 15,
+          "4": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.04316475917309481,
+          "top_1_share": 0.021785492870427775,
+          "top_5_share": 0.09279809878073983,
+          "top_10_share": 0.14054556726596404,
+          "top_100_share": 0.04401735895846249,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.30254822005377924,
+          "top_1_share": 0.039329856171961435,
+          "top_5_share": 0.12800300300300302,
+          "top_10_share": 0.23755729413624152,
+          "top_100_share": 0.0658645487592856,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-10",
+      "linked_papers": 2377,
+      "paired_papers": 2217,
+      "retention": 0.9326882625157762,
+      "states": {
+        "paired": 2217,
+        "all_ids_missing": 24,
+        "some_ids_missing": 135,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9326882625157762,
+        "all_ids_missing": 0.010096760622633571,
+        "some_ids_missing": 0.05679427850231384,
+        "other_byline_exclusion": 0.00042069835927639884
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2377,
+        "usable_byline_papers": 2374,
+        "unusable_byline_papers": 3,
+        "observed_slots_usable": 5571,
+        "identified_slots_usable": 5377,
+        "unidentified_slots_usable": 194,
+        "identified_id_keys": 5138,
+        "raw_name_keys_usable": 5322,
+        "allocated_credit_to_ids": 2298.5511904761906,
+        "unallocated_missing_id_credit": 75.44880952380957,
+        "unallocated_unusable_byline_credit": 3,
+        "total_unallocated_credit": 78.44880952380957,
+        "mean_allocated_credit_per_id": 0.44736301877699314,
+        "usable_papers_per_identified_id": 0.4620474892954457,
+        "mean_full_participation_per_id": 1.0465161541455819,
+        "mean_returned_team_size_usable": 2.3466722830665545,
+        "ids_full_distribution": {
+          "gini": 0.042670209960348204,
+          "top_1_share": 0.0224586200483541,
+          "top_5_share": 0.092226148409894,
+          "top_10_share": 0.14000371954621538,
+          "top_100_share": 0.04054305374744281,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.31514592863004287,
+          "top_1_share": 0.03917250151881387,
+          "top_5_share": 0.12901605203691974,
+          "top_10_share": 0.24078210756983048,
+          "top_100_share": 0.06075566234009725,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4917,
+          "2": 204,
+          "3": 16,
+          "4": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.04293247410305323,
+          "top_1_share": 0.022875605815831986,
+          "top_5_share": 0.09246095853527195,
+          "top_10_share": 0.14022617124394185,
+          "top_100_share": 0.03966971818345001,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3167036210597778,
+          "top_1_share": 0.04017551249648975,
+          "top_5_share": 0.13044088739118226,
+          "top_10_share": 0.24253018814939628,
+          "top_100_share": 0.06047458579050828,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-11",
+      "linked_papers": 2060,
+      "paired_papers": 1867,
+      "retention": 0.9063106796116505,
+      "states": {
+        "paired": 1867,
+        "all_ids_missing": 40,
+        "some_ids_missing": 153,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9063106796116505,
+        "all_ids_missing": 0.019417475728155338,
+        "some_ids_missing": 0.07427184466019418,
+        "other_byline_exclusion": 0.0
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2060,
+        "usable_byline_papers": 2059,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4830,
+        "identified_slots_usable": 4605,
+        "unidentified_slots_usable": 225,
+        "identified_id_keys": 4401,
+        "raw_name_keys_usable": 4607,
+        "allocated_credit_to_ids": 1963.0919191919193,
+        "unallocated_missing_id_credit": 95.9080808080808,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 96.9080808080808,
+        "mean_allocated_credit_per_id": 0.44605587802588487,
+        "usable_papers_per_identified_id": 0.467848216314474,
+        "mean_full_participation_per_id": 1.0463531015678256,
+        "mean_returned_team_size_usable": 2.3457989315201555,
+        "ids_full_distribution": {
+          "gini": 0.04281131447521691,
+          "top_1_share": 0.026062975027144407,
+          "top_5_share": 0.09208469055374593,
+          "top_10_share": 0.13986970684039088,
+          "top_100_share": 0.0503800217155266,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30551502970837885,
+          "top_1_share": 0.03914403221880964,
+          "top_5_share": 0.1288188957740855,
+          "top_10_share": 0.24091247521818035,
+          "top_100_share": 0.06766536606600287,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4229,
+          "2": 149,
+          "3": 16,
+          "4": 6,
+          "6": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.04457435147972233,
+          "top_1_share": 0.026737060041407863,
+          "top_5_share": 0.09386128364389235,
+          "top_10_share": 0.14155279503105592,
+          "top_100_share": 0.04906832298136646,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3079401017746102,
+          "top_1_share": 0.03938481463493605,
+          "top_5_share": 0.1296179375101182,
+          "top_10_share": 0.2414926339647078,
+          "top_100_share": 0.06631050671847175,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2024-12",
+      "linked_papers": 2231,
+      "paired_papers": 2031,
+      "retention": 0.9103541012998655,
+      "states": {
+        "paired": 2031,
+        "all_ids_missing": 39,
+        "some_ids_missing": 159,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9103541012998655,
+        "all_ids_missing": 0.01748095024652622,
+        "some_ids_missing": 0.0712684894666069,
+        "other_byline_exclusion": 0.0008964589870013447
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2231,
+        "usable_byline_papers": 2229,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 5141,
+        "identified_slots_usable": 4894,
+        "unidentified_slots_usable": 247,
+        "identified_id_keys": 4696,
+        "raw_name_keys_usable": 4923,
+        "allocated_credit_to_ids": 2126.69126984127,
+        "unallocated_missing_id_credit": 102.30873015873019,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 104.30873015873019,
+        "mean_allocated_credit_per_id": 0.4528729279900489,
+        "usable_papers_per_identified_id": 0.47465928449744466,
+        "mean_full_participation_per_id": 1.0421635434412266,
+        "mean_returned_team_size_usable": 2.306415432929565,
+        "ids_full_distribution": {
+          "gini": 0.0390828146135902,
+          "top_1_share": 0.023481814466693913,
+          "top_5_share": 0.08843481814466694,
+          "top_10_share": 0.13641193297915816,
+          "top_100_share": 0.045157335512872904,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3067926729645061,
+          "top_1_share": 0.03645725848073858,
+          "top_5_share": 0.12498288010550707,
+          "top_10_share": 0.23538912633866382,
+          "top_100_share": 0.061598033460577226,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4519,
+          "2": 161,
+          "3": 13,
+          "4": 1,
+          "5": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.04091612268341138,
+          "top_1_share": 0.02401478311612527,
+          "top_5_share": 0.09028399144135382,
+          "top_10_share": 0.1381637813654931,
+          "top_100_share": 0.04376580431822603,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.308993987189367,
+          "top_1_share": 0.03792620008972634,
+          "top_5_share": 0.12676254091687023,
+          "top_10_share": 0.2371932273233305,
+          "top_100_share": 0.061195021850024095,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-01",
+      "linked_papers": 1916,
+      "paired_papers": 1752,
+      "retention": 0.9144050104384134,
+      "states": {
+        "paired": 1752,
+        "all_ids_missing": 23,
+        "some_ids_missing": 140,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9144050104384134,
+        "all_ids_missing": 0.012004175365344467,
+        "some_ids_missing": 0.07306889352818371,
+        "other_byline_exclusion": 0.0005219206680584551
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1916,
+        "usable_byline_papers": 1914,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4391,
+        "identified_slots_usable": 4202,
+        "unidentified_slots_usable": 189,
+        "identified_id_keys": 4038,
+        "raw_name_keys_usable": 4221,
+        "allocated_credit_to_ids": 1838.7684741728858,
+        "unallocated_missing_id_credit": 75.23152582711407,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 77.23152582711407,
+        "mean_allocated_credit_per_id": 0.4553661402112149,
+        "usable_papers_per_identified_id": 0.4739970282317979,
+        "mean_full_participation_per_id": 1.04061416542843,
+        "mean_returned_team_size_usable": 2.294148380355277,
+        "ids_full_distribution": {
+          "gini": 0.037740348177322636,
+          "top_1_share": 0.023265111851499286,
+          "top_5_share": 0.08707758210376011,
+          "top_10_share": 0.13512613041408852,
+          "top_100_share": 0.05164207520228463,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3123538848755103,
+          "top_1_share": 0.037346856435045386,
+          "top_5_share": 0.1252710429180367,
+          "top_10_share": 0.2350727949253516,
+          "top_100_share": 0.06985351676872821,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3891,
+          "2": 131,
+          "3": 15,
+          "4": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.03743695982569939,
+          "top_1_share": 0.023097244363470736,
+          "top_5_share": 0.08677977681621499,
+          "top_10_share": 0.1348439990890458,
+          "top_100_share": 0.04941926668184924,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3135586765712002,
+          "top_1_share": 0.03711772901428073,
+          "top_5_share": 0.12533089515848136,
+          "top_10_share": 0.23559735283873215,
+          "top_100_share": 0.06731104144897249,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-02",
+      "linked_papers": 1898,
+      "paired_papers": 1710,
+      "retention": 0.9009483667017913,
+      "states": {
+        "paired": 1710,
+        "all_ids_missing": 35,
+        "some_ids_missing": 153,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9009483667017913,
+        "all_ids_missing": 0.0184404636459431,
+        "some_ids_missing": 0.08061116965226554,
+        "other_byline_exclusion": 0.0
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1898,
+        "usable_byline_papers": 1896,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4575,
+        "identified_slots_usable": 4362,
+        "unidentified_slots_usable": 213,
+        "identified_id_keys": 4159,
+        "raw_name_keys_usable": 4379,
+        "allocated_credit_to_ids": 1805.1631673881673,
+        "unallocated_missing_id_credit": 90.8368326118326,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 92.8368326118326,
+        "mean_allocated_credit_per_id": 0.4340377897062196,
+        "usable_papers_per_identified_id": 0.4558788170233229,
+        "mean_full_participation_per_id": 1.048809810050493,
+        "mean_returned_team_size_usable": 2.412974683544304,
+        "ids_full_distribution": {
+          "gini": 0.044655922054765096,
+          "top_1_share": 0.023425034387895463,
+          "top_5_share": 0.09421137093076572,
+          "top_10_share": 0.14188445667125174,
+          "top_100_share": 0.050206327372764786,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3040458299474107,
+          "top_1_share": 0.03321926325527328,
+          "top_5_share": 0.12537713740506606,
+          "top_10_share": 0.240574480092307,
+          "top_100_share": 0.06557644905167503,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3975,
+          "2": 167,
+          "3": 15,
+          "4": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.041278980529277254,
+          "top_1_share": 0.023514754098360655,
+          "top_5_share": 0.09069945355191258,
+          "top_10_share": 0.13855737704918034,
+          "top_100_share": 0.048087431693989074,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.30563287360622393,
+          "top_1_share": 0.03480045710267229,
+          "top_5_share": 0.12718442334739805,
+          "top_10_share": 0.24266438115330521,
+          "top_100_share": 0.06444708157524613,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-03",
+      "linked_papers": 1750,
+      "paired_papers": 1598,
+      "retention": 0.9131428571428571,
+      "states": {
+        "paired": 1598,
+        "all_ids_missing": 36,
+        "some_ids_missing": 116,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9131428571428571,
+        "all_ids_missing": 0.02057142857142857,
+        "some_ids_missing": 0.06628571428571428,
+        "other_byline_exclusion": 0.0
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1750,
+        "usable_byline_papers": 1749,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4014,
+        "identified_slots_usable": 3844,
+        "unidentified_slots_usable": 170,
+        "identified_id_keys": 3693,
+        "raw_name_keys_usable": 3891,
+        "allocated_credit_to_ids": 1670.742821067821,
+        "unallocated_missing_id_credit": 78.25717893217896,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 79.25717893217896,
+        "mean_allocated_credit_per_id": 0.45240802086862203,
+        "usable_papers_per_identified_id": 0.4735987002437043,
+        "mean_full_participation_per_id": 1.040888166802058,
+        "mean_returned_team_size_usable": 2.295025728987993,
+        "ids_full_distribution": {
+          "gini": 0.0378370024229544,
+          "top_1_share": 0.021295525494276796,
+          "top_5_share": 0.08731789802289282,
+          "top_10_share": 0.13535379812695109,
+          "top_100_share": 0.054110301768990635,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.29845715985957266,
+          "top_1_share": 0.035866780877961434,
+          "top_5_share": 0.12428603455993589,
+          "top_10_share": 0.23480573733620444,
+          "top_100_share": 0.07361994823439497,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3550,
+          "2": 135,
+          "3": 8
+        },
+        "names_full_distribution": {
+          "gini": 0.029791899003705602,
+          "top_1_share": 0.02138016940707524,
+          "top_5_share": 0.07911061285500748,
+          "top_10_share": 0.12757847533632288,
+          "top_100_share": 0.051818634778276036,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.29565578147065175,
+          "top_1_share": 0.03339622641509434,
+          "top_5_share": 0.12238421955403088,
+          "top_10_share": 0.23361921097770155,
+          "top_100_share": 0.06832475700400228,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-04",
+      "linked_papers": 2088,
+      "paired_papers": 1887,
+      "retention": 0.9037356321839081,
+      "states": {
+        "paired": 1887,
+        "all_ids_missing": 36,
+        "some_ids_missing": 163,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9037356321839081,
+        "all_ids_missing": 0.017241379310344827,
+        "some_ids_missing": 0.07806513409961686,
+        "other_byline_exclusion": 0.0009578544061302681
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2088,
+        "usable_byline_papers": 2086,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4771,
+        "identified_slots_usable": 4555,
+        "unidentified_slots_usable": 216,
+        "identified_id_keys": 4343,
+        "raw_name_keys_usable": 4563,
+        "allocated_credit_to_ids": 1987.4781746031745,
+        "unallocated_missing_id_credit": 98.5218253968254,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 100.5218253968254,
+        "mean_allocated_credit_per_id": 0.4576279471801,
+        "usable_papers_per_identified_id": 0.48031314759382915,
+        "mean_full_participation_per_id": 1.0488141837439557,
+        "mean_returned_team_size_usable": 2.2871524448705656,
+        "ids_full_distribution": {
+          "gini": 0.04471588710449925,
+          "top_1_share": 0.024118551042810098,
+          "top_5_share": 0.09421514818880351,
+          "top_10_share": 0.1418880351262349,
+          "top_100_share": 0.04895718990120746,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3023488776684826,
+          "top_1_share": 0.039294351839742676,
+          "top_5_share": 0.1267016009959179,
+          "top_10_share": 0.23596066244113695,
+          "top_100_share": 0.06775755748540714,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4154,
+          "2": 169,
+          "3": 17,
+          "4": 3
+        },
+        "names_full_distribution": {
+          "gini": 0.04202420451231381,
+          "top_1_share": 0.024158457346468248,
+          "top_5_share": 0.09141689373297002,
+          "top_10_share": 0.13923705722070845,
+          "top_100_share": 0.04695032487948019,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.30334343258395347,
+          "top_1_share": 0.04055129434324065,
+          "top_5_share": 0.12894694790667946,
+          "top_10_share": 0.23831895174177053,
+          "top_100_share": 0.06751358261425376,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-05",
+      "linked_papers": 2122,
+      "paired_papers": 1906,
+      "retention": 0.8982092365692743,
+      "states": {
+        "paired": 1906,
+        "all_ids_missing": 50,
+        "some_ids_missing": 165,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.8982092365692743,
+        "all_ids_missing": 0.0235626767200754,
+        "some_ids_missing": 0.07775683317624882,
+        "other_byline_exclusion": 0.000471253534401508
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2122,
+        "usable_byline_papers": 2121,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4969,
+        "identified_slots_usable": 4718,
+        "unidentified_slots_usable": 251,
+        "identified_id_keys": 4522,
+        "raw_name_keys_usable": 4805,
+        "allocated_credit_to_ids": 2012.2022126022125,
+        "unallocated_missing_id_credit": 108.79778739778735,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 109.79778739778735,
+        "mean_allocated_credit_per_id": 0.44498058659933937,
+        "usable_papers_per_identified_id": 0.46904024767801855,
+        "mean_full_participation_per_id": 1.043343653250774,
+        "mean_returned_team_size_usable": 2.3427628477133426,
+        "ids_full_distribution": {
+          "gini": 0.04004275456863993,
+          "top_1_share": 0.02298431538787622,
+          "top_5_share": 0.08946587537091989,
+          "top_10_share": 0.1373887240356083,
+          "top_100_share": 0.046206019499788045,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3135599258521513,
+          "top_1_share": 0.03589102504096938,
+          "top_5_share": 0.12578258706548534,
+          "top_10_share": 0.23814703959613026,
+          "top_100_share": 0.06311492910832334,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4344,
+          "2": 160,
+          "3": 18
+        },
+        "names_full_distribution": {
+          "gini": 0.03204358175736388,
+          "top_1_share": 0.021956127993560073,
+          "top_5_share": 0.08135439726303079,
+          "top_10_share": 0.12970416582813443,
+          "top_100_share": 0.0428657677601127,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3164318004047757,
+          "top_1_share": 0.037859500235737864,
+          "top_5_share": 0.12847713342762848,
+          "top_10_share": 0.24174917491749176,
+          "top_100_share": 0.06235266383781235,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-06",
+      "linked_papers": 2155,
+      "paired_papers": 1841,
+      "retention": 0.854292343387471,
+      "states": {
+        "paired": 1841,
+        "all_ids_missing": 175,
+        "some_ids_missing": 137,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.854292343387471,
+        "all_ids_missing": 0.08120649651972157,
+        "some_ids_missing": 0.06357308584686774,
+        "other_byline_exclusion": 0.0009280742459396752
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2155,
+        "usable_byline_papers": 2153,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 5106,
+        "identified_slots_usable": 4595,
+        "unidentified_slots_usable": 511,
+        "identified_id_keys": 4410,
+        "raw_name_keys_usable": 4903,
+        "allocated_credit_to_ids": 1928.2263470828689,
+        "unallocated_missing_id_credit": 224.77365291713122,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 226.77365291713122,
+        "mean_allocated_credit_per_id": 0.4372395344859113,
+        "usable_papers_per_identified_id": 0.48820861678004535,
+        "mean_full_participation_per_id": 1.0419501133786848,
+        "mean_returned_team_size_usable": 2.3715745471435206,
+        "ids_full_distribution": {
+          "gini": 0.0389317482524385,
+          "top_1_share": 0.023982589771490752,
+          "top_5_share": 0.0882480957562568,
+          "top_10_share": 0.13623503808487486,
+          "top_100_share": 0.048313384113166484,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30073039923809675,
+          "top_1_share": 0.035196421192636045,
+          "top_5_share": 0.1266794570233973,
+          "top_10_share": 0.24103325181184887,
+          "top_100_share": 0.06418679365827977,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4247,
+          "2": 144,
+          "3": 16,
+          "4": 3
+        },
+        "names_full_distribution": {
+          "gini": 0.03854998486501815,
+          "top_1_share": 0.02527614571092832,
+          "top_5_share": 0.0877692910301606,
+          "top_10_share": 0.13578143360752057,
+          "top_100_share": 0.04524089306698002,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3027655152833164,
+          "top_1_share": 0.03723331785106053,
+          "top_5_share": 0.1283248180832946,
+          "top_10_share": 0.24218919337358727,
+          "top_100_share": 0.06090726118594209,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-07",
+      "linked_papers": 1994,
+      "paired_papers": 1806,
+      "retention": 0.905717151454363,
+      "states": {
+        "paired": 1806,
+        "all_ids_missing": 31,
+        "some_ids_missing": 157,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.905717151454363,
+        "all_ids_missing": 0.015546639919759278,
+        "some_ids_missing": 0.07873620862587763,
+        "other_byline_exclusion": 0.0
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1994,
+        "usable_byline_papers": 1993,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 4536,
+        "identified_slots_usable": 4321,
+        "unidentified_slots_usable": 215,
+        "identified_id_keys": 4126,
+        "raw_name_keys_usable": 4381,
+        "allocated_credit_to_ids": 1902.3238095238096,
+        "unallocated_missing_id_credit": 90.67619047619046,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 91.67619047619046,
+        "mean_allocated_credit_per_id": 0.46105763682108813,
+        "usable_papers_per_identified_id": 0.48303441589917595,
+        "mean_full_participation_per_id": 1.0472612699951527,
+        "mean_returned_team_size_usable": 2.2759658805820373,
+        "ids_full_distribution": {
+          "gini": 0.04334348602228144,
+          "top_1_share": 0.023031705623698218,
+          "top_5_share": 0.0928720203656561,
+          "top_10_share": 0.1406155982411479,
+          "top_100_share": 0.050219856514695675,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30338432108513347,
+          "top_1_share": 0.03930105535084909,
+          "top_5_share": 0.12707265299583467,
+          "top_10_share": 0.23551896427427108,
+          "top_100_share": 0.07119362784363986,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3948,
+          "2": 167,
+          "3": 7,
+          "4": 3,
+          "6": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.03316600423425342,
+          "top_1_share": 0.02240299823633157,
+          "top_5_share": 0.08246252204585539,
+          "top_10_share": 0.13075396825396826,
+          "top_100_share": 0.04717813051146384,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.2994492478983448,
+          "top_1_share": 0.03596420806154875,
+          "top_5_share": 0.12389195517645092,
+          "top_10_share": 0.23380163907007862,
+          "top_100_share": 0.0641578859341027,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-08",
+      "linked_papers": 1403,
+      "paired_papers": 1245,
+      "retention": 0.887384176764077,
+      "states": {
+        "paired": 1245,
+        "all_ids_missing": 34,
+        "some_ids_missing": 123,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.887384176764077,
+        "all_ids_missing": 0.024233784746970778,
+        "some_ids_missing": 0.08766928011404133,
+        "other_byline_exclusion": 0.0007127583749109052
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1403,
+        "usable_byline_papers": 1402,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 3187,
+        "identified_slots_usable": 2998,
+        "unidentified_slots_usable": 189,
+        "identified_id_keys": 2886,
+        "raw_name_keys_usable": 3068,
+        "allocated_credit_to_ids": 1322.6034992784992,
+        "unallocated_missing_id_credit": 79.39650072150076,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 80.39650072150076,
+        "mean_allocated_credit_per_id": 0.45828257078257073,
+        "usable_papers_per_identified_id": 0.4857934857934858,
+        "mean_full_participation_per_id": 1.0388080388080387,
+        "mean_returned_team_size_usable": 2.2731811697574895,
+        "ids_full_distribution": {
+          "gini": 0.03612595507191907,
+          "top_1_share": 0.022254836557705136,
+          "top_5_share": 0.08549032688458973,
+          "top_10_share": 0.13362241494329555,
+          "top_100_share": 0.06971314209472981,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30711981518408926,
+          "top_1_share": 0.03444720963225464,
+          "top_5_share": 0.12172960383654513,
+          "top_10_share": 0.23083259659190825,
+          "top_100_share": 0.08823506066909824,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 2783,
+          "2": 96,
+          "3": 5,
+          "4": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.03609748943413793,
+          "top_1_share": 0.022077188578600564,
+          "top_5_share": 0.08547223093818637,
+          "top_10_share": 0.13360527141512393,
+          "top_100_share": 0.06557891433950423,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3077324938038448,
+          "top_1_share": 0.03349738468854018,
+          "top_5_share": 0.12102948169281978,
+          "top_10_share": 0.23044460294816932,
+          "top_100_share": 0.08294103661436043,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-09",
+      "linked_papers": 2212,
+      "paired_papers": 2003,
+      "retention": 0.9055153707052441,
+      "states": {
+        "paired": 2003,
+        "all_ids_missing": 44,
+        "some_ids_missing": 164,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9055153707052441,
+        "all_ids_missing": 0.019891500904159132,
+        "some_ids_missing": 0.07414104882459313,
+        "other_byline_exclusion": 0.0004520795660036166
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2212,
+        "usable_byline_papers": 2209,
+        "unusable_byline_papers": 3,
+        "observed_slots_usable": 5147,
+        "identified_slots_usable": 4907,
+        "unidentified_slots_usable": 240,
+        "identified_id_keys": 4671,
+        "raw_name_keys_usable": 4898,
+        "allocated_credit_to_ids": 2105.048634582852,
+        "unallocated_missing_id_credit": 103.95136541714767,
+        "unallocated_unusable_byline_credit": 3,
+        "total_unallocated_credit": 106.95136541714767,
+        "mean_allocated_credit_per_id": 0.4506633771318459,
+        "usable_papers_per_identified_id": 0.47291800470991224,
+        "mean_full_participation_per_id": 1.0505245129522587,
+        "mean_returned_team_size_usable": 2.3300135808057947,
+        "ids_full_distribution": {
+          "gini": 0.04629556551253877,
+          "top_1_share": 0.026170776441817815,
+          "top_5_share": 0.0956898308538822,
+          "top_10_share": 0.1432851029142042,
+          "top_100_share": 0.04789076829019768,
+          "median": 1
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.33325445611259763,
+          "top_1_share": 0.03894446838576041,
+          "top_5_share": 0.12839766687238283,
+          "top_10_share": 0.2393452222699718,
+          "top_100_share": 0.06495495215027616,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4470,
+          "2": 173,
+          "3": 21,
+          "4": 7
+        },
+        "names_full_distribution": {
+          "gini": 0.04646674816340779,
+          "top_1_share": 0.02505537206139499,
+          "top_5_share": 0.09595881095783951,
+          "top_10_share": 0.1435399261705848,
+          "top_100_share": 0.04488051292014766,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3363367749033621,
+          "top_1_share": 0.042630149388863746,
+          "top_5_share": 0.13384638599668022,
+          "top_10_share": 0.24471103063226193,
+          "top_100_share": 0.06825109400935565,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-10",
+      "linked_papers": 1997,
+      "paired_papers": 1786,
+      "retention": 0.8943415122684026,
+      "states": {
+        "paired": 1786,
+        "all_ids_missing": 49,
+        "some_ids_missing": 160,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.8943415122684026,
+        "all_ids_missing": 0.024536805207811718,
+        "some_ids_missing": 0.08012018027040561,
+        "other_byline_exclusion": 0.00100150225338007
+      },
+      "partial_id_accounting": {
+        "linked_papers": 1997,
+        "usable_byline_papers": 1995,
+        "unusable_byline_papers": 2,
+        "observed_slots_usable": 4499,
+        "identified_slots_usable": 4256,
+        "unidentified_slots_usable": 243,
+        "identified_id_keys": 4090,
+        "raw_name_keys_usable": 4336,
+        "allocated_credit_to_ids": 1884.434126984127,
+        "unallocated_missing_id_credit": 110.565873015873,
+        "unallocated_unusable_byline_credit": 2,
+        "total_unallocated_credit": 112.565873015873,
+        "mean_allocated_credit_per_id": 0.46074184033841736,
+        "usable_papers_per_identified_id": 0.4877750611246944,
+        "mean_full_participation_per_id": 1.0405867970660148,
+        "mean_returned_team_size_usable": 2.2551378446115287,
+        "ids_full_distribution": {
+          "gini": 0.03763431347316959,
+          "top_1_share": 0.022039473684210525,
+          "top_5_share": 0.08705357142857142,
+          "top_10_share": 0.13510338345864661,
+          "top_100_share": 0.04981203007518797,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.30330919487469954,
+          "top_1_share": 0.03464852191323487,
+          "top_5_share": 0.1214650349753431,
+          "top_10_share": 0.22998567630297842,
+          "top_100_share": 0.06601072192528008,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3936,
+          "2": 143,
+          "3": 10,
+          "4": 1
+        },
+        "names_full_distribution": {
+          "gini": 0.035069447577116275,
+          "top_1_share": 0.02216492553900867,
+          "top_5_share": 0.0844187597243832,
+          "top_10_share": 0.13260724605467883,
+          "top_100_share": 0.04734385418981996,
+          "median": 1.0
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3041752687890287,
+          "top_1_share": 0.03414313561681983,
+          "top_5_share": 0.12108047897521583,
+          "top_10_share": 0.2297521581732108,
+          "top_100_share": 0.06253411306042886,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-11",
+      "linked_papers": 2792,
+      "paired_papers": 1774,
+      "retention": 0.6353868194842407,
+      "states": {
+        "paired": 1774,
+        "all_ids_missing": 855,
+        "some_ids_missing": 163,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6353868194842407,
+        "all_ids_missing": 0.30623209169054444,
+        "some_ids_missing": 0.0583810888252149,
+        "other_byline_exclusion": 0.0
+      },
+      "partial_id_accounting": {
+        "linked_papers": 2792,
+        "usable_byline_papers": 2791,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 6282,
+        "identified_slots_usable": 4304,
+        "unidentified_slots_usable": 1978,
+        "identified_id_keys": 4098,
+        "raw_name_keys_usable": 5877,
+        "allocated_credit_to_ids": 1872.5638888888889,
+        "unallocated_missing_id_credit": 918.4361111111192,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 919.4361111111192,
+        "mean_allocated_credit_per_id": 0.45694580011929936,
+        "usable_papers_per_identified_id": 0.6810639336261591,
+        "mean_full_participation_per_id": 1.0502684236212787,
+        "mean_returned_team_size_usable": 2.2508061626657114,
+        "ids_full_distribution": {
+          "gini": 0.046058939803803156,
+          "top_1_share": 0.025780669144981415,
+          "top_5_share": 0.09546933085501859,
+          "top_10_share": 0.14307620817843866,
+          "top_100_share": 0.05320631970260223,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.3016279450203072,
+          "top_1_share": 0.03972628140561885,
+          "top_5_share": 0.1283534310504166,
+          "top_10_share": 0.23777559881505303,
+          "top_100_share": 0.07233398059404589,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 3921,
+          "2": 156,
+          "3": 15,
+          "4": 4,
+          "5": 2
+        },
+        "names_full_distribution": {
+          "gini": 0.06117069239152162,
+          "top_1_share": 0.028102515122572433,
+          "top_5_share": 0.10294492199936327,
+          "top_10_share": 0.15802292263610315,
+          "top_100_share": 0.04122890799108564,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3060064567347236,
+          "top_1_share": 0.043343485011345995,
+          "top_5_share": 0.13124328197778573,
+          "top_10_share": 0.2365281261196704,
+          "top_100_share": 0.061787889645288425,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    },
+    {
+      "period": "2025-12",
+      "linked_papers": 3135,
+      "paired_papers": 2301,
+      "retention": 0.7339712918660287,
+      "states": {
+        "paired": 2301,
+        "all_ids_missing": 722,
+        "some_ids_missing": 111,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.7339712918660287,
+        "all_ids_missing": 0.23030303030303031,
+        "some_ids_missing": 0.0354066985645933,
+        "other_byline_exclusion": 0.0003189792663476874
+      },
+      "partial_id_accounting": {
+        "linked_papers": 3135,
+        "usable_byline_papers": 3134,
+        "unusable_byline_papers": 1,
+        "observed_slots_usable": 6788,
+        "identified_slots_usable": 5180,
+        "unidentified_slots_usable": 1608,
+        "identified_id_keys": 4920,
+        "raw_name_keys_usable": 6287,
+        "allocated_credit_to_ids": 2369.4261904761906,
+        "unallocated_missing_id_credit": 764.5738095238145,
+        "unallocated_unusable_byline_credit": 1,
+        "total_unallocated_credit": 765.5738095238145,
+        "mean_allocated_credit_per_id": 0.481590689121177,
+        "usable_papers_per_identified_id": 0.6369918699186992,
+        "mean_full_participation_per_id": 1.0528455284552845,
+        "mean_returned_team_size_usable": 2.1659221442246333,
+        "ids_full_distribution": {
+          "gini": 0.04805623567818684,
+          "top_1_share": 0.024401544401544403,
+          "top_5_share": 0.09768339768339768,
+          "top_10_share": 0.14517374517374518,
+          "top_100_share": 0.044015444015444015,
+          "median": 1.0
+        },
+        "ids_allocated_credit_distribution": {
+          "gini": 0.2972097139733121,
+          "top_1_share": 0.03872948945846844,
+          "top_5_share": 0.1245519560190884,
+          "top_10_share": 0.22837456125101616,
+          "top_100_share": 0.06293366185704997,
+          "median": 0.3333333333333333
+        },
+        "ids_activity_frequency": {
+          "1": 4688,
+          "2": 207,
+          "3": 22,
+          "4": 3
+        },
+        "names_full_distribution": {
+          "gini": 0.06953615972347671,
+          "top_1_share": 0.030142899233942252,
+          "top_5_share": 0.10425751325869181,
+          "top_10_share": 0.16642604596346494,
+          "top_100_share": 0.041101944608132,
+          "median": 1
+        },
+        "names_fractional_distribution": {
+          "gini": 0.3060338981477344,
+          "top_1_share": 0.04411455009572431,
+          "top_5_share": 0.13309402254839395,
+          "top_10_share": 0.2333971495426505,
+          "top_100_share": 0.061486917677089976,
+          "median": 0.3333333333333333
+        },
+        "interpretation": "Observed valid IDs on usable returned bylines, including incomplete-ID papers. This does not reconstruct missing people. Allocated credit per ID is not P/A; unallocated credit is not assigned to an artificial author."
+      }
+    }
+  ],
+  "rolling12": [
+    {
+      "period": "2024-12",
+      "start": "2024-01",
+      "linked_papers": 24978,
+      "paired_papers": 23756,
+      "retention": 0.9510769477139883,
+      "states": {
+        "paired": 23756,
+        "all_ids_missing": 206,
+        "some_ids_missing": 1000,
+        "other_byline_exclusion": 16
+      },
+      "state_shares": {
+        "paired": 0.9510769477139883,
+        "all_ids_missing": 0.008247257586676274,
+        "some_ids_missing": 0.04003523100328289,
+        "other_byline_exclusion": 0.0006405636960525262
+      }
+    },
+    {
+      "period": "2025-01",
+      "start": "2024-02",
+      "linked_papers": 24753,
+      "paired_papers": 23433,
+      "retention": 0.9466731305296328,
+      "states": {
+        "paired": 23433,
+        "all_ids_missing": 221,
+        "some_ids_missing": 1084,
+        "other_byline_exclusion": 15
+      },
+      "state_shares": {
+        "paired": 0.9466731305296328,
+        "all_ids_missing": 0.008928210721932695,
+        "some_ids_missing": 0.04379267159536218,
+        "other_byline_exclusion": 0.0006059871530723549
+      }
+    },
+    {
+      "period": "2025-02",
+      "start": "2024-03",
+      "linked_papers": 24691,
+      "paired_papers": 23241,
+      "retention": 0.9412741484751529,
+      "states": {
+        "paired": 23241,
+        "all_ids_missing": 249,
+        "some_ids_missing": 1187,
+        "other_byline_exclusion": 14
+      },
+      "state_shares": {
+        "paired": 0.9412741484751529,
+        "all_ids_missing": 0.010084646227370297,
+        "some_ids_missing": 0.0480741970758576,
+        "other_byline_exclusion": 0.0005670082216192135
+      }
+    },
+    {
+      "period": "2025-03",
+      "start": "2024-04",
+      "linked_papers": 24434,
+      "paired_papers": 22882,
+      "retention": 0.9364819513792256,
+      "states": {
+        "paired": 22882,
+        "all_ids_missing": 281,
+        "some_ids_missing": 1258,
+        "other_byline_exclusion": 13
+      },
+      "state_shares": {
+        "paired": 0.9364819513792256,
+        "all_ids_missing": 0.011500368339199476,
+        "some_ids_missing": 0.05148563477122043,
+        "other_byline_exclusion": 0.0005320455103544242
+      }
+    },
+    {
+      "period": "2025-04",
+      "start": "2024-05",
+      "linked_papers": 24446,
+      "paired_papers": 22760,
+      "retention": 0.9310316616215332,
+      "states": {
+        "paired": 22760,
+        "all_ids_missing": 305,
+        "some_ids_missing": 1367,
+        "other_byline_exclusion": 14
+      },
+      "state_shares": {
+        "paired": 0.9310316616215332,
+        "all_ids_missing": 0.012476478769532848,
+        "some_ids_missing": 0.05591916878016853,
+        "other_byline_exclusion": 0.0005726908287654422
+      }
+    },
+    {
+      "period": "2025-05",
+      "start": "2024-06",
+      "linked_papers": 24364,
+      "paired_papers": 22537,
+      "retention": 0.925012313249056,
+      "states": {
+        "paired": 22537,
+        "all_ids_missing": 342,
+        "some_ids_missing": 1472,
+        "other_byline_exclusion": 13
+      },
+      "state_shares": {
+        "paired": 0.925012313249056,
+        "all_ids_missing": 0.014037103923822033,
+        "some_ids_missing": 0.060417008701362664,
+        "other_byline_exclusion": 0.000533574125759317
+      }
+    },
+    {
+      "period": "2025-06",
+      "start": "2024-07",
+      "linked_papers": 24519,
+      "paired_papers": 22436,
+      "retention": 0.9150454749378033,
+      "states": {
+        "paired": 22436,
+        "all_ids_missing": 512,
+        "some_ids_missing": 1559,
+        "other_byline_exclusion": 12
+      },
+      "state_shares": {
+        "paired": 0.9150454749378033,
+        "all_ids_missing": 0.020881765161711325,
+        "some_ids_missing": 0.06358334352950773,
+        "other_byline_exclusion": 0.0004894163709776092
+      }
+    },
+    {
+      "period": "2025-07",
+      "start": "2024-08",
+      "linked_papers": 24460,
+      "paired_papers": 22265,
+      "retention": 0.9102616516762061,
+      "states": {
+        "paired": 22265,
+        "all_ids_missing": 523,
+        "some_ids_missing": 1662,
+        "other_byline_exclusion": 10
+      },
+      "state_shares": {
+        "paired": 0.9102616516762061,
+        "all_ids_missing": 0.021381847914963205,
+        "some_ids_missing": 0.06794766966475879,
+        "other_byline_exclusion": 0.0004088307440719542
+      }
+    },
+    {
+      "period": "2025-08",
+      "start": "2024-09",
+      "linked_papers": 24105,
+      "paired_papers": 21828,
+      "retention": 0.9055382700684506,
+      "states": {
+        "paired": 21828,
+        "all_ids_missing": 545,
+        "some_ids_missing": 1721,
+        "other_byline_exclusion": 11
+      },
+      "state_shares": {
+        "paired": 0.9055382700684506,
+        "all_ids_missing": 0.022609417133374818,
+        "some_ids_missing": 0.07139597593860195,
+        "other_byline_exclusion": 0.00045633685957270273
+      }
+    },
+    {
+      "period": "2025-09",
+      "start": "2024-10",
+      "linked_papers": 24206,
+      "paired_papers": 21863,
+      "retention": 0.9032058167396513,
+      "states": {
+        "paired": 21863,
+        "all_ids_missing": 567,
+        "some_ids_missing": 1765,
+        "other_byline_exclusion": 11
+      },
+      "state_shares": {
+        "paired": 0.9032058167396513,
+        "all_ids_missing": 0.023423944476576055,
+        "some_ids_missing": 0.07291580599851276,
+        "other_byline_exclusion": 0.0004544327852598529
+      }
+    },
+    {
+      "period": "2025-10",
+      "start": "2024-11",
+      "linked_papers": 23826,
+      "paired_papers": 21432,
+      "retention": 0.8995215311004785,
+      "states": {
+        "paired": 21432,
+        "all_ids_missing": 592,
+        "some_ids_missing": 1790,
+        "other_byline_exclusion": 12
+      },
+      "state_shares": {
+        "paired": 0.8995215311004785,
+        "all_ids_missing": 0.024846806010240915,
+        "some_ids_missing": 0.07512801141610007,
+        "other_byline_exclusion": 0.000503651473180559
+      }
+    },
+    {
+      "period": "2025-11",
+      "start": "2024-12",
+      "linked_papers": 24558,
+      "paired_papers": 21339,
+      "retention": 0.8689225506963107,
+      "states": {
+        "paired": 21339,
+        "all_ids_missing": 1407,
+        "some_ids_missing": 1800,
+        "other_byline_exclusion": 12
+      },
+      "state_shares": {
+        "paired": 0.8689225506963107,
+        "all_ids_missing": 0.05729293916442707,
+        "some_ids_missing": 0.07329587099926704,
+        "other_byline_exclusion": 0.0004886391399951136
+      }
+    },
+    {
+      "period": "2025-12",
+      "start": "2025-01",
+      "linked_papers": 25462,
+      "paired_papers": 21609,
+      "retention": 0.8486764590369963,
+      "states": {
+        "paired": 21609,
+        "all_ids_missing": 2090,
+        "some_ids_missing": 1752,
+        "other_byline_exclusion": 11
+      },
+      "state_shares": {
+        "paired": 0.8486764590369963,
+        "all_ids_missing": 0.08208310423376011,
+        "some_ids_missing": 0.06880842039117116,
+        "other_byline_exclusion": 0.00043201633807242164
+      }
+    }
+  ],
+  "by_team_size": [
+    {
+      "period": "2024",
+      "returned_slots": 1,
+      "linked_papers": 7496,
+      "paired_papers": 7339,
+      "retention": 0.9790554962646745,
+      "states": {
+        "paired": 7339,
+        "all_ids_missing": 157,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9790554962646745,
+        "all_ids_missing": 0.02094450373532551,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 2,
+      "linked_papers": 8369,
+      "paired_papers": 8059,
+      "retention": 0.9629585374596726,
+      "states": {
+        "paired": 8059,
+        "all_ids_missing": 22,
+        "some_ids_missing": 287,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9629585374596726,
+        "all_ids_missing": 0.0026287489544748474,
+        "some_ids_missing": 0.03429322499701278,
+        "other_byline_exclusion": 0.0001194885888397658
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 3,
+      "linked_papers": 5663,
+      "paired_papers": 5320,
+      "retention": 0.9394313967861557,
+      "states": {
+        "paired": 5320,
+        "all_ids_missing": 14,
+        "some_ids_missing": 325,
+        "other_byline_exclusion": 4
+      },
+      "state_shares": {
+        "paired": 0.9394313967861557,
+        "all_ids_missing": 0.002472187886279357,
+        "some_ids_missing": 0.057390075931485075,
+        "other_byline_exclusion": 0.0007063393960798164
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 4,
+      "linked_papers": 2217,
+      "paired_papers": 2023,
+      "retention": 0.9124943617501128,
+      "states": {
+        "paired": 2023,
+        "all_ids_missing": 8,
+        "some_ids_missing": 184,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9124943617501128,
+        "all_ids_missing": 0.0036084799278304014,
+        "some_ids_missing": 0.08299503834009923,
+        "other_byline_exclusion": 0.0009021199819576004
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 5,
+      "linked_papers": 657,
+      "paired_papers": 573,
+      "retention": 0.8721461187214612,
+      "states": {
+        "paired": 573,
+        "all_ids_missing": 3,
+        "some_ids_missing": 80,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.8721461187214612,
+        "all_ids_missing": 0.0045662100456621,
+        "some_ids_missing": 0.121765601217656,
+        "other_byline_exclusion": 0.0015220700152207
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 6,
+      "linked_papers": 260,
+      "paired_papers": 212,
+      "retention": 0.8153846153846154,
+      "states": {
+        "paired": 212,
+        "all_ids_missing": 1,
+        "some_ids_missing": 45,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.8153846153846154,
+        "all_ids_missing": 0.0038461538461538464,
+        "some_ids_missing": 0.17307692307692307,
+        "other_byline_exclusion": 0.007692307692307693
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 7,
+      "linked_papers": 125,
+      "paired_papers": 96,
+      "retention": 0.768,
+      "states": {
+        "paired": 96,
+        "all_ids_missing": 1,
+        "some_ids_missing": 27,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.768,
+        "all_ids_missing": 0.008,
+        "some_ids_missing": 0.216,
+        "other_byline_exclusion": 0.008
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 8,
+      "linked_papers": 78,
+      "paired_papers": 63,
+      "retention": 0.8076923076923077,
+      "states": {
+        "paired": 63,
+        "all_ids_missing": 0,
+        "some_ids_missing": 15,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.8076923076923077,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.19230769230769232,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 9,
+      "linked_papers": 28,
+      "paired_papers": 19,
+      "retention": 0.6785714285714286,
+      "states": {
+        "paired": 19,
+        "all_ids_missing": 0,
+        "some_ids_missing": 9,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6785714285714286,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.32142857142857145,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 10,
+      "linked_papers": 22,
+      "paired_papers": 15,
+      "retention": 0.6818181818181818,
+      "states": {
+        "paired": 15,
+        "all_ids_missing": 0,
+        "some_ids_missing": 7,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6818181818181818,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.3181818181818182,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 11,
+      "linked_papers": 16,
+      "paired_papers": 11,
+      "retention": 0.6875,
+      "states": {
+        "paired": 11,
+        "all_ids_missing": 0,
+        "some_ids_missing": 5,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6875,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.3125,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 12,
+      "linked_papers": 10,
+      "paired_papers": 7,
+      "retention": 0.7,
+      "states": {
+        "paired": 7,
+        "all_ids_missing": 0,
+        "some_ids_missing": 2,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.7,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.2,
+        "other_byline_exclusion": 0.1
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 13,
+      "linked_papers": 3,
+      "paired_papers": 3,
+      "retention": 1.0,
+      "states": {
+        "paired": 3,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 14,
+      "linked_papers": 3,
+      "paired_papers": 3,
+      "retention": 1.0,
+      "states": {
+        "paired": 3,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 15,
+      "linked_papers": 2,
+      "paired_papers": 2,
+      "retention": 1.0,
+      "states": {
+        "paired": 2,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 16,
+      "linked_papers": 3,
+      "paired_papers": 1,
+      "retention": 0.3333333333333333,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 2,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.3333333333333333,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.6666666666666666,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 17,
+      "linked_papers": 4,
+      "paired_papers": 1,
+      "retention": 0.25,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 3,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.25,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.75,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 18,
+      "linked_papers": 1,
+      "paired_papers": 1,
+      "retention": 1.0,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 19,
+      "linked_papers": 1,
+      "paired_papers": 1,
+      "retention": 1.0,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 20,
+      "linked_papers": 3,
+      "paired_papers": 2,
+      "retention": 0.6666666666666666,
+      "states": {
+        "paired": 2,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6666666666666666,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.3333333333333333,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 21,
+      "linked_papers": 2,
+      "paired_papers": 1,
+      "retention": 0.5,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.5,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.5,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 24,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 27,
+      "linked_papers": 2,
+      "paired_papers": 2,
+      "retention": 1.0,
+      "states": {
+        "paired": 2,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 28,
+      "linked_papers": 1,
+      "paired_papers": 1,
+      "retention": 1.0,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 29,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 35,
+      "linked_papers": 1,
+      "paired_papers": 1,
+      "retention": 1.0,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "returned_slots": 100,
+      "linked_papers": 9,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 5,
+        "other_byline_exclusion": 4
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.5555555555555556,
+        "other_byline_exclusion": 0.4444444444444444
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 1,
+      "linked_papers": 7855,
+      "paired_papers": 6915,
+      "retention": 0.8803309993634627,
+      "states": {
+        "paired": 6915,
+        "all_ids_missing": 940,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.8803309993634627,
+        "all_ids_missing": 0.11966900063653724,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 2,
+      "linked_papers": 8526,
+      "paired_papers": 7329,
+      "retention": 0.8596059113300493,
+      "states": {
+        "paired": 7329,
+        "all_ids_missing": 599,
+        "some_ids_missing": 596,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.8596059113300493,
+        "all_ids_missing": 0.07025568848228947,
+        "some_ids_missing": 0.06990382359840489,
+        "other_byline_exclusion": 0.0002345765892563922
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 3,
+      "linked_papers": 5655,
+      "paired_papers": 4696,
+      "retention": 0.8304155614500442,
+      "states": {
+        "paired": 4696,
+        "all_ids_missing": 377,
+        "some_ids_missing": 578,
+        "other_byline_exclusion": 4
+      },
+      "state_shares": {
+        "paired": 0.8304155614500442,
+        "all_ids_missing": 0.06666666666666667,
+        "some_ids_missing": 0.10221043324491601,
+        "other_byline_exclusion": 0.0007073386383731211
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 4,
+      "linked_papers": 2205,
+      "paired_papers": 1778,
+      "retention": 0.8063492063492064,
+      "states": {
+        "paired": 1778,
+        "all_ids_missing": 124,
+        "some_ids_missing": 302,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.8063492063492064,
+        "all_ids_missing": 0.05623582766439909,
+        "some_ids_missing": 0.13696145124716552,
+        "other_byline_exclusion": 0.00045351473922902497
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 5,
+      "linked_papers": 691,
+      "paired_papers": 544,
+      "retention": 0.7872648335745297,
+      "states": {
+        "paired": 544,
+        "all_ids_missing": 32,
+        "some_ids_missing": 113,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.7872648335745297,
+        "all_ids_missing": 0.04630969609261939,
+        "some_ids_missing": 0.16353111432706222,
+        "other_byline_exclusion": 0.002894356005788712
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 6,
+      "linked_papers": 251,
+      "paired_papers": 188,
+      "retention": 0.749003984063745,
+      "states": {
+        "paired": 188,
+        "all_ids_missing": 9,
+        "some_ids_missing": 54,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.749003984063745,
+        "all_ids_missing": 0.035856573705179286,
+        "some_ids_missing": 0.2151394422310757,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 7,
+      "linked_papers": 118,
+      "paired_papers": 81,
+      "retention": 0.6864406779661016,
+      "states": {
+        "paired": 81,
+        "all_ids_missing": 5,
+        "some_ids_missing": 32,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6864406779661016,
+        "all_ids_missing": 0.0423728813559322,
+        "some_ids_missing": 0.2711864406779661,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 8,
+      "linked_papers": 49,
+      "paired_papers": 28,
+      "retention": 0.5714285714285714,
+      "states": {
+        "paired": 28,
+        "all_ids_missing": 0,
+        "some_ids_missing": 21,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.5714285714285714,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.42857142857142855,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 9,
+      "linked_papers": 36,
+      "paired_papers": 19,
+      "retention": 0.5277777777777778,
+      "states": {
+        "paired": 19,
+        "all_ids_missing": 1,
+        "some_ids_missing": 16,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.5277777777777778,
+        "all_ids_missing": 0.027777777777777776,
+        "some_ids_missing": 0.4444444444444444,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 10,
+      "linked_papers": 20,
+      "paired_papers": 8,
+      "retention": 0.4,
+      "states": {
+        "paired": 8,
+        "all_ids_missing": 2,
+        "some_ids_missing": 9,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.4,
+        "all_ids_missing": 0.1,
+        "some_ids_missing": 0.45,
+        "other_byline_exclusion": 0.05
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 11,
+      "linked_papers": 17,
+      "paired_papers": 8,
+      "retention": 0.47058823529411764,
+      "states": {
+        "paired": 8,
+        "all_ids_missing": 1,
+        "some_ids_missing": 8,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.47058823529411764,
+        "all_ids_missing": 0.058823529411764705,
+        "some_ids_missing": 0.47058823529411764,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 12,
+      "linked_papers": 8,
+      "paired_papers": 3,
+      "retention": 0.375,
+      "states": {
+        "paired": 3,
+        "all_ids_missing": 0,
+        "some_ids_missing": 5,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.375,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.625,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 13,
+      "linked_papers": 7,
+      "paired_papers": 5,
+      "retention": 0.7142857142857143,
+      "states": {
+        "paired": 5,
+        "all_ids_missing": 0,
+        "some_ids_missing": 2,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.7142857142857143,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.2857142857142857,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 15,
+      "linked_papers": 6,
+      "paired_papers": 4,
+      "retention": 0.6666666666666666,
+      "states": {
+        "paired": 4,
+        "all_ids_missing": 0,
+        "some_ids_missing": 2,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.6666666666666666,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.3333333333333333,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 17,
+      "linked_papers": 2,
+      "paired_papers": 1,
+      "retention": 0.5,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.5,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.5,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 18,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 21,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 23,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 27,
+      "linked_papers": 2,
+      "paired_papers": 1,
+      "retention": 0.5,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.5,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.5,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 29,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 31,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 46,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 48,
+      "linked_papers": 1,
+      "paired_papers": 1,
+      "retention": 1.0,
+      "states": {
+        "paired": 1,
+        "all_ids_missing": 0,
+        "some_ids_missing": 0,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 1.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 49,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 55,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 56,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 65,
+      "linked_papers": 1,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 1,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 1.0,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "returned_slots": 100,
+      "linked_papers": 3,
+      "paired_papers": 0,
+      "retention": 0.0,
+      "states": {
+        "paired": 0,
+        "all_ids_missing": 0,
+        "some_ids_missing": 2,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.0,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.6666666666666666,
+        "other_byline_exclusion": 0.3333333333333333
+      }
+    }
+  ],
+  "by_subfield": [
+    {
+      "period": "2024",
+      "subfield": "Algebra and Number Theory",
+      "linked_papers": 2907,
+      "paired_papers": 2780,
+      "retention": 0.956312349501204,
+      "states": {
+        "paired": 2780,
+        "all_ids_missing": 26,
+        "some_ids_missing": 100,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.956312349501204,
+        "all_ids_missing": 0.008943928448572412,
+        "some_ids_missing": 0.03439972480220158,
+        "other_byline_exclusion": 0.0003439972480220158
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Applied Mathematics",
+      "linked_papers": 4595,
+      "paired_papers": 4405,
+      "retention": 0.9586507072905331,
+      "states": {
+        "paired": 4405,
+        "all_ids_missing": 33,
+        "some_ids_missing": 153,
+        "other_byline_exclusion": 4
+      },
+      "state_shares": {
+        "paired": 0.9586507072905331,
+        "all_ids_missing": 0.007181719260065288,
+        "some_ids_missing": 0.03329706202393906,
+        "other_byline_exclusion": 0.0008705114254624592
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Computational Mathematics",
+      "linked_papers": 220,
+      "paired_papers": 208,
+      "retention": 0.9454545454545454,
+      "states": {
+        "paired": 208,
+        "all_ids_missing": 0,
+        "some_ids_missing": 12,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9454545454545454,
+        "all_ids_missing": 0.0,
+        "some_ids_missing": 0.05454545454545454,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Discrete Mathematics and Combinatorics",
+      "linked_papers": 970,
+      "paired_papers": 920,
+      "retention": 0.9484536082474226,
+      "states": {
+        "paired": 920,
+        "all_ids_missing": 13,
+        "some_ids_missing": 37,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9484536082474226,
+        "all_ids_missing": 0.013402061855670102,
+        "some_ids_missing": 0.03814432989690722,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Geometry and Topology",
+      "linked_papers": 5433,
+      "paired_papers": 5193,
+      "retention": 0.9558255107675317,
+      "states": {
+        "paired": 5193,
+        "all_ids_missing": 50,
+        "some_ids_missing": 188,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9558255107675317,
+        "all_ids_missing": 0.009203018590097553,
+        "some_ids_missing": 0.034603349898766796,
+        "other_byline_exclusion": 0.0003681207436039021
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Mathematical Physics",
+      "linked_papers": 6335,
+      "paired_papers": 6044,
+      "retention": 0.9540647198105762,
+      "states": {
+        "paired": 6044,
+        "all_ids_missing": 50,
+        "some_ids_missing": 235,
+        "other_byline_exclusion": 6
+      },
+      "state_shares": {
+        "paired": 0.9540647198105762,
+        "all_ids_missing": 0.007892659826361484,
+        "some_ids_missing": 0.037095501183898975,
+        "other_byline_exclusion": 0.0009471191791633781
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Modeling and Simulation",
+      "linked_papers": 639,
+      "paired_papers": 603,
+      "retention": 0.9436619718309859,
+      "states": {
+        "paired": 603,
+        "all_ids_missing": 3,
+        "some_ids_missing": 32,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9436619718309859,
+        "all_ids_missing": 0.004694835680751174,
+        "some_ids_missing": 0.050078247261345854,
+        "other_byline_exclusion": 0.001564945226917058
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Numerical Analysis",
+      "linked_papers": 1382,
+      "paired_papers": 1286,
+      "retention": 0.9305354558610709,
+      "states": {
+        "paired": 1286,
+        "all_ids_missing": 13,
+        "some_ids_missing": 83,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9305354558610709,
+        "all_ids_missing": 0.009406657018813314,
+        "some_ids_missing": 0.060057887120115776,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Statistics and Probability",
+      "linked_papers": 2318,
+      "paired_papers": 2148,
+      "retention": 0.9266609145815358,
+      "states": {
+        "paired": 2148,
+        "all_ids_missing": 14,
+        "some_ids_missing": 154,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.9266609145815358,
+        "all_ids_missing": 0.0060396893874029335,
+        "some_ids_missing": 0.06643658326143227,
+        "other_byline_exclusion": 0.0008628127696289905
+      }
+    },
+    {
+      "period": "2024",
+      "subfield": "Theoretical Computer Science",
+      "linked_papers": 179,
+      "paired_papers": 169,
+      "retention": 0.9441340782122905,
+      "states": {
+        "paired": 169,
+        "all_ids_missing": 4,
+        "some_ids_missing": 6,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9441340782122905,
+        "all_ids_missing": 0.0223463687150838,
+        "some_ids_missing": 0.0335195530726257,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Algebra and Number Theory",
+      "linked_papers": 2327,
+      "paired_papers": 1995,
+      "retention": 0.857327030511388,
+      "states": {
+        "paired": 1995,
+        "all_ids_missing": 177,
+        "some_ids_missing": 154,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.857327030511388,
+        "all_ids_missing": 0.07606360120326601,
+        "some_ids_missing": 0.06617963042544048,
+        "other_byline_exclusion": 0.0004297378599054577
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Applied Mathematics",
+      "linked_papers": 5058,
+      "paired_papers": 4282,
+      "retention": 0.8465796757611704,
+      "states": {
+        "paired": 4282,
+        "all_ids_missing": 436,
+        "some_ids_missing": 337,
+        "other_byline_exclusion": 3
+      },
+      "state_shares": {
+        "paired": 0.8465796757611704,
+        "all_ids_missing": 0.08620007908264136,
+        "some_ids_missing": 0.06662712534598655,
+        "other_byline_exclusion": 0.0005931198102016608
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Computational Mathematics",
+      "linked_papers": 347,
+      "paired_papers": 275,
+      "retention": 0.792507204610951,
+      "states": {
+        "paired": 275,
+        "all_ids_missing": 29,
+        "some_ids_missing": 43,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.792507204610951,
+        "all_ids_missing": 0.08357348703170028,
+        "some_ids_missing": 0.1239193083573487,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Discrete Mathematics and Combinatorics",
+      "linked_papers": 1637,
+      "paired_papers": 1348,
+      "retention": 0.8234575442883323,
+      "states": {
+        "paired": 1348,
+        "all_ids_missing": 179,
+        "some_ids_missing": 110,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.8234575442883323,
+        "all_ids_missing": 0.10934636530238241,
+        "some_ids_missing": 0.06719609040928527,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Geometry and Topology",
+      "linked_papers": 5791,
+      "paired_papers": 4969,
+      "retention": 0.8580556035227076,
+      "states": {
+        "paired": 4969,
+        "all_ids_missing": 502,
+        "some_ids_missing": 318,
+        "other_byline_exclusion": 2
+      },
+      "state_shares": {
+        "paired": 0.8580556035227076,
+        "all_ids_missing": 0.08668623726472112,
+        "some_ids_missing": 0.05491279571749266,
+        "other_byline_exclusion": 0.0003453634950785702
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Mathematical Physics",
+      "linked_papers": 5776,
+      "paired_papers": 4947,
+      "retention": 0.8564750692520776,
+      "states": {
+        "paired": 4947,
+        "all_ids_missing": 463,
+        "some_ids_missing": 362,
+        "other_byline_exclusion": 4
+      },
+      "state_shares": {
+        "paired": 0.8564750692520776,
+        "all_ids_missing": 0.08015927977839335,
+        "some_ids_missing": 0.06267313019390582,
+        "other_byline_exclusion": 0.0006925207756232687
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Modeling and Simulation",
+      "linked_papers": 637,
+      "paired_papers": 528,
+      "retention": 0.8288854003139717,
+      "states": {
+        "paired": 528,
+        "all_ids_missing": 50,
+        "some_ids_missing": 59,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.8288854003139717,
+        "all_ids_missing": 0.07849293563579278,
+        "some_ids_missing": 0.09262166405023547,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Numerical Analysis",
+      "linked_papers": 995,
+      "paired_papers": 871,
+      "retention": 0.8753768844221106,
+      "states": {
+        "paired": 871,
+        "all_ids_missing": 38,
+        "some_ids_missing": 86,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.8753768844221106,
+        "all_ids_missing": 0.03819095477386935,
+        "some_ids_missing": 0.0864321608040201,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Statistics and Probability",
+      "linked_papers": 2793,
+      "paired_papers": 2305,
+      "retention": 0.8252774794128177,
+      "states": {
+        "paired": 2305,
+        "all_ids_missing": 211,
+        "some_ids_missing": 276,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.8252774794128177,
+        "all_ids_missing": 0.07554600787683495,
+        "some_ids_missing": 0.09881847475832438,
+        "other_byline_exclusion": 0.00035803795202291446
+      }
+    },
+    {
+      "period": "2025",
+      "subfield": "Theoretical Computer Science",
+      "linked_papers": 101,
+      "paired_papers": 89,
+      "retention": 0.8811881188118812,
+      "states": {
+        "paired": 89,
+        "all_ids_missing": 5,
+        "some_ids_missing": 7,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.8811881188118812,
+        "all_ids_missing": 0.04950495049504951,
+        "some_ids_missing": 0.06930693069306931,
+        "other_byline_exclusion": 0.0
+      }
+    }
+  ],
+  "by_publication_year": [
+    {
+      "period": "2024",
+      "openalex_publication_year": 2024,
+      "linked_papers": 22732,
+      "paired_papers": 21663,
+      "retention": 0.9529737814534577,
+      "states": {
+        "paired": 21663,
+        "all_ids_missing": 183,
+        "some_ids_missing": 872,
+        "other_byline_exclusion": 14
+      },
+      "state_shares": {
+        "paired": 0.9529737814534577,
+        "all_ids_missing": 0.008050325532289284,
+        "some_ids_missing": 0.038360021115607955,
+        "other_byline_exclusion": 0.0006158718986450818
+      }
+    },
+    {
+      "period": "2024",
+      "openalex_publication_year": 2025,
+      "linked_papers": 550,
+      "paired_papers": 497,
+      "retention": 0.9036363636363637,
+      "states": {
+        "paired": 497,
+        "all_ids_missing": 11,
+        "some_ids_missing": 41,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9036363636363637,
+        "all_ids_missing": 0.02,
+        "some_ids_missing": 0.07454545454545454,
+        "other_byline_exclusion": 0.0018181818181818182
+      }
+    },
+    {
+      "period": "2024",
+      "openalex_publication_year": 2026,
+      "linked_papers": 1696,
+      "paired_papers": 1596,
+      "retention": 0.9410377358490566,
+      "states": {
+        "paired": 1596,
+        "all_ids_missing": 12,
+        "some_ids_missing": 87,
+        "other_byline_exclusion": 1
+      },
+      "state_shares": {
+        "paired": 0.9410377358490566,
+        "all_ids_missing": 0.007075471698113208,
+        "some_ids_missing": 0.05129716981132076,
+        "other_byline_exclusion": 0.0005896226415094339
+      }
+    },
+    {
+      "period": "2025",
+      "openalex_publication_year": 2024,
+      "linked_papers": 166,
+      "paired_papers": 150,
+      "retention": 0.9036144578313253,
+      "states": {
+        "paired": 150,
+        "all_ids_missing": 1,
+        "some_ids_missing": 15,
+        "other_byline_exclusion": 0
+      },
+      "state_shares": {
+        "paired": 0.9036144578313253,
+        "all_ids_missing": 0.006024096385542169,
+        "some_ids_missing": 0.09036144578313253,
+        "other_byline_exclusion": 0.0
+      }
+    },
+    {
+      "period": "2025",
+      "openalex_publication_year": 2025,
+      "linked_papers": 21834,
+      "paired_papers": 18362,
+      "retention": 0.8409819547494733,
+      "states": {
+        "paired": 18362,
+        "all_ids_missing": 1997,
+        "some_ids_missing": 1468,
+        "other_byline_exclusion": 7
+      },
+      "state_shares": {
+        "paired": 0.8409819547494733,
+        "all_ids_missing": 0.09146285609599707,
+        "some_ids_missing": 0.06723458825684712,
+        "other_byline_exclusion": 0.0003206008976825135
+      }
+    },
+    {
+      "period": "2025",
+      "openalex_publication_year": 2026,
+      "linked_papers": 3462,
+      "paired_papers": 3097,
+      "retention": 0.8945696129404969,
+      "states": {
+        "paired": 3097,
+        "all_ids_missing": 92,
+        "some_ids_missing": 269,
+        "other_byline_exclusion": 4
+      },
+      "state_shares": {
+        "paired": 0.8945696129404969,
+        "all_ids_missing": 0.02657423454650491,
+        "some_ids_missing": 0.07770075101097632,
+        "other_byline_exclusion": 0.0011554015020219526
+      }
+    }
+  ],
+  "by_metadata_update_month": [
+    {
+      "period": "2024",
+      "metadata_update_month": "2026-08",
+      "linked_papers": 22203,
+      "paired_papers": 21129,
+      "retention": 0.9516281583569788,
+      "states": {
+        "paired": 21129,
+        "all_ids_missing": 187,
+        "some_ids_missing": 877,
+        "other_byline_exclusion": 10
+      },
+      "state_shares": {
+        "paired": 0.9516281583569788,
+        "all_ids_missing": 0.008422285276764401,
+        "some_ids_missing": 0.039499166779264065,
+        "other_byline_exclusion": 0.0004503895869927487
+      }
+    },
+    {
+      "period": "2024",
+      "metadata_update_month": "2026-09",
+      "linked_papers": 2775,
+      "paired_papers": 2627,
+      "retention": 0.9466666666666667,
+      "states": {
+        "paired": 2627,
+        "all_ids_missing": 19,
+        "some_ids_missing": 123,
+        "other_byline_exclusion": 6
+      },
+      "state_shares": {
+        "paired": 0.9466666666666667,
+        "all_ids_missing": 0.006846846846846847,
+        "some_ids_missing": 0.04432432432432432,
+        "other_byline_exclusion": 0.002162162162162162
+      }
+    },
+    {
+      "period": "2025",
+      "metadata_update_month": "2026-08",
+      "linked_papers": 22900,
+      "paired_papers": 19330,
+      "retention": 0.8441048034934497,
+      "states": {
+        "paired": 19330,
+        "all_ids_missing": 1992,
+        "some_ids_missing": 1573,
+        "other_byline_exclusion": 5
+      },
+      "state_shares": {
+        "paired": 0.8441048034934497,
+        "all_ids_missing": 0.08698689956331877,
+        "some_ids_missing": 0.06868995633187773,
+        "other_byline_exclusion": 0.0002183406113537118
+      }
+    },
+    {
+      "period": "2025",
+      "metadata_update_month": "2026-09",
+      "linked_papers": 2562,
+      "paired_papers": 2279,
+      "retention": 0.8895394223263076,
+      "states": {
+        "paired": 2279,
+        "all_ids_missing": 98,
+        "some_ids_missing": 179,
+        "other_byline_exclusion": 6
+      },
+      "state_shares": {
+        "paired": 0.8895394223263076,
+        "all_ids_missing": 0.03825136612021858,
+        "some_ids_missing": 0.06986729117876658,
+        "other_byline_exclusion": 0.00234192037470726
+      }
+    }
+  ],
+  "retention_gap_pp": {
+    "paired": -10.240048867699203,
+    "all_ids_missing": 7.383584664708384,
+    "some_ids_missing": 2.877318938788827,
+    "other_byline_exclusion": -0.020854735798010456
+  },
+  "paper_log_accounting": {
+    "linked_papers": 0.019191707198560237,
+    "retention": -0.11391694277683853,
+    "paired_papers": -0.09472523557827821
+  },
+  "standardized_retention": {
+    "strata": "OpenAlex primary subfield × exact returned team size, usable bylines only",
+    "weights": "Pooled 2024 and 2025 paper counts, restricted to cells present in both years",
+    "common_cells": 104,
+    "all_cells": 151,
+    "annual": [
+      {
+        "period": "2024",
+        "usable_papers": 24957,
+        "common_support_papers": 24918,
+        "common_support_share": 0.9984373121769443,
+        "raw_retention_usable": 0.9518772288335938,
+        "standardized_retention": 0.9525990505830929
+      },
+      {
+        "period": "2025",
+        "usable_papers": 25443,
+        "common_support_papers": 25417,
+        "common_support_share": 0.9989781079275243,
+        "raw_retention_usable": 0.8493102228510789,
+        "standardized_retention": 0.8504174890985148
+      }
+    ],
+    "interpretation": "A remaining gap is within the observed strata; this does not explain the cause or correct unique-author counts."
+  },
+  "reference_cohort_diagnostics": {
+    "ids": {
+      "baseline_keys": 42030,
+      "continuing_observed_keys": 12361,
+      "zero_observed_followup_keys": 29669,
+      "appearing_observed_keys": 27754,
+      "baseline_full_distribution": {
+        "gini": 0.21236341761803645,
+        "top_1_share": 0.04690309601381545,
+        "top_5_share": 0.14895226904520287,
+        "top_10_share": 0.23963396179387206,
+        "top_100_share": 0.016201107372394025,
+        "median": 1.0
+      },
+      "followup_full_distribution_including_zeros": {
+        "gini": 0.7887967328429522,
+        "top_1_share": 0.11650271029913671,
+        "top_5_share": 0.3626279863481229,
+        "top_10_share": 0.5735796024894599,
+        "top_100_share": 0.03975105400521983,
+        "median": 0.0
+      },
+      "followup_continuing_keys_distribution": {
+        "gini": 0.28186446738850246,
+        "top_1_share": 0.046861072073880745,
+        "top_5_share": 0.1562035735796025,
+        "top_10_share": 0.2532272636016864,
+        "top_100_share": 0.03975105400521983,
+        "median": 1
+      },
+      "followup_appearing_keys_distribution": {
+        "gini": 0.1268369603333359,
+        "top_1_share": 0.03486044928522805,
+        "top_5_share": 0.11873878334055325,
+        "top_10_share": 0.20461662231573738,
+        "top_100_share": 0.014852404232935207,
+        "median": 1.0
+      },
+      "interpretation": "2024 observed keys followed into 2025 on usable bylines. Zeros include coverage loss, missing IDs, name changes and nonpublication. Appearing keys are not established career entrants. No incumbent-behavior claim is identified."
+    },
+    "names": {
+      "baseline_keys": 43760,
+      "continuing_observed_keys": 12625,
+      "zero_observed_followup_keys": 31135,
+      "appearing_observed_keys": 32191,
+      "baseline_full_distribution": {
+        "gini": 0.20559735268746437,
+        "top_1_share": 0.0486121946568194,
+        "top_5_share": 0.15024011372895754,
+        "top_10_share": 0.237149147899655,
+        "top_100_share": 0.016331200915379415,
+        "median": 1.0
+      },
+      "followup_full_distribution_including_zeros": {
+        "gini": 0.7954472984895464,
+        "top_1_share": 0.12376256767208044,
+        "top_5_share": 0.3760150812064965,
+        "top_10_share": 0.5875386697602475,
+        "top_100_share": 0.04161832946635731,
+        "median": 0.0
+      },
+      "followup_continuing_keys_distribution": {
+        "gini": 0.2909919827249545,
+        "top_1_share": 0.049279775715390564,
+        "top_5_share": 0.1612045630317092,
+        "top_10_share": 0.25998163186388246,
+        "top_100_share": 0.04161832946635731,
+        "median": 1
+      },
+      "followup_appearing_keys_distribution": {
+        "gini": 0.12825765450300164,
+        "top_1_share": 0.03437554887298081,
+        "top_5_share": 0.11802698459163852,
+        "top_10_share": 0.203693748835724,
+        "top_100_share": 0.013385847726002608,
+        "median": 1
+      },
+      "interpretation": "2024 observed keys followed into 2025 on usable bylines. Zeros include coverage loss, missing IDs, name changes and nonpublication. Appearing keys are not established career entrants. No incumbent-behavior claim is identified."
+    }
+  }
+}

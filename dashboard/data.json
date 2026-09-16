@@ -1,0 +1,85 @@
+{
+  "snapshotDate": "2026-09-04",
+  "verifiedDate": "2026-09-06",
+  "repository": "Victorpolm/evolution-of-mathematical-research",
+  "revision": "7d1063371ad2825ac3ad622974f6df129d1324f0",
+  "pilot": {
+    "startYear": 2023,
+    "endYear": 2025,
+    "candidateWorks": 77949,
+    "retainedWorks": 69166,
+    "identifiedLinks": 155781,
+    "missingSlots": 8042,
+    "status": "Documented technical pilot, not independently reproduced for this dashboard. No validated historical findings.",
+    "sourcePath": "ArxivObservatory/analysis/STATISTICAL_RESEARCH_PLAN.md",
+    "sourceSection": "16. Current implementation and pilot"
+  },
+  "sources": [
+    {
+      "id": "paper-manifest",
+      "title": "Mathematics paper-ID manifest",
+      "url": "https://github.com/Victorpolm/evolution-of-mathematical-research/blob/7d1063371ad2825ac3ad622974f6df129d1324f0/ArxivObservatory/pipeline/aws/math_ids.txt",
+      "description": "Source of the new paper sparkline; 169,394 unique IDs before the partial-month exclusion."
+    },
+    {
+      "id": "paper-analysis",
+      "title": "Papers versus contributors: focused protocol",
+      "url": "https://github.com/Victorpolm/evolution-of-mathematical-research/blob/1fa643c7af70dedcc63e3a602a164a0c5abb3921/ArxivObservatory/analysis/PAPERS_CONTRIBUTORS.md",
+      "description": "Definitions, limited manifest result, population matching, and rolling-author deduplication."
+    },
+    {
+      "id": "paper-code",
+      "title": "Reproducible period aggregation",
+      "url": "https://github.com/Victorpolm/evolution-of-mathematical-research/blob/1fa643c7af70dedcc63e3a602a164a0c5abb3921/ArxivObservatory/analysis/papers_contributors.py",
+      "description": "Offline computation for monthly, rolling 12-month, and annual counts. Proposed in draft PR #2."
+    },
+    {
+      "id": "paper-pr",
+      "title": "Focused analysis contribution (draft)",
+      "url": "https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2",
+      "description": "Code, protocol, six passing focused tests, and aggregate results; contributor estimates await matching data."
+    },
+    {
+      "id": "context",
+      "title": "Research context",
+      "path": "RESEARCH_CONTEXT.md",
+      "description": "Authoritative research questions, hypotheses, risks, and priority order."
+    },
+    {
+      "id": "plan",
+      "title": "Statistical research plan",
+      "path": "ArxivObservatory/analysis/STATISTICAL_RESEARCH_PLAN.md",
+      "description": "Study design, proposed historical window, figure plan, and reported pilot counts."
+    },
+    {
+      "id": "protocol",
+      "title": "Democratization analysis protocol",
+      "path": "ArxivObservatory/analysis/DEMOCRATIZATION.md",
+      "description": "Input definitions, estimands, authorship completeness, and validity requirements."
+    },
+    {
+      "id": "code",
+      "title": "Current offline analysis module",
+      "path": "ArxivObservatory/analysis/democratization.py",
+      "description": "Implemented annual metrics, filtering, and aggregate outputs."
+    },
+    {
+      "id": "pr",
+      "title": "Merged import and analysis contribution",
+      "url": "https://github.com/Victorpolm/evolution-of-mathematical-research/pull/1",
+      "description": "Merged 4 September 2026; the PR records 170 passing tests at import."
+    },
+    {
+      "id": "upstream",
+      "title": "ArxivObservatory status",
+      "path": "ArxivObservatory/README.md",
+      "description": "The separate AI-disclosure prototype remains incompletely validated."
+    },
+    {
+      "id": "decisions",
+      "title": "Upstream owner decision log",
+      "path": "ArxivObservatory/DECISIONS.md",
+      "description": "Settled choices for ArxivObservatory; not a decision log for the full research program."
+    }
+  ]
+}
