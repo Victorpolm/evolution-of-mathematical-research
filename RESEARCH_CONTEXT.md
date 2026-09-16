@@ -6,10 +6,16 @@ The detailed first-stage proposal is the
 [revised statistical research plan](ArxivObservatory/analysis/STATISTICAL_RESEARCH_PLAN.md).
 It incorporates a mathematical and prior-literature review, preserves the
 paired recorded-name/OpenAlex-ID comparison, and distinguishes the existing
-three-year pilot from a longer historical study. The historical and validation
-stages remain proposals; the bounded OpenAlex comparison below has now run.
+three-year pilot from a longer historical study. The 2010–2025 descriptive P/A calculation has now run; person-level validation
+and the broader research program remain incomplete.
 
-## Current empirical checkpoint
+## Current historical result
+
+The dashboard now opens with papers per observed contributor, P_t/A_t, from 2010 to 2025. It compares distinct raw names with OpenAlex's existing resolved author IDs on the same retained papers. Annual, monthly and rolling 12-month views are accompanied by component counts, retention and a broader partial-byline sensitivity calculation. The new acquisition queries publication years 2010–2026 and derives analysis months from arXiv IDs.
+
+These are descriptive results on recorded contributor keys in a selected Mathematics frame. They do not establish individual productivity, true researcher counts or an AI effect. The five-year lookback is not required for annual active-key counts; it remains relevant to future entry studies. Code, manifest and aggregate results are in draft PR #2. The raw frozen metadata is supplied separately. Mathematical and prior-literature foundations remain intact.
+
+## Earlier empirical checkpoint · 15 September snapshot
 
 **After the second September 15 reply, population trend interpretations are
 on hold.** The main dashboard is now a coverage audit. Earlier contributor and
@@ -39,7 +45,7 @@ with main comparisons from 2015 after a five-year lookback, subject to coverage
 validation. An aggregate OpenAlex availability check on September 15 found
 330,421 candidate works with publication years 2010–2023 under the same field
 and indexing filters. Those are not upload-year counts or contributor estimates;
-the historical work-level backfill has not been collected. See the
+at that checkpoint the historical work-level backfill had not been collected. See the
 [historical extension note](ArxivObservatory/reports/historical_extension_20260915/HISTORICAL_EXTENSION.md).
 
 A frozen OpenAlex-only run now compares minimally normalized source names with
@@ -59,8 +65,8 @@ The response to the second review adds annual name/ID mapping diagnostics,
 source-ORCID coverage, full versus fractional concentration, single-appearance
 shares and explicit log-growth terms. It preserves the mathematical identities
 and prior-work comparison. Exact arXiv primary-category reconciliation,
-independent identity validation, longer history and any AI causal design remain
-outstanding. See the protocol's September 15 addendum for the methodological
+independent identity validation and any AI causal design remain outstanding.
+The newly collected history addresses the earlier data-window limitation. See the protocol's September 15 addendum for the methodological
 decisions and the analysis PR for the full response.
 
 ## 1. Research program

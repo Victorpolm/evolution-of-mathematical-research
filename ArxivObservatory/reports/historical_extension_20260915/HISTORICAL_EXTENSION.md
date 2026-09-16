@@ -1,6 +1,8 @@
 # Extending the observation window
 
-Updated 15 September 2026. This is a data-availability and design note, not a completed historical analysis.
+This note preserves the 15 September 2026 availability check and design.
+
+**16 September update:** the historical metadata acquisition and descriptive 2010–2025 P/A calculation are now implemented in draft PR #2. The dashboard opens with papers per observed contributor under both identity definitions. Calendar-year counts start in 2010; five-year lookback concerns later entry/returner measures. The main graph is accompanied by component counts, annual coverage and partial-byline sensitivity accounting. Person-level validation remains outstanding. See `reports/historical_participation_20260916/HISTORICAL_PARTICIPATION.md` in the implementation PR. The paragraphs below describe the earlier planning checkpoint.
 
 ## Why the current comparison is 2024–2025
 
