@@ -9,6 +9,12 @@ paired recorded-name/OpenAlex-ID comparison, and distinguishes the existing
 three-year pilot from a longer historical study. The 2010–2025 descriptive P/A calculation has now run; person-level validation
 and the broader research program remain incomplete.
 
+## Contributor populations and concentration now available
+
+The updated dashboard keeps annual/window-active P_t/A_t first and adds P_t/A_all using the full 2010–2025 contributor union. A whole-study table reports P_all/A_all. The same 300,011 paired papers contain 178,730 OpenAlex author IDs or 231,929 distinct names across the study. One paper with three contributors explains why P/A can be below one: fractional credit is shared even though each contributor coauthored a paper.
+
+The new Top 10% view ranks fractional credit and coauthored-paper counts separately under both identity definitions, in annual, monthly and rolling windows, and over the full study. Proportional cutoff ties preserve an exact 10% group weight. In 2025 the top-decile fractional share is 27.35% for IDs and 27.26% for names; cumulative 2010–2025 shares are 52.02% and 46.56%. Cumulative and annual ranks have different exposure lengths and memberships. This extension remains descriptive and does not validate identities or establish an AI effect. See the dated addendum in the research plan and the aggregate report in draft PR #2.
+
 ## Current historical result
 
 The dashboard now opens with papers per observed contributor, P_t/A_t, from 2010 to 2025. It compares distinct raw names with OpenAlex's existing resolved author IDs on the same retained papers. Annual, monthly and rolling 12-month views are accompanied by component counts, retention and a broader partial-byline sensitivity calculation. The new acquisition queries publication years 2010–2026 and derives analysis months from arXiv IDs.
