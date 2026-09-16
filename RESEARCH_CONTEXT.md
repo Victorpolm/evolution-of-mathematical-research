@@ -1,13 +1,67 @@
 # RESEARCH_CONTEXT.md
 
-_Last updated: 2026-09-06_
+_Last updated: 2026-09-16_
 
 The detailed first-stage proposal is the
 [revised statistical research plan](ArxivObservatory/analysis/STATISTICAL_RESEARCH_PLAN.md).
 It incorporates a mathematical and prior-literature review, preserves the
 paired recorded-name/OpenAlex-ID comparison, and distinguishes the existing
-three-year pilot from a longer historical study. Corpus choices and new
-analyses remain proposals for discussion, not completed empirical results.
+three-year pilot from a longer historical study. The historical and validation
+stages remain proposals; the bounded OpenAlex comparison below has now run.
+
+## Current empirical checkpoint
+
+**After the second September 15 reply, population trend interpretations are
+on hold.** The main dashboard is now a coverage audit. Earlier contributor and
+concentration charts are withdrawn from its primary view and retained in the
+archived diagnostic output.
+
+The new audit finds 206 entirely unidentified bylines in 2024 and 2,090 in 2025,
+accounting for 7.38 percentage points of the 10.24-point retention gap. Of the
+2025 entirely unidentified bylines, 1,577 occur in November–December. Retention
+remains 95.26% versus 85.04% after standardizing on common exact-team-size and
+subfield cells. This locates the problem; it does not establish indexing lag
+or neutralize selection. The snapshot has no indexing-history clock.
+
+`analysis/retention_audit.py` implements partial-ID credit with explicitly
+unallocated missing-ID and unusable-byline credit. It also reports upstream
+date-window filtering, repeated-observation ORCID diagnostics and baseline
+observed-key cohorts with zero follow-up retained. The mathematical and
+prior-work protocol remains intact. The updated offline code, aggregate results
+and frozen acquisition manifest are submitted in draft analysis PR #2; the
+revised method is submitted in draft PR #3. Raw source metadata remains a
+separate input. Main-branch integration remains an owner review decision.
+
+The 2024–2025 interval is a technical pilot, not the intended historical scope.
+Those are the only full calendar years in the existing August 2023–July 2026
+repository ID window. The historical target remains metadata from 2010 onward,
+with main comparisons from 2015 after a five-year lookback, subject to coverage
+validation. An aggregate OpenAlex availability check on September 15 found
+330,421 candidate works with publication years 2010–2023 under the same field
+and indexing filters. Those are not upload-year counts or contributor estimates;
+the historical work-level backfill has not been collected. See the
+[historical extension note](ArxivObservatory/reports/historical_extension_20260915/HISTORICAL_EXTENSION.md).
+
+A frozen OpenAlex-only run now compares minimally normalized source names with
+existing OpenAlex author IDs on identical eligible papers for 2024–2025.
+It is available in [draft analysis PR #2](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2)
+and the [participation dashboard](https://mathematics-research-observatory.tim-gehrunge-2308.chatgpt.site).
+This is separate from the upstream AI-disclosure dashboard reviewed at main
+commit `7d10633`; both new analysis and method documents remain in draft PRs.
+
+The main finding is coverage sensitivity: paired byline retention falls from
+95.11% to 84.87%. The paired raw-name count falls 7.24%, but relaxing only the
+missing-ID rule gives a 2.41% increase. Neither result establishes the direction
+of change in real-person participation. Names and IDs remain two specifications,
+not upper/lower bounds or validated corrected counts.
+
+The response to the second review adds annual name/ID mapping diagnostics,
+source-ORCID coverage, full versus fractional concentration, single-appearance
+shares and explicit log-growth terms. It preserves the mathematical identities
+and prior-work comparison. Exact arXiv primary-category reconciliation,
+independent identity validation, longer history and any AI causal design remain
+outstanding. See the protocol's September 15 addendum for the methodological
+decisions and the analysis PR for the full response.
 
 ## 1. Research program
 

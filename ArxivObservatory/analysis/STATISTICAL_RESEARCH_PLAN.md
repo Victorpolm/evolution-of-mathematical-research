@@ -1,9 +1,164 @@
 # Revised method: participation, collaboration and mathematical publication output
 
-Revision: 2026-09-06. Research protocol for discussion before the contributor
-analysis. This revises the earlier statistical plan after reviewing the
-user-supplied methodological critique and the primary literature. It does not
-report new empirical results or authorize a new acquisition campaign.
+Protocol: 2026-09-06; review addenda: 2026-09-15; repository update: 2026-09-16. The original sections below retain
+the mathematical and prior-literature foundations. The addendum records the
+bounded OpenAlex run and decisions following the second supplied review.
+The historical study and independent validation remain incomplete.
+
+## Historical window clarification, 16 September 2026
+
+The two-year OpenAlex run is a bounded technical pilot. The existing repository
+ID manifest spans August 2023–July 2026, so 2024 and 2025 are its only full
+calendar years. That practical boundary is not a scientific reason to start
+the historical study in 2024. Retain the provisional metadata target from
+2010 onward and main comparisons from 2015 through the latest validated full
+year. Annual paper and active-author counts can also be reported from 2010 if
+coverage permits; entry and returner measures need adequate lookback.
+
+A September 15 OpenAlex group-count query found 330,421 candidate works with
+publication years 2010–2023 under the same Mathematics and arXiv-indexing
+filters. These are acquisition-sizing counts, not arXiv upload-year counts or
+contributor results. No historical work-level backfill was collected. See the
+[extension note and recorded query](../reports/historical_extension_20260915/HISTORICAL_EXTENSION.md)
+for availability, observed request allowance and the coverage checks required
+before adding earlier years. More history does not repair selective missingness
+by itself.
+
+Every displayed graph should state its measure, unit, time window, denominator,
+source and calculation. The updated dashboard provides a title above each
+graph and an explanation below it, keeps unavailable series explicitly empty,
+and identifies overlapping rolling windows. Its source and aggregate data are
+submitted with the implementation in draft PR #2.
+
+## Second September 15 reply: coverage takes priority
+
+Population participation and concentration interpretations are suspended. The
+main dashboard now presents a coverage audit; earlier identity-comparison
+charts are retained only in archived diagnostic outputs. The research question
+and the mathematical/prior-work foundations below remain the longer-term plan.
+
+The frozen-data audit identifies 206 entirely unidentified bylines in 2024 and
+2,090 in 2025. Their changing share contributes 7.38 percentage points to the
+10.24-point retention difference. November–December contain 1,577 of the 2025
+cases. Common-weight standardization by exact returned team size and OpenAlex
+primary subfield still yields retention of 95.26% versus 85.04%. This describes
+the pattern; it is not a causal diagnosis of indexing lag or a selection fix.
+
+The operational partial-ID path is now `analysis/retention_audit.py`. For every
+usable k-slot byline, valid IDs receive 1/k and unidentified slots contribute
+1/k to an unallocated-credit total. Entirely unusable bylines retain one whole
+unallocated paper equivalent. Thus linked paper totals reconcile with allocated
+credit, missing-ID credit and unusable-byline credit. Unknown people are never
+represented by one artificial author. Mean allocated credit per identified ID
+is explicitly separate from papers per identified ID. This path supersedes use
+of the legacy prototype for incomplete metadata; it does not recover missing
+people or validate the returned team size against arXiv v1.
+
+The original ORCID proportions have limited repeated-observation opportunity:
+only 75 of 2,216 source ORCIDs in 2024 and 198 of 3,699 in 2025 occur on two or
+more paired papers. Among these, 5 and 29 map to multiple IDs. These selected
+mapping proportions are not adjudicated split rates or population floors.
+Retain names as an identity-sensitivity diagnostic and make the independent
+stratified audit the route toward person-level estimates.
+
+For cohort checks, select keys using baseline history and retain zero observed
+follow-up counts. The new diagnostic follows 2024 keys into 2025 and separates
+observed appearing/continuing keys, while explicitly allowing coverage loss and
+identity changes to generate these states. It does not identify career entry or
+incumbent behavior. Do not infer entry from an annual singleton share.
+
+The 83,017-to-50,440 reduction is accounted for: 32,552 works fall outside the
+declared 2024–2025 arXiv-ID window, 20 have ambiguous multiple IDs and five have
+no unique modern ID. The outside-window works include 30,062 with 2026 IDs.
+Keep these query/date filters distinct from byline exclusions and external
+coverage. The accurate terms are acquired works, uniquely linked target-window
+papers, usable returned bylines and retained paired papers.
+
+A single snapshot of current bylines cannot reconstruct equal-elapsed-indexing
+comparisons. Collect repeated or archival metadata, preserve source and
+snapshot provenance, and inspect additions, losses and reassignment of IDs.
+Equal ages or retention rates alone do not guarantee comparable selection.
+The hypothesis of poor coverage at both historical endpoints must be assessed
+empirically; it is not inferred from two upload cohorts.
+
+Neither majority nor minority partial merging determines the direction of
+Gini without specifying the output distribution and which groups merge.
+The review's conditional claim still fails, for example, when the two smallest
+keys in [1,2,4,8,16,32,64,128,256,512] become 3: Gini falls from 0.70196 to
+0.66906, with no coincident values. A strict change persists in a neighborhood.
+Ratios A/P and P/A are reciprocal descriptions, not alternative corrections
+of the same count estimand.
+
+A paper-cluster bootstrap requires an explicit sampling/dependence model;
+authors recurring across papers prevent treating it as a universal remedy.
+For a later credible difference-in-differences study, add sensitivity to
+substantively justified departures from parallel trends following
+[Rambachan and Roth (2023)](https://academic.oup.com/restud/article-abstract/90/5/2555/7039335).
+This does not by itself supply exogenous AI exposure or comparable measurement.
+
+## Addendum: September 15 review and interim run
+
+The review of main commit `7d10633` concerns the legacy participation prototype
+and the upstream AI-disclosure dashboard. The subsequent
+[draft analysis PR #2](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2)
+contains an executed OpenAlex comparison on 45,365 paired papers from 2024–2025,
+following a complete, frozen acquisition of 83,017 works. Its population is
+OpenAlex-classified Mathematics indexed in arXiv, restricted by publication-year
+query and arXiv-ID month. It does not replace the preferred primary-subject
+arXiv frame. References below to unavailable database audits and longer history
+remain applicable; the two-year paired comparison is no longer merely planned.
+
+The observed raw-name trend reverses from −7.24% to +2.41% when only the missing-ID
+gate is relaxed. Annual paired retention is 95.11% and 84.87%. Coverage is an
+empirical limitation, not a problem solved by requiring complete bylines.
+The new runner preserves every returned slot and excludes flagged/100-plus,
+incomplete or repeated-ID bylines. The legacy partial-byline runner must not be
+used to allocate the whole credit of a paper to only its identified authors.
+For k total slots and m identified slots, allocate m/k to those authors and
+report 1−m/k as unallocated; unknown k must remain unknown. With incomplete
+allocation, the mean allocated credit is not automatically P/A.
+
+We adopt the following clarifications from a critical reading of the review:
+
+1. Display full-count and fractional concentration together, accompanied by
+   team-size and activity distributions. Fractional credit measures allocated
+   paper output, not effort. Disagreement between counting conventions does
+   not uniquely identify its cause.
+2. Rebuild name-to-ID and ID-to-name mappings within each year; report their
+   multiplicity distributions and affected authorship-slot shares with explicit
+   denominators. These are ambiguity diagnostics, not validated error rates.
+   This addition has been computed from the frozen data.
+3. Retain the two agreed identity definitions as sensitivity specifications.
+   Reject the review's proposed bounds on people and concentration. Both can
+   split and merge; even pure aggregation can lower Gini, as [1,1,2] → [2,2]
+   demonstrates. Agreement of two proxy trends is not identification of a
+   real-person trend. Even genuinely bounded counts can fall when both interval
+   endpoints rise: 20 → 11 is consistent with [10,20] → [11,21].
+4. A one-paper author may be an incumbent. Adding a one-paper entrant can lower
+   Gini: [1,1,3] has Gini 4/15, while [1,1,1,3] has Gini 1/4. Keep the planned
+   longer windows and reference cohorts with zero-output follow-up retained.
+5. Source ORCID can identify audit candidates; profile-propagated ORCID is not
+   an independent standard. Selected-subset multiplicities cannot directly
+   correct the full population. Additional coauthor/institution/subfield rules
+   require validation before being described as an improved estimator.
+6. Preserve the exact growth identities and publish their numerical terms.
+   No independent-author bootstrap is added without a target population and
+   dependence model. Measurement validation is the immediate uncertainty task.
+7. Treat disclosure coverage separately from authorship coverage. Missing-outcome
+   extremes conditional on correct observed machine labels are not bounds on
+   true disclosure prevalence allowing classifier error. Version-selection
+   mechanisms and classifier validation require the existing owner-run data.
+8. A subfield difference-in-differences remains a possible later design, subject
+   to a credible exposure definition, counterfactual trends, spillovers and
+   composition. A successful pretrend test is not sufficient validation;
+   pretests can have low power and selection on passing can distort inference.
+   [Roth (2022)](https://www.jonathandroth.com/assets/files/roth_pretrends_testing.pdf)
+   provides the methodological basis for that caution.
+
+The closest mathematics bibliometric studies and their methods remain in §2.
+The first-stage contribution is transparent descriptive accounting and a
+measurement-sensitivity assessment. No democratization, elitism or AI effect
+is established by the current short, selectively covered comparison.
 
 ## 1. Research question and contribution
 
@@ -501,4 +656,3 @@ comparisons and observed-cohort analysis; it does not identify the unseen zeros.
 | AI-adjacent versus other fields is a ready-made falsification test | Do not adopt without an independently justified mechanism and exposure design. |
 | Engage prior work before running the analysis | Adopt; Hulek–Teschke is a particularly close mathematics-specific precedent, alongside the other studies above. |
 | Harvest everything immediately | Reuse and audit existing data first. Extend only to meet a specified estimand and through the established acquisition workflow. |
-
