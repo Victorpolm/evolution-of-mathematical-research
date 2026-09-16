@@ -45,3 +45,4 @@
 .history-details summary{cursor:pointer;font-weight:600;color:#263c5d}
 .history-details p{margin-top:10px}
 @media(max-width:720px){.explained-chart{padding:22px 0}.chart-heading h3{font-size:19px}.chart-legend{gap:9px 16px}.chart-legend>span{gap:6px}.chart-plot{grid-template-columns:61px minmax(0,1fr);gap:5px}.chart-explanation{padding:14px 13px}.chart-x-ticks>span:not(:first-child):not(:last-child){display:none}.history-note{padding:15px}.chart-unit{line-height:1.6}}
+#view-trends > .panel + .panel{margin-top:24px}

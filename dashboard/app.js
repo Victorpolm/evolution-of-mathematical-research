@@ -9,7 +9,7 @@ const modules = {
     definition: 'P is the number of retained papers; A is the number of active author IDs; ȳ = P/A. With complete authorships and 1/k credit per author, total fractional credit equals the paper count. This identity is descriptive.',
     measures: [['Annual papers and active author IDs', 'Implemented'], ['Fractional output per active author', 'Implemented'], ['Fixed-composition field standardization', 'Planned'], ['Rolling 3- and 5-year activity populations', 'Planned']],
     limitation: 'An increase in active IDs can reflect indexing or identity changes as well as more researchers. Mean fractional output also depends on collaboration patterns.',
-    pending: 'The 2024–2025 comparison is archived. The Coverage audit shows why population conclusions are on hold. The longer historical analysis remains pending.'
+    pending: 'The 2010–2025 papers/contributors comparison is available on the first dashboard view. Its annual decomposition and coverage series describe observed keys; population and causal conclusions require validation.'
   },
   concentration: {
     title: 'Output concentration', label: 'DISTRIBUTION OF PRODUCTION',
@@ -39,7 +39,7 @@ const modules = {
     definition: 'I counts author–paper incidences and k is paper team size. Papers and incidences are different units. Full counting awards one credit to each author; fractional counting awards 1/k.',
     measures: [['Mean and median identified team size', 'Implemented'], ['Single-author and 3+ author paper shares', 'Implemented'], ['Separate 2, 3–5, and 6+ team-size bins', 'Planned'], ['New coauthor ties and cross-field networks', 'Later study']],
     limitation: 'The current implementation counts identified authors per paper. Incomplete IDs can understate team size and inflate the apparent solo-paper share; use complete authorships for headline comparisons.',
-    pending: 'The new paired comparison reports team sizes and within-subfield counts for 2024–2025. A longer historical collaboration analysis remains pending.'
+    pending: 'The historical aggregate dataset reports annual paired team sizes and within-subfield counts for 2010–2025. A causal or person-level collaboration interpretation remains unvalidated.'
   }
 };
 
@@ -89,13 +89,13 @@ function renderModule(key) {
     <p class="analysis-description">${m.definition}</p>
     <div class="analysis-status"><h3>Implementation</h3><ul class="measure-list">${m.measures.map(([measure,status]) => `<li><span>${measure}</span><span class="badge ${status === 'Implemented' ? 'blue' : 'gray'}">${status}</span></li>`).join('')}</ul></div>
     <p class="chart-note">${m.limitation}</p></article>
-    <div class="result-state"><span class="result-symbol" aria-hidden="true">∅</span><div><h3>Historical results pending</h3><p>${m.pending}</p></div></div>`;
+    <div class="result-state"><span class="result-symbol" aria-hidden="true">∅</span><div><h3>Evidence and interpretation</h3><p>${m.pending}</p></div></div>`;
   document.querySelectorAll('[data-module]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.module === key)));
 }
 
 function route() {
   const hash = window.location.hash.slice(1);
-  const view = hash.startsWith('analysis') ? 'analysis' : hash === 'methods' ? 'methods' : hash === 'overview' ? 'overview' : hash === 'manifest' ? 'manifest' : 'papers';
+  const view = hash.startsWith('analysis') ? 'analysis' : hash === 'methods' ? 'methods' : hash === 'overview' ? 'overview' : hash === 'manifest' ? 'manifest' : hash === 'papers' ? 'papers' : 'trends';
   const key = hash.startsWith('analysis-') ? hash.slice(9) : 'growth';
   document.querySelectorAll('.view').forEach(section => { section.hidden = section.id !== 'view-' + view; });
   document.querySelectorAll('[data-view]').forEach(link => {
@@ -104,7 +104,7 @@ function route() {
     if (selected) link.setAttribute('aria-current', 'page'); else link.removeAttribute('aria-current');
   });
   if (view === 'analysis') renderModule(Object.hasOwn(modules, key) ? key : 'growth');
-  document.title = `${view === 'papers' ? 'Coverage audit' : view === 'manifest' ? 'Repository upload counts' : view === 'overview' ? 'Growth & participation' : view === 'analysis' ? 'Measures & results' : 'Methods & sources'} · Mathematics Observatory`;
+  document.title = `${view === 'trends' ? 'Papers per observed contributor' : view === 'papers' ? 'Earlier coverage audit' : view === 'manifest' ? 'Repository upload counts' : view === 'overview' ? 'Growth & participation' : view === 'analysis' ? 'Measures & results' : 'Methods & sources'} · Mathematics Observatory`;
 }
 
 document.querySelectorAll('[data-pilot]').forEach(button => button.addEventListener('click', () => { pilotView = button.dataset.pilot; renderPilot(); }));

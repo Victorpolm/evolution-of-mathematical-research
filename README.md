@@ -4,20 +4,21 @@ Quantitative study of the evolution, participation, concentration, collaboration
 
 ## Current checkpoint
 
-The 2024–2025 OpenAlex comparison is a bounded pilot. **Interpretations of population participation and concentration are on hold** because the completeness of author information differs substantially between years.
+The dashboard now opens with **papers per observed contributor, 2010–2025**. It compares distinct raw-name keys with OpenAlex's existing resolved author IDs on exactly the same retained papers. Annual, monthly and rolling 12-month views are available, followed by paper counts, contributor counts and retention.
 
-Start with the [retention audit](ArxivObservatory/reports/openalex_interim_20260915/RETENTION_AUDIT.md). It reports coverage, whole bylines with missing IDs, and publication credit that cannot be allocated to identified authors. The [earlier name/ID comparison](ArxivObservatory/reports/openalex_interim_20260915/OPENALEX_COMPARISON.md) remains available as an archived diagnostic.
+These are descriptive results for a selected OpenAlex arXiv-linked Mathematics population. They do not establish counts of real people, individual productivity changes or causal AI effects. Names and IDs can both split or combine people; changing metadata completeness remains a limitation.
 
-- [Analysis, tests and reproduction instructions](ArxivObservatory/analysis/OPENALEX_INTERIM.md)
+- [Historical analysis, results and reproduction](ArxivObservatory/reports/historical_participation_20260916/HISTORICAL_PARTICIPATION.md)
+- [Earlier 2024–2025 retention audit](ArxivObservatory/reports/openalex_interim_20260915/RETENTION_AUDIT.md)
 - [Static dashboard source and local viewing instructions](dashboard/README.md)
-- [Revised mathematical method and historical plan — draft PR #3](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/3)
+- [Revised mathematical method and prior work — draft PR #3](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/3)
 - [Analysis and dashboard implementation — draft PR #2](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2)
 
-The historical target is metadata from 2010 onward, with main comparisons from 2015 after a five-year lookback and an end year determined by coverage validation. The [historical availability note](dashboard/HISTORICAL_EXTENSION.md) confirms that earlier records exist; it does not represent a completed historical contributor analysis.
+The historical metadata query covers publication years 2010–2026; analysis dates come from arXiv ID months in 2010–2025. Annual active-key counts do not require a five-year lookback. Future career-entry measures do, and still require independent identity and coverage validation.
 
 ## Reproduction and scope
 
-Analysis code runs offline. From `ArxivObservatory/`, run the 22 focused fixture checks with:
+Analysis code runs offline. From `ArxivObservatory/`, run the 27 focused fixture checks with:
 
 ```sh
 python tests/run_participation_checks.py

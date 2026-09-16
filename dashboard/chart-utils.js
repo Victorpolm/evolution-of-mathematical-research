@@ -12,7 +12,7 @@ window.ObservatoryCharts = (() => {
   };
   const windowNote = mode => ({
     monthly:'Each point represents one calendar month, assigned from the date in the arXiv ID.',
-    annual:'Each point represents one full calendar year. The two observations show a year-to-year comparison only.',
+    annual:'Each point represents one full calendar year.',
     rolling12:'Each point includes its labelled month and the preceding 11 months. Adjacent windows overlap, and percentages use the summed counts within each window.'
   })[mode];
   function niceMax(value) {
@@ -20,7 +20,7 @@ window.ObservatoryCharts = (() => {
     const power = 10 ** Math.floor(Math.log10(value));
     return [1, 2, 2.5, 5, 10].find(n => n * power >= value) * power;
   }
-  function lineChart(rows, series, {title, unit, mode, maxY}) {
+  function lineChart(rows, series, {title, unit, mode, maxY, unitLabel}) {
     const values = series.flatMap(s => rows.map(s.value)).filter(Number.isFinite);
     if (!values.length) return '<div class="spark-unavailable">No measured values available for this series.</div>';
     const top = maxY || niceMax(Math.max(...values));
@@ -51,7 +51,7 @@ window.ObservatoryCharts = (() => {
     const tickIndexes = [...new Set([0, Math.floor((rows.length - 1) / 2), rows.length - 1])];
     const ticks = tickIndexes.map((i, k) => `<span style="left:${i / Math.max(1, rows.length - 1) * 100}%;transform:translateX(${k === 0 ? '0' : k === tickIndexes.length - 1 ? '-100%' : '-50%'})">${date(rows[i].period)}</span>`).join('');
     const axisTitle = mode === 'rolling12' ? 'End of the 12-month window' : mode === 'annual' ? 'arXiv ID year' : 'arXiv ID month';
-    return `<div class="chart-unit">Vertical axis: ${unit === '%' ? 'percent of linked papers' : escape(unit)} · scale starts at zero</div><div class="chart-plot"><div class="chart-y-axis" aria-hidden="true">${[1, .75, .5, .25, 0].map(f => `<span>${format(top*f)}</span>`).join('')}</div><div class="chart-canvas"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${escape(title)}. ${date(rows[0].period)} to ${date(rows.at(-1).period)}. Vertical scale 0 to ${format(top)}. Exact values are in the table below."><title>${escape(title)}</title>${grid}${paths}</svg><div class="chart-x-ticks" aria-hidden="true">${ticks}</div><div class="chart-x-label">${axisTitle}</div></div></div>`;
+    return `<div class="chart-unit">Vertical axis: ${unitLabel ? escape(unitLabel) : unit === '%' ? 'percent of linked papers' : escape(unit)} · scale starts at zero</div><div class="chart-plot"><div class="chart-y-axis" aria-hidden="true">${[1, .75, .5, .25, 0].map(f => `<span>${format(top*f)}</span>`).join('')}</div><div class="chart-canvas"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="${escape(title)}. ${date(rows[0].period)} to ${date(rows.at(-1).period)}. Vertical scale 0 to ${format(top)}. Exact values are in the table below."><title>${escape(title)}</title>${grid}${paths}</svg><div class="chart-x-ticks" aria-hidden="true">${ticks}</div><div class="chart-x-label">${axisTitle}</div></div></div>`;
   }
   const legend = (series, rows, unit) => `<div class="chart-legend">${series.map((s, i) => `<span><i style="border-color:${s.color};border-top-style:${i ? 'dashed' : 'solid'}" aria-hidden="true"></i>${escape(s.label)} <strong>${formatter.format(s.value(rows.at(-1)))}${unit === '%' ? '%' : ''}</strong><small>latest window</small></span>`).join('')}</div>`;
   return {lineChart, legend, date, windowLabel, windowNote, escape};

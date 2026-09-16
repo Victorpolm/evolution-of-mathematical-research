@@ -1,5 +1,7 @@
 # Interim OpenAlex-only comparison
 
+**Historical extension, 16 September 2026:** the main dashboard now starts with the 2010–2025 P/A comparison. See `reports/historical_participation_20260916/HISTORICAL_PARTICIPATION.md` and `analysis/historical_participation.py`. This document preserves the earlier two-year run and its 15 September coverage audit. The expanded focused runner includes five historical fixtures (27 checks total).
+
 **Current status after the second September 15 reply:** population participation
 and concentration interpretations are on hold. The main dashboard presents the
 retention audit; the earlier comparison remains archived for reproducibility.
@@ -101,5 +103,4 @@ or person-resolution method changed. See `REVIEW_RESPONSE.md` and
 The root `dashboard/` directory contains the standalone static presentation,
 including the graph titles, labelled scales and explanations beneath each
 figure. It uses aggregate JSON only and makes no OpenAlex or arXiv API calls.
-The 2010-onward extension remains a declared next stage; the availability query
-recorded in the method PR is not a historical author-level dataset.
+The earlier availability query has now been followed by the separately frozen historical acquisition. Its report and manifest are in `reports/historical_participation_20260916/`.

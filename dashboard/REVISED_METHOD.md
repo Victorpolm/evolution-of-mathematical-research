@@ -3,7 +3,17 @@
 Protocol: 2026-09-06; review addenda: 2026-09-15; repository update: 2026-09-16. The original sections below retain
 the mathematical and prior-literature foundations. The addendum records the
 bounded OpenAlex run and decisions following the second supplied review.
-The historical study and independent validation remain incomplete.
+The historical P/A calculation is now available; independent person-level validation and the broader research program remain incomplete.
+
+## Historical P/A implementation, 16 September 2026
+
+The user authorized free-quota acquisition with an OpenAlex API key and requested that the first visible graph be papers per observed contributor, P_t/A_t, under both identity definitions. The new frozen extraction queries publication years 2010–2026; the descriptive analysis covers arXiv ID dates 2010–2025. The offline historical module and aggregate report are submitted in draft PR #2.
+
+Calendar-year counts begin in 2010 because annual active-key counts do not need a lookback. The five-year lookback remains relevant to future entry/returner measures. The first graph uses existing OpenAlex resolved IDs and minimally normalized raw-name keys on identical retained papers. It is followed by P, A and retention, plus annual partial-byline credit accounting, within-subfield aggregates and exact growth identities. Monthly and rolling 12-month views recompute distinct-key unions over each window.
+
+This is an observed-record comparison, not validation of people or a new identity resolver. The earlier coverage finding remains a limitation: changing retention can affect P/A, and agreement between definitions cannot remove shared selection. A single extraction, even with creation and update dates retained, does not recover historical byline states at equal indexing age. Concentration, career entry and AI effects require their separate designs and validation. The mathematical and prior-work sections below remain unchanged.
+
+See [draft PR #2](https://github.com/Victorpolm/evolution-of-mathematical-research/pull/2) for `analysis/historical_participation.py` and `reports/historical_participation_20260916/HISTORICAL_PARTICIPATION.md`. The older checkpoint sections below document what was known before this extraction.
 
 ## Historical window clarification, 16 September 2026
 
@@ -18,7 +28,7 @@ coverage permits; entry and returner measures need adequate lookback.
 A September 15 OpenAlex group-count query found 330,421 candidate works with
 publication years 2010–2023 under the same Mathematics and arXiv-indexing
 filters. These are acquisition-sizing counts, not arXiv upload-year counts or
-contributor results. No historical work-level backfill was collected. See the
+contributor results. At that checkpoint, no historical work-level backfill had been collected. See the
 [extension note and recorded query](../reports/historical_extension_20260915/HISTORICAL_EXTENSION.md)
 for availability, observed request allowance and the coverage checks required
 before adding earlier years. More history does not repair selective missingness
@@ -33,7 +43,7 @@ submitted with the implementation in draft PR #2.
 ## Second September 15 reply: coverage takes priority
 
 Population participation and concentration interpretations are suspended. The
-main dashboard now presents a coverage audit; earlier identity-comparison
+main dashboard at that checkpoint presented a coverage audit; earlier identity-comparison
 charts are retained only in archived diagnostic outputs. The research question
 and the mathematical/prior-work foundations below remain the longer-term plan.
 
